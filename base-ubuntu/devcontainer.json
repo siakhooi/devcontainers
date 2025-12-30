@@ -1,8 +1,8 @@
 {
 	"name": "Base Ubuntu Dev Container",
 	"image": "siakhooi/devcontainer:base-ubuntu-0.1.0",
-	"remoteUser": "ubuntu",
-	"containerUser": "ubuntu",
+	"remoteUser": "maui",
+	"containerUser": "maui",
 	"updateRemoteUserUID": true,
 	"features": {},
 	"customizations": {

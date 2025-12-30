@@ -1,1 +1,4 @@
+# devcontainer folder is for testing purposes only
+.devcontainer
+
 *.log
