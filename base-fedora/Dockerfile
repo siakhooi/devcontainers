@@ -2,10 +2,12 @@ FROM  fedora:43
 
 RUN dnf update -y
 
-COPY --chown=root:root --chmod=755 init-devcontainers.sh /usr/local/bin/init-devcontainers.sh
+# use maui as user
+RUN useradd -m -s /bin/bash maui
 
-# Setup user, group, and workspace
-RUN groupadd -r maui && useradd -r -g maui maui
-WORKDIR /working
+COPY --chown=root:root --chmod=755 init-devcontainer.sh /usr/local/bin/init-devcontainer.sh
 
-CMD [ "bash", "/usr/local/bin/init-devcontainers.sh" ]
+USER maui
+WORKDIR /workspace
+
+CMD [ "bash", "/usr/local/bin/init-devcontainer.sh" ]
