@@ -1,6 +1,8 @@
 name: Build All
 
 on:
+  schedule:
+    - cron: '0 0 * * 3' # Every Wednesday at 00:00 UTC
   workflow_dispatch:
     inputs:
       push-images:
