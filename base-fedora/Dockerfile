@@ -1,9 +1,13 @@
 FROM  fedora:43
 
-RUN dnf update -y
+RUN dnf update -y \
+    && dnf install -y ack tree zip git nano make wget sudo \
+    && dnf clean all
 
 # use maui as user
-RUN useradd -m -s /bin/bash maui
+RUN useradd -m -s /bin/bash maui \
+    && echo "maui ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/maui \
+    && chmod 0440 /etc/sudoers.d/maui
 
 COPY --chown=root:root --chmod=755 init-devcontainer.sh /usr/local/bin/init-devcontainer.sh
 

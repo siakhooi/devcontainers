@@ -24,15 +24,58 @@ my devcontainers
 | curl      | http           | apt       | built-in  |
 | gnupg     | crypto         | apt       | built-in  |
 | vi/vim    | editor         | apt       | built-in  |
-| zip       | compression    | apt       | not found |
-| nano      | editor         | apt       | not found |
-| make      | build          | apt       | not found |
-| git       | source control | apt       | not found |
-| wget      | http           | apt       | not found |
-| tree      | file           | apt       | not found |
-| sudo      | admin          | apt       |
+| sudo      | admin          | apt       | dnf       |
+| zip       | compression    | apt       | dnf       |
+| nano      | editor         | apt       | dnf       |
+| make      | build          | apt       | dnf       |
+| git       | source control | apt       | dnf       |
+| tree      | file           | apt       | dnf       |
+| wget      | http           | apt       | dnf       |
+| ack       | matching       | not found | dnf       |
 | yq        | stream editor  | not found | not found |
 | jq        | stream editor  | not found | not found |
-| ack       | matching       | not found | not found |
 | gh        | github cli     |
 
+### Java
+
+- java
+- maven
+- gradle
+- springboot
+- jacoco
+
+### GO
+
+- go, golangci, goreleaser
+
+### Typescript
+
+- nvm
+
+### Firebase
+
+- firebase
+
+### Python
+
+- python
+
+## bash
+
+- dpkg-dev, fakeroot,rpm-sign pinentry
+- pandoc, shellcheck, bats
+- rpmdevtools rpmlint
+
+### Others
+
+- glab
+- docker
+- git-lfs
+- helm
+- helm-unit-test
+- openssl
+- siakhooi-buildo
+  | siakhooi-devutils | utilities | not found | not found |
+  | devy | utilities | not found | not found |
+- kubectl, kind, jv
+- qlty
