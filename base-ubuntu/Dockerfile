@@ -14,6 +14,8 @@ RUN usermod -l maui ubuntu \
     && chmod 0440 /etc/sudoers.d/maui
 
 COPY --chown=root:root --chmod=755 init-devcontainer.sh /usr/local/bin/init-devcontainer.sh
+COPY --chown=root:root --chmod=755 init-shell.sh /usr/local/bin/init-shell.sh
+RUN echo 'source /usr/local/bin/init-shell.sh' >> /home/maui/.bashrc
 
 USER maui
 WORKDIR /workspace
