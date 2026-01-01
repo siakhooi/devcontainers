@@ -31,7 +31,7 @@ my devcontainers
 | git       | source control | apt       | dnf       |
 | tree      | file           | apt       | dnf       |
 | wget      | http           | apt       | dnf       |
-| ack       | matching       | not found | dnf       |
+| ack       | matching       | apt       | dnf       |
 | yq        | stream editor  | not found | not found |
 | jq        | stream editor  | not found | not found |
 | gh        | github cli     |
