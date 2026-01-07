@@ -1,5 +1,7 @@
 help:
 
+base: base-ubuntu base-fedora
+
 base-ubuntu:
 	cd base-ubuntu && make build
 	mkdir -p .devcontainer

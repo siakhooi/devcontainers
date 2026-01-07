@@ -13,11 +13,16 @@ my devcontainers
 
 ## Components
 
-### Base
+## Images Tree
+```
+.
+├── ubuntu:24.04
+│   └── base-ubuntu
+└── fedora:43
+    └── base-fedora
+```
 
-- base images:
-  - base-ubuntu: ubuntu:24.04
-  - base-fedora: fedora:43
+### Base
 
 | Component         | type           | base-ubuntu | base-fedora |
 | ----------------- | -------------- | ----------- | ----------- |
@@ -133,3 +138,8 @@ my devcontainers
 - openssl
 - kubectl, kind, jv
 - sonar
+
+[![Wise](https://img.shields.io/badge/Funding-Wise-33cb56.svg?logo=wise)](https://wise.com/pay/me/siakn3)
+[![Buy Me a Coffee](https://img.shields.io/badge/Funding-BuyMeACoffee-33cb56.svg?logo=buymeacoffee)](https://www.buymeacoffee.com/siakhooi)
+[![Ko-Fi](https://img.shields.io/badge/Funding-Ko%20Fi-33cb56.svg?logo=kofi)](https://ko-fi.com/siakhooi)
+![visitors](https://hit-tztugwlsja-uc.a.run.app/?outputtype=badge&counter=ghmd-devcontainers)
