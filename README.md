@@ -30,7 +30,11 @@ my devcontainers
 .
 ├── ubuntu:24.04
 │   └── base-ubuntu
-│   │   └── bash-deb
+│       ├── bash-deb
+│       ├── java-lts (todo)
+│       ├── go (todo)
+│       ├── python (todo)
+│       └── nodejs-lts (todo)
 └── fedora:43
     └── base-fedora
         └── bash-rpm
@@ -55,14 +59,19 @@ my devcontainers
 | tree              | file           | apt         | dnf         |
 | wget              | http           | apt         | dnf         |
 | ack               | matching       | apt         | dnf         |
-| yq                | stream editor  | not found   | not found   |
-| jq                | stream editor  | not found   | not found   |
-| gh                | github cli     |
-| glab              | gitlab cli     |
-| siakhooi-buildo   | utilities      | not found   | not found   |
-| siakhooi-devutils | utilities      | not found   | not found   |
-| siakhooi-devy     | utilities      | not found   | not found   |
-| siakhooi-ore      | utilities      | not found   | not found   |
+| yq                | stream editor  | todo        | todo        |
+| jq                | stream editor  | todo        | todo        |
+| gh                | github cli     | todo        | todo        |
+| glab              | gitlab cli     | todo        | todo        |
+| siakhooi-buildo   | utilities      | todo        | todo        |
+| siakhooi-devutils | utilities      | todo        | todo        |
+| siakhooi-devy     | utilities      | todo        | todo        |
+| siakhooi-ore      | utilities      | todo        | todo        |
+| pinentry          | crypto         | todo        | todo        |
+| git-lfs           | git lfs        | todo        | todo        |
+| openssl           | crypto         | todo        | todo        |
+| jv                | json viewer    | todo        | todo        |
+| httpie            | http client    | todo        | todo        |
 
 ### bash
 
@@ -75,70 +84,32 @@ my devcontainers
 | rpm-sign    | rpm build | -        | dnf      |
 | rpmdevtools | rpm build | -        | dnf      |
 | rpmlint     | rpm build | -        | dnf      |
-| pandoc      |
-| pinentry    |
+| pandoc      | manpage   | todo     | todo     |
 
-### quality
+### languages
 
-- base images:
-  - quality: base-ubuntu
-
-| Component | type | deb |
-| --------- | ---- | --- |
-| qlty      |
-
-### Java
-
-- base images:
-  - jdk-lts: quality
-
-| Component  | type | jdk-lts |
-| ---------- | ---- | ------- |
-| jdk        |
-| maven      |
-| springboot |
-| gradle     |
-| jacoco     |
-| groovy     |
-
-### GO
-
-- base images:
-  - go: quality
-
-| Component  | type | go  |
-| ---------- | ---- | --- |
-| go         |
-| golanci    |
-| goreleaser |
-
-### Python
-
-- base images:
-  - python: quality
-
-| Component | type | python |
-| --------- | ---- | ------ |
-| python    |
-| poetry    |
-
-### Typescript
-
-- nvm
-
-### Firebase
-
-- firebase
-
-### Others
-
-- docker
-- git-lfs
-- helm
-- helm-unit-test
-- openssl
-- kubectl, kind, jv
-- sonar
+| Component      | type         | java-lts | go   | python | nodejs-lts |
+| -------------- | ------------ | -------- | ---- | ------ | ---------- |
+| qlty           | quality      | todo     | todo | todo   | todo       |
+| jdk            | java-build   | todo     | -    | -      | -          |
+| maven          | java-build   | todo     | -    | -      | -          |
+| springboot     | java-build   | todo     | -    | -      | -          |
+| gradle         | java-build   | todo     | -    | -      | -          |
+| jacoco         | java-build   | todo     | -    | -      | -          |
+| groovy         | java-build   | todo     | -    | -      | -          |
+| go             | go-build     | -        | todo | -      | -          |
+| golanci        | go-build     | -        | todo | -      | -          |
+| goreleaser     | go-build     | -        | todo | -      | -          |
+| python         | python-build | -        | -    | todo   | -          |
+| poetry         | python-build | -        | -    | todo   | -          |
+| nvm            | typescript   | -        | -    | -      | todo       |
+| firebase       | typescript   | -        | -    | -      | todo       |
+| sonar          | quality      | todo     | todo | todo   | todo       |
+| docker         | container    | todo     | todo | todo   | todo       |
+| kubectl        | container    | todo     | todo | todo   | todo       |
+| helm           | container    | todo     | todo | todo   | todo       |
+| helm-unit-test | container    | todo     | todo | todo   | todo       |
+| kind           | container    | todo     | todo | todo   | todo       |
 
 [![Wise](https://img.shields.io/badge/Funding-Wise-33cb56.svg?logo=wise)](https://wise.com/pay/me/siakn3)
 [![Buy Me a Coffee](https://img.shields.io/badge/Funding-BuyMeACoffee-33cb56.svg?logo=buymeacoffee)](https://www.buymeacoffee.com/siakhooi)
