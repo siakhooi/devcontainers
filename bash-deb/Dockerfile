@@ -1,8 +1,9 @@
 FROM  siakhooi/devcontainer:base-ubuntu-0.1.0
 
-RUN sudo apt update \
-    && sudo apt upgrade -y \
-    && sudo apt install -y \
+USER root
+RUN apt update \
+    && apt upgrade -y \
+    && apt install -y \
     # linting
     shellcheck \
     # testing
@@ -10,5 +11,6 @@ RUN sudo apt update \
     # debian packaging
     dpkg-dev fakeroot \
     #
-    && sudo apt clean \
-    && sudo rm -rf /var/lib/apt/lists/*
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/*
+USER maui
