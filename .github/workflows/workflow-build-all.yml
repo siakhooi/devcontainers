@@ -27,3 +27,19 @@ jobs:
       REGISTRY_PASSWORD_DOCKER: ${{ secrets.REGISTRY_PASSWORD_DOCKER }}
     with:
       push-images: ${{ inputs.push-images || false }}
+
+  build-bash-deb:
+    uses: ./.github/workflows/build-bash-deb.yml
+    secrets:
+      PUBLISH_TO_GITHUB_REPO_TOKEN: ${{ secrets.PUBLISH_TO_GITHUB_REPO_TOKEN }}
+      REGISTRY_PASSWORD_DOCKER: ${{ secrets.REGISTRY_PASSWORD_DOCKER }}
+    with:
+      push-images: ${{ inputs.push-images || false }}
+
+  build-bash-rpm:
+    uses: ./.github/workflows/build-bash-rpm.yml
+    secrets:
+      PUBLISH_TO_GITHUB_REPO_TOKEN: ${{ secrets.PUBLISH_TO_GITHUB_REPO_TOKEN }}
+      REGISTRY_PASSWORD_DOCKER: ${{ secrets.REGISTRY_PASSWORD_DOCKER }}
+    with:
+      push-images: ${{ inputs.push-images || false }}

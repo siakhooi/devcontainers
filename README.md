@@ -30,8 +30,10 @@ my devcontainers
 .
 ├── ubuntu:24.04
 │   └── base-ubuntu
+│   │   └── bash-deb
 └── fedora:43
     └── base-fedora
+        └── bash-rpm
 ```
 
 ### Base
@@ -62,32 +64,19 @@ my devcontainers
 | siakhooi-devy     | utilities      | not found   | not found   |
 | siakhooi-ore      | utilities      | not found   | not found   |
 
-### deb
+### bash
 
-- base images:
-  - deb: base-ubuntu
-
-| Component  | type | deb |
-| ---------- | ---- | --- |
-| dpkg-dev   |
-| fakeroot   |
-| shellcheck |
-| bats       |
-| pandoc     |
-
-### rpm
-
-- base images:
-  - rpm: base-fedora
-
-| Component   | type | rpm |
-| ----------- | ---- | --- |
-| shellcheck  |
-| bats        |
-| rpm-sign    |
+| Component   | type      | bash-deb | bash-rpm |
+| ----------- | --------- | -------- | -------- |
+| dpkg-dev    | deb build | apt      | -        |
+| fakeroot    | deb build | apt      | -        |
+| shellcheck  | linting   | apt      | dnf      |
+| bats        | testing   | apt      | dnf      |
+| rpm-sign    | rpm build | -        | dnf      |
+| rpmdevtools | rpm build | -        | dnf      |
+| rpmlint     | rpm build | -        | dnf      |
+| pandoc      |
 | pinentry    |
-| rpmdevtools |
-| rpmlint     |
 
 ### quality
 
