@@ -34,4 +34,12 @@ run-bash-deb:
 run-bash-rpm:
 	docker run -it --rm  siakhooi/devcontainer:bash-rpm-0.1.0  bash
 
-.PHONY: base-ubuntu base-fedora bash-deb bash-rpm
+java-lts:
+	cd java-lts && make build
+	mkdir -p .devcontainer
+	cp -v java-lts/devcontainer.json .devcontainer/devcontainer.json
+
+run-java-lts:
+	docker run -it --rm  siakhooi/devcontainer:java-lts-0.1.0  bash
+
+.PHONY: base-ubuntu base-fedora bash-deb bash-rpm java-lts
