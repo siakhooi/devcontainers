@@ -1,0 +1,73 @@
+name: Build GO
+
+env:
+  BUILD_CONTEXT: ./go
+
+on:
+  workflow_dispatch:
+    inputs:
+      push-images:
+        description: "Push built images to registries"
+        required: true
+        type: boolean
+        default: false
+  push:
+    branches:
+      - main
+    paths:
+      - "go/**"
+      - "variables.env"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "go/**"
+      - "variables.env"
+
+  workflow_call:
+    secrets:
+      REGISTRY_PASSWORD_DOCKER:
+        required: true
+      PUBLISH_TO_GITHUB_REPO_TOKEN:
+        required: true
+    inputs:
+      push-images:
+        required: true
+        type: boolean
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      SHOULD_PUSH: ${{ (github.event_name == 'push' && github.ref == 'refs/heads/main') || inputs.push-images || false }}
+    steps:
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8  # v6.0.1
+        with:
+          fetch-depth: 0
+
+      - run: ls -l
+      - run: cat ./variables.env >> $GITHUB_ENV
+      - run: cat ${{ env.BUILD_CONTEXT }}/variables.env >> $GITHUB_ENV
+
+      - uses: docker/login-action@5e57cd118135c172c3672efd75eb46360885c0ef # v3.6.0
+        if: ${{ env.SHOULD_PUSH }}
+        with:
+          username: ${{ env.REGISTRY_USERNAME_DOCKER }}
+          password: ${{ secrets.REGISTRY_PASSWORD_DOCKER }}
+
+      - uses: docker/login-action@5e57cd118135c172c3672efd75eb46360885c0ef # v3.6.0
+        if: ${{ env.SHOULD_PUSH }}
+        with:
+          registry: ghcr.io
+          username: ${{ env.REGISTRY_USERNAME_GHCR }}
+          password: ${{ secrets.PUBLISH_TO_GITHUB_REPO_TOKEN }}
+
+      - uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f # v3.12.0
+
+      - uses: docker/build-push-action@263435318d21b8e681c14492fe198d362a7d2c83 # v6.18.0
+        with:
+          context: ${{ env.BUILD_CONTEXT }}
+          push: ${{ env.SHOULD_PUSH }}
+          tags: |
+            ${{ env.REGISTRY_USERNAME_DOCKER }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG_BASE }}
+            ghcr.io/${{ env.REGISTRY_USERNAME_GHCR }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG_BASE }}

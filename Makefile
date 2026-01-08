@@ -2,7 +2,7 @@ help:
 
 base: base-ubuntu base-fedora
 bash: bash-deb bash-rpm
-lang: java-lts nodejs-lts
+lang: java-lts nodejs-lts go
 
 base-ubuntu:
 	.scripts/build.sh base-ubuntu
@@ -38,4 +38,10 @@ nodejs-lts:
 run-nodejs-lts:
 	docker run -it --rm  siakhooi/devcontainer:nodejs-lts-0.1.0  bash
 
-.PHONY: base-ubuntu base-fedora bash-deb bash-rpm java-lts nodejs-lts
+go:
+	.scripts/build.sh go
+
+run-go:
+	docker run -it --rm  siakhooi/devcontainer:go-0.1.0  bash
+
+.PHONY: base-ubuntu base-fedora bash-deb bash-rpm java-lts nodejs-lts go
