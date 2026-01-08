@@ -1,0 +1,29 @@
+name: Build Base
+
+on:
+  schedule:
+    - cron: '0 0 * * 3' # Every Wednesday at 00:00 UTC
+  workflow_dispatch:
+    inputs:
+      push-images:
+        description: "Push built images to registries"
+        required: true
+        type: boolean
+        default: false
+
+jobs:
+  build-base-ubuntu:
+    uses: ./.github/workflows/build-base-ubuntu.yml
+    secrets:
+      PUBLISH_TO_GITHUB_REPO_TOKEN: ${{ secrets.PUBLISH_TO_GITHUB_REPO_TOKEN }}
+      REGISTRY_PASSWORD_DOCKER: ${{ secrets.REGISTRY_PASSWORD_DOCKER }}
+    with:
+      push-images: ${{ inputs.push-images || false }}
+
+  build-base-fedora:
+    uses: ./.github/workflows/build-base-fedora.yml
+    secrets:
+      PUBLISH_TO_GITHUB_REPO_TOKEN: ${{ secrets.PUBLISH_TO_GITHUB_REPO_TOKEN }}
+      REGISTRY_PASSWORD_DOCKER: ${{ secrets.REGISTRY_PASSWORD_DOCKER }}
+    with:
+      push-images: ${{ inputs.push-images || false }}
