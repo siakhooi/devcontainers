@@ -2,16 +2,12 @@ help:
 
 base: base-ubuntu base-fedora
 bash: bash-deb bash-rpm
+lang: java-lts nodejs-lts
 
 base-ubuntu:
-	cd base-ubuntu && make build
-	mkdir -p .devcontainer
-	cp -v base-ubuntu/devcontainer.json .devcontainer/devcontainer.json
-
+	.scripts/build.sh base-ubuntu
 base-fedora:
-	cd base-fedora && make build
-	mkdir -p .devcontainer
-	cp -v base-fedora/devcontainer.json .devcontainer/devcontainer.json
+	.scripts/build.sh base-fedora
 
 run-base-ubuntu:
 	docker run -it --rm  siakhooi/devcontainer:base-ubuntu-0.1.0  bash
@@ -21,13 +17,9 @@ run-base-fedora:
 #	docker run -it --rm  -v $(realpath ./tests):/opt/devcontainer/entrypoint.d siakhooi/devcontainer:base-fedora-0.1.0  bash
 
 bash-deb:
-	cd bash-deb && make build
-	mkdir -p .devcontainer
-	cp -v bash-deb/devcontainer.json .devcontainer/devcontainer.json
+	.scripts/build.sh bash-deb
 bash-rpm:
-	cd bash-rpm && make build
-	mkdir -p .devcontainer
-	cp -v bash-rpm/devcontainer.json .devcontainer/devcontainer.json
+	.scripts/build.sh bash-rpm
 
 run-bash-deb:
 	docker run -it --rm  siakhooi/devcontainer:bash-deb-0.1.0  bash
@@ -35,17 +27,13 @@ run-bash-rpm:
 	docker run -it --rm  siakhooi/devcontainer:bash-rpm-0.1.0  bash
 
 java-lts:
-	cd java-lts && make build
-	mkdir -p .devcontainer
-	cp -v java-lts/devcontainer.json .devcontainer/devcontainer.json
+	.scripts/build.sh java-lts
 
 run-java-lts:
 	docker run -it --rm  siakhooi/devcontainer:java-lts-0.1.0  bash
 
 nodejs-lts:
-	cd nodejs-lts && make build
-	mkdir -p .devcontainer
-	cp -v nodejs-lts/devcontainer.json .devcontainer/devcontainer.json
+	.scripts/build.sh nodejs-lts
 
 run-nodejs-lts:
 	docker run -it --rm  siakhooi/devcontainer:nodejs-lts-0.1.0  bash
