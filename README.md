@@ -2,6 +2,17 @@
 
 my devcontainers
 
+## Usage
+
+```
+ docker run -it --rm  -v /path/to/custom-init-scripts:/opt/devcontainer/entrypoint.d siakhooi/devcontainer:base-ubuntu-0.1.0  bash
+
+```
+
+### Directories in container
+
+- `/opt/devcontainer/entrypoint.d` - to be mounted by user to add custom init logic
+
 ## List of Containers
 
 - siakhooi/devcontainer:base-ubuntu-0.1.0
@@ -14,6 +25,7 @@ my devcontainers
 ## Components
 
 ## Images Tree
+
 ```
 .
 ├── ubuntu:24.04
@@ -117,7 +129,7 @@ my devcontainers
   - python: quality
 
 | Component | type | python |
-| --------- | ---- | --- |
+| --------- | ---- | ------ |
 | python    |
 | poetry    |
 
