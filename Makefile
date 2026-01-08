@@ -2,7 +2,7 @@ help:
 
 base: base-ubuntu base-fedora
 bash: bash-deb bash-rpm
-lang: java-lts nodejs-lts go
+lang: java-lts nodejs-lts go python
 
 base-ubuntu:
 	.scripts/build.sh base-ubuntu
@@ -44,4 +44,10 @@ go:
 run-go:
 	docker run -it --rm  siakhooi/devcontainer:go-0.1.0  bash
 
-.PHONY: base-ubuntu base-fedora bash-deb bash-rpm java-lts nodejs-lts go
+python:
+	.scripts/build.sh python
+
+run-python:
+	docker run -it --rm  siakhooi/devcontainer:python-0.1.0  bash
+
+.PHONY: base-ubuntu base-fedora bash-deb bash-rpm java-lts nodejs-lts go python
