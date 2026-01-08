@@ -42,4 +42,12 @@ java-lts:
 run-java-lts:
 	docker run -it --rm  siakhooi/devcontainer:java-lts-0.1.0  bash
 
-.PHONY: base-ubuntu base-fedora bash-deb bash-rpm java-lts
+nodejs-lts:
+	cd nodejs-lts && make build
+	mkdir -p .devcontainer
+	cp -v nodejs-lts/devcontainer.json .devcontainer/devcontainer.json
+
+run-nodejs-lts:
+	docker run -it --rm  siakhooi/devcontainer:nodejs-lts-0.1.0  bash
+
+.PHONY: base-ubuntu base-fedora bash-deb bash-rpm java-lts nodejs-lts
