@@ -14,6 +14,7 @@ RUN apt update \
         gnupg \
         vim \
         sudo \
+        openssl \
         ca-certificates \
         git-lfs \
     && apt clean \

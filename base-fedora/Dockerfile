@@ -1,7 +1,7 @@
 FROM  fedora:43
 
 RUN dnf update -y \
-    && dnf install -y ack tree zip git nano make wget sudo git-lfs \
+    && dnf install -y ack tree zip git nano make wget sudo git-lfs openssl \
     && dnf clean all
 
 # use maui as user

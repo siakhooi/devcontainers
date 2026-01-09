@@ -80,10 +80,9 @@ my devcontainers
 | siakhooi-buildo | utilities      | todo        | todo        |
 | siakhooi-ore    | utilities      | todo        | todo        |
 | pinentry        | crypto         | todo        | todo        |
-| openssl         | crypto         | todo        | todo        |
+| openssl         | crypto         | apt         | dnf         |
 | jv              | json viewer    | todo        | todo        |
 | httpie          | http client    | todo        | todo        |
-| man             | help           | todo        | todo        |
 
 ### bash
 
@@ -97,6 +96,7 @@ my devcontainers
 | rpmdevtools | rpm build | -        | dnf      |
 | rpmlint     | rpm build | -        | dnf      |
 | pandoc      | manpage   | todo     | todo     |
+| man         | help      | todo     | todo     |
 
 ### languages
 
