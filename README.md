@@ -68,6 +68,7 @@ my devcontainers
 | nano            | editor         | apt         | dnf         |
 | make            | build          | apt         | dnf         |
 | git             | source control | apt         | dnf         |
+| git-lfs         | git lfs        | apt         | dnf         |
 | tree            | file           | apt         | dnf         |
 | wget            | http           | apt         | dnf         |
 | ack             | matching       | apt         | dnf         |
@@ -79,7 +80,6 @@ my devcontainers
 | siakhooi-buildo | utilities      | todo        | todo        |
 | siakhooi-ore    | utilities      | todo        | todo        |
 | pinentry        | crypto         | todo        | todo        |
-| git-lfs         | git lfs        | todo        | todo        |
 | openssl         | crypto         | todo        | todo        |
 | jv              | json viewer    | todo        | todo        |
 | httpie          | http client    | todo        | todo        |
