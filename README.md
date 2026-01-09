@@ -115,6 +115,8 @@ my devcontainers
 | python         | python-build | -        | -    | todo   | -          |
 | poetry         | python-build | -        | -    | todo   | -          |
 | nvm            | typescript   | -        | -    | -      | todo       |
+| node           | typescript   | -        | -    | -      | todo       |
+| yarn           | typescript   | -        | -    | -      | todo       |
 | firebase       | typescript   | -        | -    | -      | todo       |
 | sonar          | quality      | todo     | todo | todo   | todo       |
 | docker         | container    | todo     | todo | todo   | todo       |
