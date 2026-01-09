@@ -15,6 +15,8 @@ RUN usermod -l maui ubuntu \
 
 COPY --chown=root:root --chmod=755 bin/devcontainer-entrypoint.sh /usr/local/bin/devcontainer-entrypoint.sh
 COPY --chown=root:root --chmod=755 bin/devcontainer-init-shell.sh /usr/local/bin/devcontainer-init-shell.sh
+COPY --chown=root:root --chmod=755 bashrc.d/check-binaries.sh /etc/devcontainer/bashrc.d/check-binaries.sh
+
 RUN echo 'source /usr/local/bin/devcontainer-init-shell.sh' >> /home/maui/.bashrc
 
 USER maui
