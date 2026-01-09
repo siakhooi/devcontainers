@@ -30,6 +30,14 @@ RUN wget https://siakhooi.github.io/apt/siakhooi-apt.list -O /etc/apt/sources.li
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
 
+RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg -o /usr/share/keyrings/githubcli-archive-keyring.gpg \
+    && chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
+    && echo "deb [arch=amd64 signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" > /etc/apt/sources.list.d/github-cli.list \
+    && apt update \
+    && apt install -y gh \
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/*
+
 USER maui
 # disable sudo message
 RUN touch ~/.sudo_as_admin_successful

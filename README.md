@@ -73,7 +73,7 @@ my devcontainers
 | ack             | matching       | apt         | dnf         |
 | yq              | stream editor  | curl        | curl        |
 | jq              | stream editor  | curl        | curl        |
-| gh              | github cli     | todo        | todo        |
+| gh              | github cli     | apt         | dnf         |
 | glab            | gitlab cli     | todo        | todo        |
 | siakhooi-devy   | utilities      | apt         | dnf         | siakhooi-devutils |
 | siakhooi-buildo | utilities      | todo        | todo        |

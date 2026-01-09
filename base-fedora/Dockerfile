@@ -23,6 +23,11 @@ RUN curl -L -o /etc/yum.repos.d/siakhooi-rpms.repo https://siakhooi.github.io/rp
     && dnf install -y siakhooi-devy \
     && dnf clean all
 
+RUN dnf install -y 'dnf-command(config-manager)' \
+    && dnf config-manager addrepo --from-repofile=https://cli.github.com/packages/rpm/gh-cli.repo \
+    && dnf install -y gh \
+    && dnf clean all
+
 USER maui
 WORKDIR /workspace
 
