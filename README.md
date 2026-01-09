@@ -12,6 +12,7 @@ my devcontainers
 ### Directories in container
 
 - `/opt/devcontainer/entrypoint.d` - to be mounted by user to add custom init logic
+- `/opt/devcontainer/bashrc.d` - to be mounted by user to add custom shell logic
 
 ## List of Containers
 
