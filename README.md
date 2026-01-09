@@ -9,15 +9,22 @@ my devcontainers
 
 ```
 
-### Directories in container
+### Directories in container for Customization
 
 - `/opt/devcontainer/entrypoint.d` - to be mounted by user to add custom init logic
 - `/opt/devcontainer/bashrc.d` - to be mounted by user to add custom shell logic
+- `/etc/devcontainer/check-binaries` - to be mounted by user to add custom binaries list to check
 
 ## List of Containers
 
 - siakhooi/devcontainer:base-ubuntu-0.1.0
 - siakhooi/devcontainer:base-fedora-0.1.0
+- siakhooi/devcontainer:bash-deb-0.1.0
+- siakhooi/devcontainer:bash-rpm-0.1.0
+- siakhooi/devcontainer:java-lts-0.1.0
+- siakhooi/devcontainer:nodejs-lts-0.1.0
+- siakhooi/devcontainer:go-0.1.0
+- siakhooi/devcontainer:python-0.1.0
 
 ## Deliverables
 
@@ -68,7 +75,7 @@ my devcontainers
 | jq              | stream editor  | todo        | todo        |
 | gh              | github cli     | todo        | todo        |
 | glab            | gitlab cli     | todo        | todo        |
-| siakhooi-devy   | utilities      | apt         | todo        | siakhooi-devutils |
+| siakhooi-devy   | utilities      | apt         | dnf         | siakhooi-devutils |
 | siakhooi-buildo | utilities      | todo        | todo        |
 | siakhooi-ore    | utilities      | todo        | todo        |
 | pinentry        | crypto         | todo        | todo        |
