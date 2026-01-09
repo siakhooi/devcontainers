@@ -31,6 +31,8 @@ RUN wget https://siakhooi.github.io/apt/siakhooi-apt.list -O /etc/apt/sources.li
     && rm -rf /var/lib/apt/lists/*
 
 USER maui
+# disable sudo message
+RUN touch ~/.sudo_as_admin_successful
 WORKDIR /workspace
 
 ENTRYPOINT [ "/usr/local/bin/devcontainer-entrypoint.sh" ]
