@@ -2,7 +2,7 @@ FROM ubuntu:24.04
 
 RUN apt update \
     && apt upgrade -y \
-    && apt install -y --no-install-recommends ack zip nano make wget tree git curl gnupg vim sudo \
+    && apt install -y --no-install-recommends ack zip nano make wget tree git curl gnupg vim sudo ca-certificates \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
 
