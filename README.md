@@ -43,35 +43,35 @@ my devcontainers
 
 ### Base
 
-| Component         | type           | base-ubuntu | base-fedora | includes          |
-| ----------------- | -------------- | ----------- | ----------- | ----------------- |
-| tar               | compression    | built-in    | built-in    |
-| sed               | stream editor  | built-in    | built-in    |
-| awk               | stream editor  | built-in    | built-in    |
-| grep              | matching       | built-in    | built-in    |
-| curl              | http           | apt         | built-in    |
-| gnupg             | crypto         | apt         | built-in    |
-| vi/vim            | editor         | apt         | built-in    |
-| sudo              | admin          | apt         | dnf         |
-| zip               | compression    | apt         | dnf         |
-| nano              | editor         | apt         | dnf         |
-| make              | build          | apt         | dnf         |
-| git               | source control | apt         | dnf         |
-| tree              | file           | apt         | dnf         |
-| wget              | http           | apt         | dnf         |
-| ack               | matching       | apt         | dnf         |
-| yq                | stream editor  | todo        | todo        |
-| jq                | stream editor  | todo        | todo        |
-| gh                | github cli     | todo        | todo        |
-| glab              | gitlab cli     | todo        | todo        |
-| siakhooi-devy     | utilities      | apt         | todo        | siakhooi-devutils |
-| siakhooi-buildo   | utilities      | todo        | todo        |
-| siakhooi-ore      | utilities      | todo        | todo        |
-| pinentry          | crypto         | todo        | todo        |
-| git-lfs           | git lfs        | todo        | todo        |
-| openssl           | crypto         | todo        | todo        |
-| jv                | json viewer    | todo        | todo        |
-| httpie            | http client    | todo        | todo        |
+| Component       | type           | base-ubuntu | base-fedora | includes          |
+| --------------- | -------------- | ----------- | ----------- | ----------------- |
+| tar             | compression    | (baseimage) | (baseimage) |
+| sed             | stream editor  | (baseimage) | (baseimage) |
+| awk             | stream editor  | (baseimage) | (baseimage) |
+| grep            | matching       | (baseimage) | (baseimage) |
+| curl            | http           | apt         | (baseimage) |
+| gnupg           | crypto         | apt         | (baseimage) |
+| vi/vim          | editor         | apt         | (baseimage) |
+| sudo            | admin          | apt         | dnf         |
+| zip             | compression    | apt         | dnf         |
+| nano            | editor         | apt         | dnf         |
+| make            | build          | apt         | dnf         |
+| git             | source control | apt         | dnf         |
+| tree            | file           | apt         | dnf         |
+| wget            | http           | apt         | dnf         |
+| ack             | matching       | apt         | dnf         |
+| yq              | stream editor  | todo        | todo        |
+| jq              | stream editor  | todo        | todo        |
+| gh              | github cli     | todo        | todo        |
+| glab            | gitlab cli     | todo        | todo        |
+| siakhooi-devy   | utilities      | apt         | todo        | siakhooi-devutils |
+| siakhooi-buildo | utilities      | todo        | todo        |
+| siakhooi-ore    | utilities      | todo        | todo        |
+| pinentry        | crypto         | todo        | todo        |
+| git-lfs         | git lfs        | todo        | todo        |
+| openssl         | crypto         | todo        | todo        |
+| jv              | json viewer    | todo        | todo        |
+| httpie          | http client    | todo        | todo        |
 
 ### bash
 
