@@ -71,8 +71,8 @@ my devcontainers
 | tree            | file           | apt         | dnf         |
 | wget            | http           | apt         | dnf         |
 | ack             | matching       | apt         | dnf         |
-| yq              | stream editor  | todo        | todo        |
-| jq              | stream editor  | todo        | todo        |
+| yq              | stream editor  | curl        | curl        |
+| jq              | stream editor  | curl        | curl        |
 | gh              | github cli     | todo        | todo        |
 | glab            | gitlab cli     | todo        | todo        |
 | siakhooi-devy   | utilities      | apt         | dnf         | siakhooi-devutils |
