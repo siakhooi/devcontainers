@@ -1,17 +1,13 @@
 #!/bin/bash
 
-commands=(ack awk curl git gpg grep make nano sed sudo tar tree vi wget zip)
-
-found=()
-not_found=()
-# Check if each command is available
-for cmd in "${commands[@]}"; do
-	if ! command -v "$cmd" >/dev/null 2>&1; then
-		not_found+=("$cmd")
-	else
-		found+=("$cmd")
-	fi
+# Devcontainer check binaries from internal, to be provided by devcontainer
+for f in /etc/devcontainer/check-binaries/*; do
+	[ -e "$f" ] || continue
+	devy-check-binaries -f "$f"
 done
 
-[ ${#found[@]} -ne 0 ] && echo "Available: ${found[*]}"
-[ ${#not_found[@]} -ne 0 ] && echo "Not Available: ${not_found[*]}"
+# Devcontainer check binaries from external, to be mounted by user
+for f in /opt/devcontainer/check-binaries/*; do
+	[ -e "$f" ] || continue
+	devy-check-binaries -f "$f"
+done
