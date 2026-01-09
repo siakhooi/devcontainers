@@ -40,7 +40,7 @@ my devcontainers
 │   └── base-ubuntu
 │       ├── bash-deb
 │       ├── java-lts (todo)
-│       ├── go (todo)
+│       ├── go
 │       ├── python (todo)
 │       └── nodejs-lts
 └── fedora:43
@@ -109,7 +109,7 @@ my devcontainers
 | gradle         | java-build   | todo     | -    | -      | -          |
 | jacoco         | java-build   | todo     | -    | -      | -          |
 | groovy         | java-build   | todo     | -    | -      | -          |
-| go             | go-build     | -        | todo | -      | -          |
+| go             | go-build     | -        | curl | -      | -          |
 | golanci        | go-build     | -        | todo | -      | -          |
 | goreleaser     | go-build     | -        | todo | -      | -          |
 | python         | python-build | -        | -    | todo   | -          |
