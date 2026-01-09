@@ -39,7 +39,7 @@ my devcontainers
 ├── ubuntu:24.04
 │   └── base-ubuntu
 │       ├── bash-deb
-│       ├── java-lts (todo)
+│       ├── java-lts
 │       ├── go
 │       ├── python (todo)
 │       └── nodejs-lts
@@ -103,7 +103,7 @@ my devcontainers
 | Component      | type         | java-lts | go   | python | nodejs-lts |
 | -------------- | ------------ | -------- | ---- | ------ | ---------- |
 | qlty           | quality      | todo     | todo | todo   | todo       |
-| jdk            | java-build   | todo     | -    | -      | -          |
+| jdk21          | java-build   | curl     | -    | -      | -          |
 | maven          | java-build   | todo     | -    | -      | -          |
 | springboot     | java-build   | todo     | -    | -      | -          |
 | gradle         | java-build   | todo     | -    | -      | -          |
