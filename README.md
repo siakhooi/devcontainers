@@ -111,7 +111,7 @@ my devcontainers
 | groovy         | java-build   | todo     | -    | -      | -          |
 | go             | go-build     | -        | curl | -      | -          |
 | golangci-lint  | go-build     | -        | curl | -      | -          |
-| goreleaser     | go-build     | -        | todo | -      | -          |
+| goreleaser     | go-build     | -        | curl | -      | -          |
 | python         | python-build | -        | -    | todo   | -          |
 | poetry         | python-build | -        | -    | todo   | -          |
 | nvm            | typescript   | -        | -    | -      | curl       |
