@@ -22,8 +22,8 @@ RUN echo 'source /usr/local/bin/devcontainer-init-shell.sh' >> /home/maui/.bashr
 
 RUN wget https://siakhooi.github.io/apt/siakhooi-apt.list -O /etc/apt/sources.list.d/siakhooi-apt.list \
     && wget https://siakhooi.github.io/apt/siakhooi-apt.gpg  -O /usr/share/keyrings/siakhooi-apt.gpg \
-    &&  apt -y update \
-    && apt -y install siakhooi-devy \
+    && apt update \
+    && apt install -y --no-install-recommends siakhooi-devy \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
 
