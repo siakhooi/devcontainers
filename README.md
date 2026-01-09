@@ -110,7 +110,7 @@ my devcontainers
 | jacoco         | java-build   | todo     | -    | -      | -          |
 | groovy         | java-build   | todo     | -    | -      | -          |
 | go             | go-build     | -        | curl | -      | -          |
-| golanci        | go-build     | -        | todo | -      | -          |
+| golangci-lint  | go-build     | -        | curl | -      | -          |
 | goreleaser     | go-build     | -        | todo | -      | -          |
 | python         | python-build | -        | -    | todo   | -          |
 | poetry         | python-build | -        | -    | todo   | -          |
