@@ -9,12 +9,22 @@ if [[ ! -d $dockerName ]]; then
     echo "Docker directory $dockerName does not exist" 2>&1
     exit 1
 fi
+# shellcheck disable=SC1091
+source ./variables.env # global environment variables
+
 echo "Building $dockerName"
 cd "$dockerName" || {
   echo "Failed to enter directory $dockerName" 2>&1
   exit 1
 }
-make build
+
+# shellcheck disable=SC1091
+source ./variables.env # docker-specific environment variables
+
+	docker build . \
+	-t "${REGISTRY_USERNAME_DOCKER}/${IMAGE_NAME}:${IMAGE_TAG_BASE}" \
+	-t "ghcr.io/${REGISTRY_USERNAME_GHCR}/${IMAGE_NAME}:${IMAGE_TAG_BASE}"
+
 mkdir -p ../.devcontainer
 cp -v devcontainer.json ../.devcontainer/devcontainer.json
 
