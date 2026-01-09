@@ -1,7 +1,5 @@
-nvm
-firebase
 node
-qlty
-node
-yarn
 npm
+yarn
+firebase
+qlty

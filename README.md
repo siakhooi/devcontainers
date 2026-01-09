@@ -42,7 +42,7 @@ my devcontainers
 │       ├── java-lts (todo)
 │       ├── go (todo)
 │       ├── python (todo)
-│       └── nodejs-lts (todo)
+│       └── nodejs-lts
 └── fedora:43
     └── base-fedora
         └── bash-rpm
@@ -114,10 +114,10 @@ my devcontainers
 | goreleaser     | go-build     | -        | todo | -      | -          |
 | python         | python-build | -        | -    | todo   | -          |
 | poetry         | python-build | -        | -    | todo   | -          |
-| nvm            | typescript   | -        | -    | -      | todo       |
-| node           | typescript   | -        | -    | -      | todo       |
-| yarn           | typescript   | -        | -    | -      | todo       |
-| firebase       | typescript   | -        | -    | -      | todo       |
+| nvm            | typescript   | -        | -    | -      | curl       |
+| node           | typescript   | -        | -    | -      | nvm        |
+| yarn           | typescript   | -        | -    | -      | npm        |
+| firebase       | typescript   | -        | -    | -      | npm        |
 | sonar          | quality      | todo     | todo | todo   | todo       |
 | docker         | container    | todo     | todo | todo   | todo       |
 | kubectl        | container    | todo     | todo | todo   | todo       |
