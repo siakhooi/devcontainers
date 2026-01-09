@@ -6,8 +6,10 @@ git
 glab
 gpg
 grep
+gzip
 jq
 make
+man
 nano
 sed
 sudo
@@ -17,3 +19,5 @@ vi
 wget
 yq
 zip
+sha256sum
+sha512sum

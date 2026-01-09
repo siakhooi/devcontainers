@@ -50,4 +50,11 @@ python:
 run-python:
 	docker run -it --rm  siakhooi/devcontainer:python-0.1.0  bash
 
+# find binary in rpm package
+rpm-find:
+	rpm -ql rpmdevtools | grep bin
+# find binary in deb package
+deb-find:
+	dpkg -L pandoc | grep bin
+
 .PHONY: base-ubuntu base-fedora bash-deb bash-rpm java-lts nodejs-lts go python

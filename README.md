@@ -46,9 +46,12 @@ my devcontainers
 | Component       | type           | base-ubuntu | base-fedora | includes          |
 | --------------- | -------------- | ----------- | ----------- | ----------------- |
 | tar             | compression    | (baseimage) | (baseimage) |
+| gzip            | compression    | (baseimage) | (baseimage) |
 | sed             | stream editor  | (baseimage) | (baseimage) |
 | awk             | stream editor  | (baseimage) | (baseimage) |
 | grep            | matching       | (baseimage) | (baseimage) |
+| sha256sum       | crypto         | (baseimage) | (baseimage) |
+| sha512sum       | crypto         | (baseimage) | (baseimage) |
 | curl            | http           | apt         | (baseimage) |
 | gnupg           | crypto         | apt         | (baseimage) |
 | vi/vim          | editor         | apt         | (baseimage) |
@@ -72,6 +75,7 @@ my devcontainers
 | openssl         | crypto         | todo        | todo        |
 | jv              | json viewer    | todo        | todo        |
 | httpie          | http client    | todo        | todo        |
+| man             | help           | todo        | todo        |
 
 ### bash
 

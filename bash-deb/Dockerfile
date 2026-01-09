@@ -13,4 +13,7 @@ RUN apt update \
     #
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
+
+COPY check-binaries /etc/devcontainer/check-binaries
+
 USER maui

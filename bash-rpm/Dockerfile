@@ -10,4 +10,6 @@ RUN dnf -y update \
     # rpm packaging
     rpmdevtools rpmlint rpm-sign
 
+COPY check-binaries /etc/devcontainer/check-binaries
+
 USER maui
