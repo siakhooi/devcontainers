@@ -55,6 +55,7 @@ my devcontainers
 | curl            | http           | apt         | (baseimage) |
 | gnupg           | crypto         | apt         | (baseimage) |
 | vi/vim          | editor         | apt         | (baseimage) |
+| ca-certificates | crypto         | apt         | -           |
 | sudo            | admin          | apt         | dnf         |
 | zip             | compression    | apt         | dnf         |
 | nano            | editor         | apt         | dnf         |

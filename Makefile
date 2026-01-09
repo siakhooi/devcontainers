@@ -57,4 +57,13 @@ rpm-find:
 deb-find:
 	dpkg -L pandoc | grep bin
 
+docker-pull:
+	docker pull siakhooi/devcontainer:base-ubuntu-0.1.0
+	docker pull siakhooi/devcontainer:base-fedora-0.1.0
+	docker pull siakhooi/devcontainer:bash-deb-0.1.0
+	docker pull siakhooi/devcontainer:bash-rpm-0.1.0
+	docker pull siakhooi/devcontainer:java-lts-0.1.0
+	docker pull siakhooi/devcontainer:nodejs-lts-0.1.0
+	docker pull siakhooi/devcontainer:go-0.1.0
+	docker pull siakhooi/devcontainer:python-0.1.0
 .PHONY: base-ubuntu base-fedora bash-deb bash-rpm java-lts nodejs-lts go python
