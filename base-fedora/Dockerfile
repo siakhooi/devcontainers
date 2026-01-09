@@ -15,6 +15,10 @@ COPY --chown=root:root --chmod=755 bashrc.d/check-binaries.sh /etc/devcontainer/
 
 RUN echo 'source /usr/local/bin/devcontainer-init-shell.sh' >> /home/maui/.bashrc
 
+RUN curl -L -o /etc/yum.repos.d/siakhooi-rpms.repo https://siakhooi.github.io/rpms/siakhooi-rpms.repo \
+    && dnf install -y siakhooi-devy \
+    && dnf clean all
+
 USER maui
 WORKDIR /workspace
 

@@ -43,8 +43,8 @@ my devcontainers
 
 ### Base
 
-| Component         | type           | base-ubuntu | base-fedora |
-| ----------------- | -------------- | ----------- | ----------- |
+| Component         | type           | base-ubuntu | base-fedora | includes          |
+| ----------------- | -------------- | ----------- | ----------- | ----------------- |
 | tar               | compression    | built-in    | built-in    |
 | sed               | stream editor  | built-in    | built-in    |
 | awk               | stream editor  | built-in    | built-in    |
@@ -64,9 +64,8 @@ my devcontainers
 | jq                | stream editor  | todo        | todo        |
 | gh                | github cli     | todo        | todo        |
 | glab              | gitlab cli     | todo        | todo        |
+| siakhooi-devy     | utilities      | apt         | todo        | siakhooi-devutils |
 | siakhooi-buildo   | utilities      | todo        | todo        |
-| siakhooi-devutils | utilities      | todo        | todo        |
-| siakhooi-devy     | utilities      | todo        | todo        |
 | siakhooi-ore      | utilities      | todo        | todo        |
 | pinentry          | crypto         | todo        | todo        |
 | git-lfs           | git lfs        | todo        | todo        |

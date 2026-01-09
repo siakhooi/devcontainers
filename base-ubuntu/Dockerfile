@@ -19,6 +19,13 @@ COPY --chown=root:root --chmod=755 bashrc.d/check-binaries.sh /etc/devcontainer/
 
 RUN echo 'source /usr/local/bin/devcontainer-init-shell.sh' >> /home/maui/.bashrc
 
+RUN wget https://siakhooi.github.io/apt/siakhooi-apt.list -O /etc/apt/sources.list.d/siakhooi-apt.list \
+    && wget https://siakhooi.github.io/apt/siakhooi-apt.gpg  -O /usr/share/keyrings/siakhooi-apt.gpg \
+    &&  apt -y update \
+    && apt -y install siakhooi-devy \
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/*
+
 USER maui
 WORKDIR /workspace
 

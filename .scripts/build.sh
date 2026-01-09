@@ -21,7 +21,7 @@ cd "$dockerName" || {
 # shellcheck disable=SC1091
 source ./variables.env # docker-specific environment variables
 
-	docker build . \
+docker build . \
 	-t "${REGISTRY_USERNAME_DOCKER}/${IMAGE_NAME}:${IMAGE_TAG_BASE}" \
 	-t "ghcr.io/${REGISTRY_USERNAME_GHCR}/${IMAGE_NAME}:${IMAGE_TAG_BASE}"
 
