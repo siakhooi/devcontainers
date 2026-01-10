@@ -104,7 +104,7 @@ my devcontainers
 | -------------- | ------------ | ----- | ---- | ------ | -------- |
 | qlty           | quality      | todo  | todo | todo   | todo     |
 | jdk21          | java-build   | curl  | -    | -      | -        |
-| maven          | java-build   | todo  | -    | -      | -        |
+| maven          | java-build   | curl  | -    | -      | -        |
 | springboot     | java-build   | todo  | -    | -      | -        |
 | gradle         | java-build   | todo  | -    | -      | -        |
 | jacoco         | java-build   | todo  | -    | -      | -        |

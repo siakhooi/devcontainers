@@ -1,4 +1,5 @@
 #!/bin/bash
 
 export JAVA_HOME=/opt/jdk21
-export PATH=$JAVA_HOME/bin:$PATH
+export MAVEN_HOME=/opt/maven
+export PATH=$JAVA_HOME/bin:$MAVEN_HOME/bin:$PATH

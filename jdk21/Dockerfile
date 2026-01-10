@@ -10,6 +10,11 @@ RUN \
     curl -L -o /opt/jdk21.tar.gz  https://aka.ms/download-jdk/microsoft-jdk-21.0.8-linux-x64.tar.gz \
     && tar -C /opt -xzf /opt/jdk21.tar.gz \
     && mv /opt/jdk-21.0.8+9 /opt/jdk21 \
-    && rm /opt/jdk21.tar.gz
+    && rm /opt/jdk21.tar.gz \
+    # Install Maven
+    && curl -L -o /opt/maven.tar.gz  https://dlcdn.apache.org/maven/maven-3/3.9.12/binaries/apache-maven-3.9.12-bin.tar.gz \
+    && tar -C /opt -xzf /opt/maven.tar.gz \
+    && mv /opt/apache-maven-3.9.12 /opt/maven \
+    && rm /opt/maven.tar.gz
 
 USER maui
