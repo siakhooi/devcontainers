@@ -25,6 +25,11 @@ RUN \
     && curl -L -o /opt/spring-boot-cli.tar.gz https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-cli/4.0.1/spring-boot-cli-4.0.1-bin.tar.gz \
     && tar -C /opt -xzf /opt/spring-boot-cli.tar.gz \
     && mv /opt/spring-4.0.1 /opt/spring-boot-cli \
-    && rm /opt/spring-boot-cli.tar.gz
+    && rm /opt/spring-boot-cli.tar.gz \
+    # install groovy
+    && curl -L -o /opt/groovy.zip https://groovy.jfrog.io/artifactory/dist-release-local/groovy-zips/apache-groovy-binary-5.0.3.zip \
+    && unzip -d /opt /opt/groovy.zip \
+    && mv /opt/groovy-5.0.3 /opt/groovy \
+    && rm /opt/groovy.zip
 
 USER maui

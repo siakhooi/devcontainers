@@ -108,8 +108,8 @@ my devcontainers
 | maven           | java-build   | curl  | -    | -      | -        |
 | gradle          | java-build   | curl  | -    | -      | -        |
 | spring-boot-cli | java-build   | curl  | -    | -      | -        |
+| groovy          | java-build   | curl  | -    | -      | -        |
 | jacoco          | java-build   | todo  | -    | -      | -        |
-| groovy          | java-build   | todo  | -    | -      | -        |
 | go              | go-build     | -     | curl | -      | -        |
 | golangci-lint   | go-build     | -     | curl | -      | -        |
 | goreleaser      | go-build     | -     | curl | -      | -        |
