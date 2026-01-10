@@ -1,7 +1,7 @@
-name: Build Node.js LTS
+name: Build Node.js 24
 
 env:
-  BUILD_CONTEXT: ./nodejs-lts
+  BUILD_CONTEXT: ./nodejs24
 
 on:
   workflow_dispatch:
@@ -15,13 +15,13 @@ on:
     branches:
       - main
     paths:
-      - "nodejs-lts/**"
+      - "nodejs24/**"
       - "variables.env"
   pull_request:
     branches:
       - main
     paths:
-      - "nodejs-lts/**"
+      - "nodejs24/**"
       - "variables.env"
 
   workflow_call:

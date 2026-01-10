@@ -10,5 +10,5 @@ USER maui
 RUN (PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash') \
     && /bin/bash -c 'NVM_DIR="$HOME/.nvm" \
     && source $NVM_DIR/nvm.sh \
-    && nvm install --lts \
+    && nvm install 24 \
     && npm install -g firebase-tools yarn'
