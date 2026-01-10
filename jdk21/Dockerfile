@@ -15,6 +15,11 @@ RUN \
     && curl -L -o /opt/maven.tar.gz  https://dlcdn.apache.org/maven/maven-3/3.9.12/binaries/apache-maven-3.9.12-bin.tar.gz \
     && tar -C /opt -xzf /opt/maven.tar.gz \
     && mv /opt/apache-maven-3.9.12 /opt/maven \
-    && rm /opt/maven.tar.gz
+    && rm /opt/maven.tar.gz \
+    # Install Gradle
+    && curl -L -o /opt/gradle.zip https://services.gradle.org/distributions/gradle-9.2.1-bin.zip \
+    && unzip -d /opt /opt/gradle.zip \
+    && mv /opt/gradle-9.2.1 /opt/gradle \
+    && rm /opt/gradle.zip
 
 USER maui
