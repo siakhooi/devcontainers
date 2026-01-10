@@ -2,7 +2,7 @@ help:
 
 base: base-ubuntu base-fedora
 bash: bash-deb bash-rpm
-lang: java-lts nodejs-lts go python
+lang: jdk21 nodejs-lts go python
 
 base-ubuntu:
 	.scripts/build.sh base-ubuntu
@@ -26,11 +26,11 @@ run-bash-deb:
 run-bash-rpm:
 	docker run -it --rm  siakhooi/devcontainer:bash-rpm-0.1.0  bash
 
-java-lts:
-	.scripts/build.sh java-lts
+jdk21:
+	.scripts/build.sh jdk21
 
-run-java-lts:
-	docker run -it --rm  siakhooi/devcontainer:java-lts-0.1.0  bash
+run-jdk21:
+	docker run -it --rm  siakhooi/devcontainer:jdk21-0.1.0  bash
 
 nodejs-lts:
 	.scripts/build.sh nodejs-lts
@@ -62,8 +62,8 @@ docker-pull:
 	docker pull siakhooi/devcontainer:base-fedora-0.1.0
 	docker pull siakhooi/devcontainer:bash-deb-0.1.0
 	docker pull siakhooi/devcontainer:bash-rpm-0.1.0
-	docker pull siakhooi/devcontainer:java-lts-0.1.0
+	docker pull siakhooi/devcontainer:jdk21-0.1.0
 	docker pull siakhooi/devcontainer:nodejs-lts-0.1.0
 	docker pull siakhooi/devcontainer:go-0.1.0
 	docker pull siakhooi/devcontainer:python-0.1.0
-.PHONY: base-ubuntu base-fedora bash-deb bash-rpm java-lts nodejs-lts go python
+.PHONY: base-ubuntu base-fedora bash-deb bash-rpm jdk21 nodejs-lts go python

@@ -28,8 +28,8 @@ jobs:
     with:
       push-images: ${{ inputs.push-images || false }}
 
-  build-java-lts:
-    uses: ./.github/workflows/build-java-lts.yml
+  build-jdk21:
+    uses: ./.github/workflows/build-jdk21.yml
     secrets:
       PUBLISH_TO_GITHUB_REPO_TOKEN: ${{ secrets.PUBLISH_TO_GITHUB_REPO_TOKEN }}
       REGISTRY_PASSWORD_DOCKER: ${{ secrets.REGISTRY_PASSWORD_DOCKER }}

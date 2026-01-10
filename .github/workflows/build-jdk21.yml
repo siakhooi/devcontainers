@@ -1,7 +1,7 @@
-name: Build Java LTS
+name: Build JDK21
 
 env:
-  BUILD_CONTEXT: ./java-lts
+  BUILD_CONTEXT: ./jdk21
 
 on:
   workflow_dispatch:
@@ -15,13 +15,13 @@ on:
     branches:
       - main
     paths:
-      - "java-lts/**"
+      - "jdk21/**"
       - "variables.env"
   pull_request:
     branches:
       - main
     paths:
-      - "java-lts/**"
+      - "jdk21/**"
       - "variables.env"
 
   workflow_call:

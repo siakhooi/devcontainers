@@ -21,7 +21,7 @@ my devcontainers
 - siakhooi/devcontainer:base-fedora-0.1.0
 - siakhooi/devcontainer:bash-deb-0.1.0
 - siakhooi/devcontainer:bash-rpm-0.1.0
-- siakhooi/devcontainer:java-lts-0.1.0
+- siakhooi/devcontainer:jdk21-0.1.0
 - siakhooi/devcontainer:nodejs-lts-0.1.0
 - siakhooi/devcontainer:go-0.1.0
 - siakhooi/devcontainer:python-0.1.0
@@ -39,7 +39,7 @@ my devcontainers
 ├── ubuntu:24.04
 │   └── base-ubuntu
 │       ├── bash-deb
-│       ├── java-lts
+│       ├── jdk21
 │       ├── go
 │       ├── python (todo)
 │       └── nodejs-lts
@@ -100,30 +100,30 @@ my devcontainers
 
 ### languages
 
-| Component      | type         | java-lts | go   | python | nodejs-lts |
-| -------------- | ------------ | -------- | ---- | ------ | ---------- |
-| qlty           | quality      | todo     | todo | todo   | todo       |
-| jdk21          | java-build   | curl     | -    | -      | -          |
-| maven          | java-build   | todo     | -    | -      | -          |
-| springboot     | java-build   | todo     | -    | -      | -          |
-| gradle         | java-build   | todo     | -    | -      | -          |
-| jacoco         | java-build   | todo     | -    | -      | -          |
-| groovy         | java-build   | todo     | -    | -      | -          |
-| go             | go-build     | -        | curl | -      | -          |
-| golangci-lint  | go-build     | -        | curl | -      | -          |
-| goreleaser     | go-build     | -        | curl | -      | -          |
-| python         | python-build | -        | -    | todo   | -          |
-| poetry         | python-build | -        | -    | todo   | -          |
-| nvm            | typescript   | -        | -    | -      | curl       |
-| node           | typescript   | -        | -    | -      | nvm        |
-| yarn           | typescript   | -        | -    | -      | npm        |
-| firebase       | typescript   | -        | -    | -      | npm        |
-| sonar          | quality      | todo     | todo | todo   | todo       |
-| docker         | container    | todo     | todo | todo   | todo       |
-| kubectl        | container    | todo     | todo | todo   | todo       |
-| helm           | container    | todo     | todo | todo   | todo       |
-| helm-unit-test | container    | todo     | todo | todo   | todo       |
-| kind           | container    | todo     | todo | todo   | todo       |
+| Component      | type         | jdk21 | go   | python | nodejs-lts |
+| -------------- | ------------ | ----- | ---- | ------ | ---------- |
+| qlty           | quality      | todo  | todo | todo   | todo       |
+| jdk21          | java-build   | curl  | -    | -      | -          |
+| maven          | java-build   | todo  | -    | -      | -          |
+| springboot     | java-build   | todo  | -    | -      | -          |
+| gradle         | java-build   | todo  | -    | -      | -          |
+| jacoco         | java-build   | todo  | -    | -      | -          |
+| groovy         | java-build   | todo  | -    | -      | -          |
+| go             | go-build     | -     | curl | -      | -          |
+| golangci-lint  | go-build     | -     | curl | -      | -          |
+| goreleaser     | go-build     | -     | curl | -      | -          |
+| python         | python-build | -     | -    | todo   | -          |
+| poetry         | python-build | -     | -    | todo   | -          |
+| nvm            | typescript   | -     | -    | -      | curl       |
+| node           | typescript   | -     | -    | -      | nvm        |
+| yarn           | typescript   | -     | -    | -      | npm        |
+| firebase       | typescript   | -     | -    | -      | npm        |
+| sonar          | quality      | todo  | todo | todo   | todo       |
+| docker         | container    | todo  | todo | todo   | todo       |
+| kubectl        | container    | todo  | todo | todo   | todo       |
+| helm           | container    | todo  | todo | todo   | todo       |
+| helm-unit-test | container    | todo  | todo | todo   | todo       |
+| kind           | container    | todo  | todo | todo   | todo       |
 
 [![Wise](https://img.shields.io/badge/Funding-Wise-33cb56.svg?logo=wise)](https://wise.com/pay/me/siakn3)
 [![Buy Me a Coffee](https://img.shields.io/badge/Funding-BuyMeACoffee-33cb56.svg?logo=buymeacoffee)](https://www.buymeacoffee.com/siakhooi)
