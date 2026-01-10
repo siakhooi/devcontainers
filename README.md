@@ -101,30 +101,30 @@ my devcontainers
 
 ### languages
 
-| Component      | type         | jdk21 | go   | python | nodejs24 |
-| -------------- | ------------ | ----- | ---- | ------ | -------- |
-| qlty           | quality      | todo  | todo | todo   | todo     |
-| jdk21          | java-build   | curl  | -    | -      | -        |
-| maven          | java-build   | curl  | -    | -      | -        |
-| gradle         | java-build   | curl  | -    | -      | -        |
-| springboot     | java-build   | todo  | -    | -      | -        |
-| jacoco         | java-build   | todo  | -    | -      | -        |
-| groovy         | java-build   | todo  | -    | -      | -        |
-| go             | go-build     | -     | curl | -      | -        |
-| golangci-lint  | go-build     | -     | curl | -      | -        |
-| goreleaser     | go-build     | -     | curl | -      | -        |
-| python         | python-build | -     | -    | todo   | -        |
-| poetry         | python-build | -     | -    | todo   | -        |
-| nvm            | typescript   | -     | -    | -      | curl     |
-| node           | typescript   | -     | -    | -      | nvm      |
-| yarn           | typescript   | -     | -    | -      | npm      |
-| firebase       | typescript   | -     | -    | -      | npm      |
-| sonar          | quality      | todo  | todo | todo   | todo     |
-| docker         | container    | todo  | todo | todo   | todo     |
-| kubectl        | container    | todo  | todo | todo   | todo     |
-| helm           | container    | todo  | todo | todo   | todo     |
-| helm-unit-test | container    | todo  | todo | todo   | todo     |
-| kind           | container    | todo  | todo | todo   | todo     |
+| Component       | type         | jdk21 | go   | python | nodejs24 |
+| --------------- | ------------ | ----- | ---- | ------ | -------- |
+| qlty            | quality      | todo  | todo | todo   | todo     |
+| jdk21           | java-build   | curl  | -    | -      | -        |
+| maven           | java-build   | curl  | -    | -      | -        |
+| gradle          | java-build   | curl  | -    | -      | -        |
+| spring-boot-cli | java-build   | curl  | -    | -      | -        |
+| jacoco          | java-build   | todo  | -    | -      | -        |
+| groovy          | java-build   | todo  | -    | -      | -        |
+| go              | go-build     | -     | curl | -      | -        |
+| golangci-lint   | go-build     | -     | curl | -      | -        |
+| goreleaser      | go-build     | -     | curl | -      | -        |
+| python          | python-build | -     | -    | todo   | -        |
+| poetry          | python-build | -     | -    | todo   | -        |
+| nvm             | typescript   | -     | -    | -      | curl     |
+| node            | typescript   | -     | -    | -      | nvm      |
+| yarn            | typescript   | -     | -    | -      | npm      |
+| firebase        | typescript   | -     | -    | -      | npm      |
+| sonar           | quality      | todo  | todo | todo   | todo     |
+| docker          | container    | todo  | todo | todo   | todo     |
+| kubectl         | container    | todo  | todo | todo   | todo     |
+| helm            | container    | todo  | todo | todo   | todo     |
+| helm-unit-test  | container    | todo  | todo | todo   | todo     |
+| kind            | container    | todo  | todo | todo   | todo     |
 
 [![Wise](https://img.shields.io/badge/Funding-Wise-33cb56.svg?logo=wise)](https://wise.com/pay/me/siakn3)
 [![Buy Me a Coffee](https://img.shields.io/badge/Funding-BuyMeACoffee-33cb56.svg?logo=buymeacoffee)](https://www.buymeacoffee.com/siakhooi)

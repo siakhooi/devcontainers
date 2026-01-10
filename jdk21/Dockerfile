@@ -20,6 +20,11 @@ RUN \
     && curl -L -o /opt/gradle.zip https://services.gradle.org/distributions/gradle-9.2.1-bin.zip \
     && unzip -d /opt /opt/gradle.zip \
     && mv /opt/gradle-9.2.1 /opt/gradle \
-    && rm /opt/gradle.zip
+    && rm /opt/gradle.zip \
+    # Install springboot cli
+    && curl -L -o /opt/spring-boot-cli.tar.gz https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-cli/4.0.1/spring-boot-cli-4.0.1-bin.tar.gz \
+    && tar -C /opt -xzf /opt/spring-boot-cli.tar.gz \
+    && mv /opt/spring-4.0.1 /opt/spring-boot-cli \
+    && rm /opt/spring-boot-cli.tar.gz
 
 USER maui

@@ -1,8 +1,8 @@
 java
 javac
 mvn
-springboot
 gradle
+spring
 jacoco
 groovy
 qlty
