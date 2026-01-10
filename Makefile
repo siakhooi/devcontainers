@@ -4,6 +4,10 @@ base: base-ubuntu base-fedora
 bash: bash-deb bash-rpm
 lang: jdk21 nodejs24 go python
 
+run-ubuntu:
+	docker run -it --rm  ubuntu:24.04 bash
+run-fedora:
+	docker run -it --rm  fedora:43 bash
 base-ubuntu:
 	.scripts/build.sh base-ubuntu
 base-fedora:

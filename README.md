@@ -65,6 +65,7 @@ my devcontainers
 | ca-certificates | crypto         | apt         | -           |
 | sudo            | admin          | apt         | dnf         |
 | zip             | compression    | apt         | dnf         |
+| unzip           | compression    | apt         | dnf         |
 | nano            | editor         | apt         | dnf         |
 | make            | build          | apt         | dnf         |
 | git             | source control | apt         | dnf         |
