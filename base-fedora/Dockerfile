@@ -1,5 +1,8 @@
 FROM  fedora:43
 
+ARG JQ_VERSION=1.8.1
+ARG YQ_VERSION=4.50.1
+
 RUN dnf update -y \
     && dnf install -y ack tree zip git nano make wget sudo git-lfs openssl unzip \
     && dnf clean all
@@ -16,8 +19,8 @@ COPY check-binaries /etc/devcontainer/check-binaries
 
 RUN echo 'source /usr/local/bin/devcontainer-init-shell.sh' >> /home/maui/.bashrc
 
-ADD --chown=root:root --chmod=755 https://github.com/jqlang/jq/releases/download/jq-1.8.1/jq-linux-amd64 /usr/local/bin/jq
-ADD --chown=root:root --chmod=755 https://github.com/mikefarah/yq/releases/download/v4.50.1/yq_linux_amd64 /usr/local/bin/yq
+ADD --chown=root:root --chmod=755 https://github.com/jqlang/jq/releases/download/jq-${JQ_VERSION}/jq-linux-amd64 /usr/local/bin/jq
+ADD --chown=root:root --chmod=755 https://github.com/mikefarah/yq/releases/download/v${YQ_VERSION}/yq_linux_amd64 /usr/local/bin/yq
 
 RUN curl -L -o /etc/yum.repos.d/siakhooi-rpms.repo https://siakhooi.github.io/rpms/siakhooi-rpms.repo \
     && dnf install -y siakhooi-devy \

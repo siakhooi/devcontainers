@@ -1,5 +1,8 @@
 FROM ubuntu:24.04
 
+ARG JQ_VERSION=1.8.1
+ARG YQ_VERSION=4.50.1
+
 RUN apt update \
     && apt upgrade -y \
     && apt install -y --no-install-recommends \
@@ -35,8 +38,8 @@ COPY check-binaries /etc/devcontainer/check-binaries
 
 RUN echo 'source /usr/local/bin/devcontainer-init-shell.sh' >> /home/maui/.bashrc
 
-ADD --chown=root:root --chmod=755 https://github.com/jqlang/jq/releases/download/jq-1.8.1/jq-linux-amd64 /usr/local/bin/jq
-ADD --chown=root:root --chmod=755 https://github.com/mikefarah/yq/releases/download/v4.50.1/yq_linux_amd64 /usr/local/bin/yq
+ADD --chown=root:root --chmod=755 https://github.com/jqlang/jq/releases/download/jq-${JQ_VERSION}/jq-linux-amd64 /usr/local/bin/jq
+ADD --chown=root:root --chmod=755 https://github.com/mikefarah/yq/releases/download/v${YQ_VERSION}/yq_linux_amd64 /usr/local/bin/yq
 
 RUN wget https://siakhooi.github.io/apt/siakhooi-apt.list -O /etc/apt/sources.list.d/siakhooi-apt.list \
     && wget https://siakhooi.github.io/apt/siakhooi-apt.gpg  -O /usr/share/keyrings/siakhooi-apt.gpg \
