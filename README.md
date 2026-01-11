@@ -50,8 +50,8 @@ my devcontainers
 
 ### Base
 
-| Component       | type           | base-ubuntu | base-fedora | includes          |
-| --------------- | -------------- | ----------- | ----------- | ----------------- |
+| Component       | type           | base-ubuntu | base-fedora | Remark                 |
+| --------------- | -------------- | ----------- | ----------- | ---------------------- |
 | tar             | compression    | (baseimage) | (baseimage) |
 | gzip            | compression    | (baseimage) | (baseimage) |
 | sed             | stream editor  | (baseimage) | (baseimage) |
@@ -73,11 +73,11 @@ my devcontainers
 | tree            | file           | apt         | dnf         |
 | wget            | http           | apt         | dnf         |
 | ack             | matching       | apt         | dnf         |
-| yq              | stream editor  | curl        | curl        |
+| yq              | stream editor  | curl        | curl        | with completion        |
 | jq              | stream editor  | curl        | curl        |
-| gh              | github cli     | apt         | dnf         |
+| gh              | github cli     | apt         | dnf         | with completion        |
 | glab            | gitlab cli     | todo        | todo        |
-| siakhooi-devy   | utilities      | apt         | dnf         | siakhooi-devutils |
+| siakhooi-devy   | utilities      | apt         | dnf         | incl siakhooi-devutils |
 | siakhooi-buildo | utilities      | todo        | todo        |
 | siakhooi-ore    | utilities      | todo        | todo        |
 | pinentry        | crypto         | todo        | todo        |
