@@ -20,6 +20,7 @@ RUN apt update \
         openssl \
         ca-certificates \
         git-lfs \
+        ssh \
         unzip \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*

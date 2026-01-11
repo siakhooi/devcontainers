@@ -22,3 +22,4 @@ zip
 sha256sum
 sha512sum
 openssl
+ssh

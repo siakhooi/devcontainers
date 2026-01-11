@@ -84,6 +84,7 @@ my devcontainers
 | openssl         | crypto         | apt         | dnf         |
 | jv              | json viewer    | todo        | todo        |
 | httpie          | http client    | todo        | todo        |
+| ssh             | remote         | apt         | -           | dnf provided by ?      |
 
 ### bash
 
