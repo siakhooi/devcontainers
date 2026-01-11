@@ -85,6 +85,7 @@ my devcontainers
 | jv              | json viewer    | todo        | todo        |
 | httpie          | http client    | todo        | todo        |
 | ssh             | remote         | apt         | -           | dnf provided by ?      |
+| podman          | container      | apt         | dnf         |
 
 ### bash
 

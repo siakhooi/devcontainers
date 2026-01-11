@@ -22,6 +22,7 @@ RUN apt update \
         git-lfs \
         ssh \
         unzip \
+        podman \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
 

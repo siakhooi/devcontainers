@@ -4,7 +4,7 @@ ARG JQ_VERSION=1.8.1
 ARG YQ_VERSION=4.50.1
 
 RUN dnf update -y \
-    && dnf install -y ack tree zip git nano make wget sudo git-lfs openssl unzip \
+    && dnf install -y ack tree zip git nano make wget sudo git-lfs openssl unzip podman \
     && dnf clean all
 
 # use maui as user
