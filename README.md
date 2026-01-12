@@ -73,19 +73,19 @@ my devcontainers
 | tree            | file           | apt         | dnf         |
 | wget            | http           | apt         | dnf         |
 | ack             | matching       | apt         | dnf         |
-| yq              | stream editor  | curl        | curl        | with completion        |
-| jq              | stream editor  | curl        | curl        |
+| openssl         | crypto         | apt         | dnf         |
+| podman          | container      | apt         | dnf         |
 | gh              | github cli     | apt         | dnf         | with completion        |
-| glab            | gitlab cli     | todo        | todo        |
+| yq              | stream editor  | curl        | curl        | with completion        |
+| jq              | stream editor  | curl        | curl        |                        |
 | siakhooi-devy   | utilities      | apt         | dnf         | incl siakhooi-devutils |
+| ssh             | remote         | apt         | -           | dnf provided by ?      |
+| jv              | json viewer    | todo        | todo        |
+| httpie          | http client    | todo        | todo        |
 | siakhooi-buildo | utilities      | todo        | todo        |
 | siakhooi-ore    | utilities      | todo        | todo        |
 | pinentry        | crypto         | todo        | todo        |
-| openssl         | crypto         | apt         | dnf         |
-| jv              | json viewer    | todo        | todo        |
-| httpie          | http client    | todo        | todo        |
-| ssh             | remote         | apt         | -           | dnf provided by ?      |
-| podman          | container      | apt         | dnf         |
+| glab            | gitlab cli     | todo        | todo        |
 
 ### bash
 
