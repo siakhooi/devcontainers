@@ -24,4 +24,5 @@ RUN export PYENV_ROOT="${HOME}/.pyenv" \
     && pip install --upgrade pip \
     && pip install ipykernel papermill jupyterlab \
     pyarrow pandas pyspark matplotlib \
-    numpy tensorflow tf2onnx onnx scikit-learn
+    numpy tensorflow tf2onnx onnx scikit-learn seaborn \
+    tensorflow_datasets

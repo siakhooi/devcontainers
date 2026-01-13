@@ -7,7 +7,12 @@
 	"features": {},
 	"customizations": {
 		"vscode": {
-			"extensions": []
+			"extensions": [
+				"github.copilot-chat",
+				"ms-toolsai.jupyter",
+				"ms-python.python",
+				"ms-python.vscode-pylance"
+			]
 		}
 	},
 	"mounts": [
