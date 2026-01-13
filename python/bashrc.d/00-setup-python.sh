@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PYENV_ROOT="/usr/local/pyenv"
+export PYENV_ROOT="${HOME}/.pyenv"
 export PATH="${PYENV_ROOT}/bin:${PYENV_ROOT}/shims:${PATH}"
 
 if command -v pyenv 1>/dev/null 2>&1; then
