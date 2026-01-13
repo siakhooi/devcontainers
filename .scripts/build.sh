@@ -22,8 +22,8 @@ cd "$dockerName" || {
 source ./variables.env # docker-specific environment variables
 
 docker build . \
-	-t "${REGISTRY_USERNAME_DOCKER}/${IMAGE_NAME}:${IMAGE_TAG_BASE}" \
-	-t "ghcr.io/${REGISTRY_USERNAME_GHCR}/${IMAGE_NAME}:${IMAGE_TAG_BASE}"
+	-t "${REGISTRY_USERNAME_DOCKER}/${IMAGE_NAME}:${IMAGE_TAG}" \
+	-t "ghcr.io/${REGISTRY_USERNAME_GHCR}/${IMAGE_NAME}:${IMAGE_TAG}"
 
 mkdir -p ../.devcontainer
 cp -v devcontainer.json ../.devcontainer/devcontainer.json

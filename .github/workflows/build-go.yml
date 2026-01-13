@@ -69,5 +69,5 @@ jobs:
           context: ${{ env.BUILD_CONTEXT }}
           push: ${{ env.SHOULD_PUSH }}
           tags: |
-            ${{ env.REGISTRY_USERNAME_DOCKER }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG_BASE }}
-            ghcr.io/${{ env.REGISTRY_USERNAME_GHCR }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG_BASE }}
+            ${{ env.REGISTRY_USERNAME_DOCKER }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+            ghcr.io/${{ env.REGISTRY_USERNAME_GHCR }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
