@@ -25,6 +25,7 @@ my devcontainers
 - siakhooi/devcontainer:nodejs24-0.1.0
 - siakhooi/devcontainer:go-0.1.0
 - siakhooi/devcontainer:python-0.1.0
+- siakhooi/devcontainer:jupyter-ai-0.1.0
 
 ## Deliverables
 
@@ -41,7 +42,8 @@ my devcontainers
 │       ├── bash-deb
 │       ├── jdk21
 │       ├── go
-│       ├── python (todo)
+│       ├── python
+│       ├── jupyter-ai
 │       └── nodejs24
 └── fedora:43
     └── base-fedora
@@ -132,6 +134,25 @@ my devcontainers
 | helm            | container    | todo  | todo | todo   | todo     |
 | helm-unit-test  | container    | todo  | todo | todo   | todo     |
 | kind            | container    | todo  | todo | todo   | todo     |
+
+### Jupyter AI
+
+| Component    | type | jupyter-ai |
+| ------------ | ---- | ---------- |
+| pyenv        |      | curl       |
+| python 3.12  |      | pyenv      |
+| ipykernel    |      | pip        |
+| papermill    |      | pip        |
+| jupyterlab   |      | pip        |
+| pyarrow      |      | pip        |
+| pandas       |      | pip        |
+| pyspark      |      | pip        |
+| numpy        |      | pip        |
+| tensorflow   |      | pip        |
+| tf2onnx      |      | pip        |
+| onnx         |      | pip        |
+| scikit-learn |      | pip        |
+| matplotlib   |      | pip        |
 
 [![Wise](https://img.shields.io/badge/Funding-Wise-33cb56.svg?logo=wise)](https://wise.com/pay/me/siakn3)
 [![Buy Me a Coffee](https://img.shields.io/badge/Funding-BuyMeACoffee-33cb56.svg?logo=buymeacoffee)](https://www.buymeacoffee.com/siakhooi)
