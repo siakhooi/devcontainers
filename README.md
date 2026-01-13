@@ -54,40 +54,40 @@ my devcontainers
 
 | Component       | type           | base-ubuntu | base-fedora | Remark                 |
 | --------------- | -------------- | ----------- | ----------- | ---------------------- |
-| tar             | compression    | (baseimage) | (baseimage) |
-| gzip            | compression    | (baseimage) | (baseimage) |
-| sed             | stream editor  | (baseimage) | (baseimage) |
-| awk             | stream editor  | (baseimage) | (baseimage) |
-| grep            | matching       | (baseimage) | (baseimage) |
-| sha256sum       | crypto         | (baseimage) | (baseimage) |
-| sha512sum       | crypto         | (baseimage) | (baseimage) |
-| curl            | http           | apt         | (baseimage) |
-| gnupg           | crypto         | apt         | (baseimage) |
-| vi/vim          | editor         | apt         | (baseimage) |
-| ca-certificates | crypto         | apt         | -           |
-| sudo            | admin          | apt         | dnf         |
-| zip             | compression    | apt         | dnf         |
-| unzip           | compression    | apt         | dnf         |
-| nano            | editor         | apt         | dnf         |
-| make            | build          | apt         | dnf         |
-| git             | source control | apt         | dnf         |
-| git-lfs         | git lfs        | apt         | dnf         |
-| tree            | file           | apt         | dnf         |
-| wget            | http           | apt         | dnf         |
-| ack             | matching       | apt         | dnf         |
-| openssl         | crypto         | apt         | dnf         |
-| podman          | container      | apt         | dnf         |
+| tar             | compression    | (baseimage) | (baseimage) |                        |
+| gzip            | compression    | (baseimage) | (baseimage) |                        |
+| sed             | stream editor  | (baseimage) | (baseimage) |                        |
+| awk             | stream editor  | (baseimage) | (baseimage) |                        |
+| grep            | matching       | (baseimage) | (baseimage) |                        |
+| sha256sum       | crypto         | (baseimage) | (baseimage) |                        |
+| sha512sum       | crypto         | (baseimage) | (baseimage) |                        |
+| curl            | http           | apt         | (baseimage) |                        |
+| gnupg           | crypto         | apt         | (baseimage) |                        |
+| vi/vim          | editor         | apt         | (baseimage) |                        |
+| ca-certificates | crypto         | apt         | -           |                        |
+| sudo            | admin          | apt         | dnf         |                        |
+| zip             | compression    | apt         | dnf         |                        |
+| unzip           | compression    | apt         | dnf         |                        |
+| nano            | editor         | apt         | dnf         |                        |
+| make            | build          | apt         | dnf         |                        |
+| git             | source control | apt         | dnf         |                        |
+| git-lfs         | git lfs        | apt         | dnf         |                        |
+| tree            | file           | apt         | dnf         |                        |
+| wget            | http           | apt         | dnf         |                        |
+| ack             | matching       | apt         | dnf         |                        |
+| openssl         | crypto         | apt         | dnf         |                        |
+| podman          | container      | apt         | dnf         |                        |
 | gh              | github cli     | apt         | dnf         | with completion        |
 | yq              | stream editor  | curl        | curl        | with completion        |
 | jq              | stream editor  | curl        | curl        |                        |
 | siakhooi-devy   | utilities      | apt         | dnf         | incl siakhooi-devutils |
 | ssh             | remote         | apt         | -           | dnf provided by ?      |
-| jv              | json viewer    | todo        | todo        |
-| httpie          | http client    | todo        | todo        |
-| siakhooi-buildo | utilities      | todo        | todo        |
-| siakhooi-ore    | utilities      | todo        | todo        |
-| pinentry        | crypto         | todo        | todo        |
-| glab            | gitlab cli     | todo        | todo        |
+| jv              | json viewer    | todo        | todo        |                        |
+| httpie          | http client    | todo        | todo        |                        |
+| siakhooi-buildo | utilities      | todo        | todo        |                        |
+| siakhooi-ore    | utilities      | todo        | todo        |                        |
+| pinentry        | crypto         | todo        | todo        |                        |
+| glab            | gitlab cli     | todo        | todo        |                        |
 
 ### bash
 
@@ -105,54 +105,56 @@ my devcontainers
 
 ### languages
 
-| Component       | type         | jdk21 | go   | python | nodejs24 |
-| --------------- | ------------ | ----- | ---- | ------ | -------- |
-| qlty            | quality      | todo  | todo | todo   | todo     |
-| jdk21           | java-build   | curl  | -    | -      | -        |
-| maven           | java-build   | curl  | -    | -      | -        |
-| gradle          | java-build   | curl  | -    | -      | -        |
-| spring-boot-cli | java-build   | curl  | -    | -      | -        |
-| groovy          | java-build   | curl  | -    | -      | -        |
-| jacoco          | java-build   | todo  | -    | -      | -        |
-| go              | go-build     | -     | curl | -      | -        |
-| golangci-lint   | go-build     | -     | curl | -      | -        |
-| goreleaser      | go-build     | -     | curl | -      | -        |
-| pyenv           | python-build | -     | -    | curl   | -        |
-| python 3.10     | python-build | -     | -    | pyenv  | -        |
-| python 3.11     | python-build | -     | -    | pyenv  | -        |
-| python 3.12     | python-build | -     | -    | pyenv  | -        |
-| python 3.13     | python-build | -     | -    | pyenv  | -        |
-| python 3.14     | python-build | -     | -    | pyenv  | -        |
-| poetry          | python-build | -     | -    | pip    | -        |
-| nvm             | typescript   | -     | -    | -      | curl     |
-| node            | typescript   | -     | -    | -      | nvm      |
-| yarn            | typescript   | -     | -    | -      | npm      |
-| firebase        | typescript   | -     | -    | -      | npm      |
-| sonar           | quality      | todo  | todo | todo   | todo     |
-| docker          | container    | todo  | todo | todo   | todo     |
-| kubectl         | container    | todo  | todo | todo   | todo     |
-| helm            | container    | todo  | todo | todo   | todo     |
-| helm-unit-test  | container    | todo  | todo | todo   | todo     |
-| kind            | container    | todo  | todo | todo   | todo     |
+| Component        | type      | jdk21 | go   | python    | nodejs24 |
+| ---------------- | --------- | ----- | ---- | --------- | -------- |
+| jdk21            | lang      | curl  | -    | -         | -        |
+| maven            | build     | curl  | -    | -         | -        |
+| gradle           | build     | curl  | -    | -         | -        |
+| spring-boot-cli  | build     | curl  | -    | -         | -        |
+| groovy           | lang      | curl  | -    | -         | -        |
+| go               | lang      | -     | curl | -         | -        |
+| golangci-lint    | quality   | -     | curl | -         | -        |
+| goreleaser       | deploy    | -     | curl | -         | -        |
+| pyenv            | env       | -     | -    | git clone | -        |
+| pyenv-virtualenv | env       | -     | -    | git clone | -        |
+| python 3.10      | lang      | -     | -    | pyenv     | -        |
+| python 3.11      | lang      | -     | -    | pyenv     | -        |
+| python 3.12      | lang      | -     | -    | pyenv     | -        |
+| python 3.13      | lang      | -     | -    | pyenv     | -        |
+| python 3.14      | lang      | -     | -    | pyenv     | -        |
+| poetry           | lang      | -     | -    | pip       | -        |
+| nvm              | env       | -     | -    | -         | curl     |
+| node             | lang      | -     | -    | -         | nvm      |
+| yarn             | build     | -     | -    | -         | npm      |
+| firebase         | firebase  | -     | -    | -         | npm      |
+| jacoco           | coverage  | todo  | -    | -         | -        |
+| qlty             | quality   | todo  | todo | todo      | todo     |
+| sonar            | quality   | todo  | todo | todo      | todo     |
+| docker           | container | todo  | todo | todo      | todo     |
+| kubectl          | container | todo  | todo | todo      | todo     |
+| helm             | container | todo  | todo | todo      | todo     |
+| helm-unit-test   | container | todo  | todo | todo      | todo     |
+| kind             | container | todo  | todo | todo      | todo     |
 
 ### Jupyter AI
 
-| Component    | type | jupyter-ai |
-| ------------ | ---- | ---------- |
-| pyenv        |      | curl       |
-| python 3.12  |      | pyenv      |
-| ipykernel    |      | pip        |
-| papermill    |      | pip        |
-| jupyterlab   |      | pip        |
-| pyarrow      |      | pip        |
-| pandas       |      | pip        |
-| pyspark      |      | pip        |
-| numpy        |      | pip        |
-| tensorflow   |      | pip        |
-| tf2onnx      |      | pip        |
-| onnx         |      | pip        |
-| scikit-learn |      | pip        |
-| matplotlib   |      | pip        |
+| Component        | type | jupyter-ai |
+| ---------------- | ---- | ---------- |
+| pyenv            |      | git clone  |
+| pyenv-virtualenv |      | git clone  |
+| python 3.12      |      | pyenv      |
+| ipykernel        |      | pip        |
+| papermill        |      | pip        |
+| jupyterlab       |      | pip        |
+| pyarrow          |      | pip        |
+| pandas           |      | pip        |
+| pyspark          |      | pip        |
+| numpy            |      | pip        |
+| tensorflow       |      | pip        |
+| tf2onnx          |      | pip        |
+| onnx             |      | pip        |
+| scikit-learn     |      | pip        |
+| matplotlib       |      | pip        |
 
 [![Wise](https://img.shields.io/badge/Funding-Wise-33cb56.svg?logo=wise)](https://wise.com/pay/me/siakn3)
 [![Buy Me a Coffee](https://img.shields.io/badge/Funding-BuyMeACoffee-33cb56.svg?logo=buymeacoffee)](https://www.buymeacoffee.com/siakhooi)
