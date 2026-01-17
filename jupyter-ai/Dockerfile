@@ -10,8 +10,10 @@ RUN apt-get update \
     build-essential curl git make zlib1g-dev libssl-dev \
     libbz2-dev libreadline-dev libsqlite3-dev libffi-dev \
     libncursesw5-dev liblzma-dev tk-dev wget \
+    openjdk-17-jdk \
     && rm -rf /var/lib/apt/lists/*
 
+ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 USER maui
 
 RUN export PYENV_ROOT="${HOME}/.pyenv" \

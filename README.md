@@ -138,8 +138,9 @@ my devcontainers
 
 ### Jupyter AI
 
-| Component        | type | jupyter-ai |
-| ---------------- | ---- | ---------- |
+| Component        | type | jupyter-ai | Remark              |
+| ---------------- | ---- | ---------- | ------------------- |
+| openjdk-17-jdk   |      | apt        | required by pyspark |
 | pyenv            |      | git clone  |
 | pyenv-virtualenv |      | git clone  |
 | python 3.12      |      | pyenv      |
