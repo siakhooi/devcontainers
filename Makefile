@@ -72,3 +72,8 @@ docker-pull:
 	docker pull siakhooi/devcontainer:python-0.1.0
 	docker pull siakhooi/devcontainer:jupyter-ai-0.1.0
 .PHONY: base-ubuntu base-fedora bash-deb bash-rpm jdk21 nodejs24 go python jupyter-ai
+
+run-wf-base:
+	gh workflow run workflow-build-base.yml -f push-images=true
+run-wf-langs:
+	gh workflow run workflow-build-level-1.yml -f push-images=true
