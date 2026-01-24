@@ -1,7 +1,7 @@
-name: Build Base Fedora
+name: Build Base Ubuntu 24.04
 
 env:
-  BUILD_CONTEXT: ./base-fedora
+  BUILD_CONTEXT: ./base-ubuntu2404
 
 on:
   workflow_dispatch:
@@ -15,13 +15,13 @@ on:
     branches:
       - main
     paths:
-      - "base-fedora/**"
+      - "base-ubuntu2404/**"
       - "variables.env"
   pull_request:
     branches:
       - main
     paths:
-      - "base-fedora/**"
+      - "base-ubuntu2404/**"
       - "variables.env"
 
   workflow_call:

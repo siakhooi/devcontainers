@@ -1,4 +1,4 @@
-FROM  siakhooi/devcontainer:base-fedora-0.1.0
+FROM  siakhooi/devcontainer:base-fedora43
 
 USER root
 RUN dnf -y update \

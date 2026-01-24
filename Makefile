@@ -15,9 +15,9 @@ run-base-ubuntu:
 	docker run -it --rm  siakhooi/devcontainer:base-ubuntu2404  bash
 
 base-fedora:
-	.scripts/build.sh base-fedora
+	.scripts/build.sh base-fedora43
 run-base-fedora:
-	docker run -it --rm  siakhooi/devcontainer:base-fedora-0.1.0  bash
+	docker run -it --rm  siakhooi/devcontainer:base-fedora43  bash
 
 bash-deb:
 	.scripts/build.sh bash-deb
@@ -63,7 +63,7 @@ deb-find:
 
 docker-pull:
 	docker pull siakhooi/devcontainer:base-ubuntu2404
-	docker pull siakhooi/devcontainer:base-fedora-0.1.0
+	docker pull siakhooi/devcontainer:base-fedora43
 	docker pull siakhooi/devcontainer:bash-deb-0.1.0
 	docker pull siakhooi/devcontainer:bash-rpm-0.1.0
 	docker pull siakhooi/devcontainer:jdk21

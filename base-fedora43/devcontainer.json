@@ -1,6 +1,6 @@
 {
-	"name": "Base Ubuntu Dev Container",
-	"image": "siakhooi/devcontainer:base-fedora-0.1.0",
+	"name": "Base Fedora 43 Dev Container",
+	"image": "siakhooi/devcontainer:base-fedora43",
 	"remoteUser": "maui",
 	"containerUser": "maui",
 	"updateRemoteUserUID": true,
