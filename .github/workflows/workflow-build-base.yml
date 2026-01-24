@@ -13,7 +13,7 @@ on:
 
 jobs:
   build-base-ubuntu:
-    uses: ./.github/workflows/build-base-ubuntu.yml
+    uses: ./.github/workflows/build-base-ubuntu2404.yml
     secrets:
       PUBLISH_TO_GITHUB_REPO_TOKEN: ${{ secrets.PUBLISH_TO_GITHUB_REPO_TOKEN }}
       REGISTRY_PASSWORD_DOCKER: ${{ secrets.REGISTRY_PASSWORD_DOCKER }}
@@ -21,7 +21,7 @@ jobs:
       push-images: ${{ inputs.push-images || false }}
 
   build-base-fedora:
-    uses: ./.github/workflows/build-base-fedora.yml
+    uses: ./.github/workflows/build-base-fedora43.yml
     secrets:
       PUBLISH_TO_GITHUB_REPO_TOKEN: ${{ secrets.PUBLISH_TO_GITHUB_REPO_TOKEN }}
       REGISTRY_PASSWORD_DOCKER: ${{ secrets.REGISTRY_PASSWORD_DOCKER }}

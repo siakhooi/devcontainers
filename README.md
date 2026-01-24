@@ -22,7 +22,7 @@ my devcontainers
 - siakhooi/devcontainer:bash-deb-0.1.0
 - siakhooi/devcontainer:bash-rpm-0.1.0
 - siakhooi/devcontainer:jdk21
-- siakhooi/devcontainer:nodejs24-0.1.0
+- siakhooi/devcontainer:nodejs24
 - siakhooi/devcontainer:go-0.1.0
 - siakhooi/devcontainer:python-0.1.0
 - siakhooi/devcontainer:jupyter-ai-0.1.0
