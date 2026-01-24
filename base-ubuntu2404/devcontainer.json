@@ -1,6 +1,6 @@
 {
-	"name": "Base Ubuntu Dev Container",
-	"image": "siakhooi/devcontainer:base-ubuntu-0.1.0",
+	"name": "Base Ubuntu 24.04 Dev Container",
+	"image": "siakhooi/devcontainer:base-ubuntu2404",
 	"remoteUser": "maui",
 	"containerUser": "maui",
 	"updateRemoteUserUID": true,

@@ -1,4 +1,4 @@
-FROM  siakhooi/devcontainer:base-ubuntu-0.1.0
+FROM  siakhooi/devcontainer:base-ubuntu2404
 
 ARG GO_VERSION=1.25.5
 ARG GOLANGCI_LINT_VERSION=2.8.0

@@ -1,4 +1,4 @@
-FROM  siakhooi/devcontainer:base-ubuntu-0.1.0
+FROM  siakhooi/devcontainer:base-ubuntu2404
 
 ARG JDK_VERSION=21.0.8
 ARG JDK_BUILD=21.0.8+9

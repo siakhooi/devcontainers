@@ -1,4 +1,4 @@
-FROM  siakhooi/devcontainer:base-ubuntu-0.1.0
+FROM  siakhooi/devcontainer:base-ubuntu2404
 
 ARG NVM_VERSION=0.40.3
 ARG NODE_VERSION=24

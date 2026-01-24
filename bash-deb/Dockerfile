@@ -1,4 +1,4 @@
-FROM  siakhooi/devcontainer:base-ubuntu-0.1.0
+FROM  siakhooi/devcontainer:base-ubuntu2404
 
 USER root
 RUN apt update \
