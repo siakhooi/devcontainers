@@ -32,7 +32,7 @@ run-bash-rpm:
 jdk21:
 	.scripts/build.sh jdk21
 run-jdk21:
-	docker run -it --rm  siakhooi/devcontainer:jdk21-0.1.0  bash
+	docker run -it --rm  siakhooi/devcontainer:jdk21  bash
 
 nodejs24:
 	.scripts/build.sh nodejs24
@@ -66,7 +66,7 @@ docker-pull:
 	docker pull siakhooi/devcontainer:base-fedora-0.1.0
 	docker pull siakhooi/devcontainer:bash-deb-0.1.0
 	docker pull siakhooi/devcontainer:bash-rpm-0.1.0
-	docker pull siakhooi/devcontainer:jdk21-0.1.0
+	docker pull siakhooi/devcontainer:jdk21
 	docker pull siakhooi/devcontainer:nodejs24-0.1.0
 	docker pull siakhooi/devcontainer:go-0.1.0
 	docker pull siakhooi/devcontainer:python-0.1.0
@@ -77,3 +77,6 @@ run-wf-base:
 	gh workflow run workflow-build-base.yml -f push-images=true
 run-wf-langs:
 	gh workflow run workflow-build-level-1.yml -f push-images=true
+
+clean:
+	rm -rf *.log
