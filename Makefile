@@ -27,7 +27,7 @@ run-bash-deb:
 bash-rpm:
 	.scripts/build.sh bash-rpm
 run-bash-rpm:
-	docker run -it --rm  siakhooi/devcontainer:bash-rpm-0.1.0  bash
+	docker run -it --rm  siakhooi/devcontainer:bash-rpm  bash
 
 jdk21:
 	.scripts/build.sh jdk21
@@ -65,7 +65,7 @@ docker-pull:
 	docker pull siakhooi/devcontainer:base-ubuntu2404
 	docker pull siakhooi/devcontainer:base-fedora43
 	docker pull siakhooi/devcontainer:bash-deb
-	docker pull siakhooi/devcontainer:bash-rpm-0.1.0
+	docker pull siakhooi/devcontainer:bash-rpm
 	docker pull siakhooi/devcontainer:jdk21
 	docker pull siakhooi/devcontainer:nodejs24
 	docker pull siakhooi/devcontainer:go-0.1.0

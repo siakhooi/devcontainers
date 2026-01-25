@@ -1,6 +1,6 @@
 {
 	"name": "RPM Development Dev Container",
-	"image": "siakhooi/devcontainer:bash-rpm-0.1.0",
+	"image": "siakhooi/devcontainer:bash-rpm",
 	"remoteUser": "maui",
 	"containerUser": "maui",
 	"updateRemoteUserUID": true,
