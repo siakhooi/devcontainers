@@ -25,7 +25,7 @@ my devcontainers
 - siakhooi/devcontainer:nodejs24
 - siakhooi/devcontainer:go-0.1.0
 - siakhooi/devcontainer:python314
-- siakhooi/devcontainer:jupyter-ai-0.1.0
+- siakhooi/devcontainer:jupyter312
 
 ## Deliverables
 
@@ -43,7 +43,7 @@ my devcontainers
 │       ├── jdk21
 │       ├── go
 │       ├── python314
-│       ├── jupyter-ai
+│       ├── jupyter312
 │       └── nodejs24
 └── fedora:43
     └── base-fedora43
@@ -138,7 +138,7 @@ my devcontainers
 
 ### Jupyter AI
 
-| Component        | type | jupyter-ai | Remark              |
+| Component        | type | jupyter312 | Remark              |
 | ---------------- | ---- | ---------- | ------------------- |
 | openjdk-17-jdk   |      | apt        | required by pyspark |
 | pyenv            |      | git clone  |

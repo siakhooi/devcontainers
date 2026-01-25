@@ -1,7 +1,7 @@
-name: Build Jupyter AI
+name: Build Jupyter AI Python 3.12
 
 env:
-  BUILD_CONTEXT: ./jupyter-ai
+  BUILD_CONTEXT: ./jupyter312
 
 on:
   workflow_dispatch:
@@ -15,13 +15,13 @@ on:
     branches:
       - main
     paths:
-      - "jupyter-ai/**"
+      - "jupyter312/**"
       - "variables.env"
   pull_request:
     branches:
       - main
     paths:
-      - "jupyter-ai/**"
+      - "jupyter312/**"
       - "variables.env"
 
   workflow_call:

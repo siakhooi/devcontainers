@@ -1,6 +1,6 @@
 {
-	"name": "Jupyter AI Development Dev Container",
-	"image": "siakhooi/devcontainer:jupyter-ai-0.1.0",
+	"name": "Jupyter AI Python 3.12 Development Dev Container",
+	"image": "siakhooi/devcontainer:jupyter312",
 	"remoteUser": "maui",
 	"containerUser": "maui",
 	"updateRemoteUserUID": true,

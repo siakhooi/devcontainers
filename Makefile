@@ -2,7 +2,7 @@ help:
 
 base: base-ubuntu base-fedora
 bash: bash-deb bash-rpm
-lang: jdk21 nodejs24 go python314 jupyter-ai
+lang: jdk21 nodejs24 go python314 jupyter312
 
 run-ubuntu:
 	docker run -it --rm  ubuntu:24.04 bash
@@ -49,10 +49,10 @@ python:
 run-python:
 	docker run -it --rm  siakhooi/devcontainer:python314  bash
 
-jupyter-ai:
-	.scripts/build.sh jupyter-ai
-run-jupyter-ai:
-	docker run -it --rm  siakhooi/devcontainer:jupyter-ai-0.1.0  bash
+jupyter:
+	.scripts/build.sh jupyter312
+run-jupyter:
+	docker run -it --rm  siakhooi/devcontainer:jupyter312  bash
 
 # find binary in rpm package
 rpm-find:
@@ -70,8 +70,8 @@ docker-pull:
 	docker pull siakhooi/devcontainer:nodejs24
 	docker pull siakhooi/devcontainer:go-0.1.0
 	docker pull siakhooi/devcontainer:python314
-	docker pull siakhooi/devcontainer:jupyter-ai-0.1.0
-.PHONY: base-ubuntu base-fedora bash-deb bash-rpm jdk21 nodejs24 go python314 jupyter-ai
+	docker pull siakhooi/devcontainer:jupyter312
+.PHONY: base-ubuntu base-fedora bash-deb bash-rpm jdk21 nodejs24 go python314 jupyter312
 
 run-wf-base:
 	gh workflow run workflow-build-base.yml -f push-images=true
