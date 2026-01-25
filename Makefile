@@ -2,7 +2,7 @@ help:
 
 base: base-ubuntu base-fedora
 bash: bash-deb bash-rpm
-lang: jdk21 nodejs24 go python jupyter-ai
+lang: jdk21 nodejs24 go python314 jupyter-ai
 
 run-ubuntu:
 	docker run -it --rm  ubuntu:24.04 bash
@@ -45,9 +45,9 @@ run-go:
 	docker run -it --rm  siakhooi/devcontainer:go-0.1.0  bash
 
 python:
-	.scripts/build.sh python
+	.scripts/build.sh python314
 run-python:
-	docker run -it --rm  siakhooi/devcontainer:python-0.1.0  bash
+	docker run -it --rm  siakhooi/devcontainer:python314  bash
 
 jupyter-ai:
 	.scripts/build.sh jupyter-ai
@@ -69,9 +69,9 @@ docker-pull:
 	docker pull siakhooi/devcontainer:jdk21
 	docker pull siakhooi/devcontainer:nodejs24
 	docker pull siakhooi/devcontainer:go-0.1.0
-	docker pull siakhooi/devcontainer:python-0.1.0
+	docker pull siakhooi/devcontainer:python314
 	docker pull siakhooi/devcontainer:jupyter-ai-0.1.0
-.PHONY: base-ubuntu base-fedora bash-deb bash-rpm jdk21 nodejs24 go python jupyter-ai
+.PHONY: base-ubuntu base-fedora bash-deb bash-rpm jdk21 nodejs24 go python314 jupyter-ai
 
 run-wf-base:
 	gh workflow run workflow-build-base.yml -f push-images=true

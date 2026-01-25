@@ -44,8 +44,8 @@ jobs:
     with:
       push-images: ${{ inputs.push-images || false }}
 
-  build-python:
-    uses: ./.github/workflows/build-python.yml
+  build-python314:
+    uses: ./.github/workflows/build-python314.yml
     secrets:
       PUBLISH_TO_GITHUB_REPO_TOKEN: ${{ secrets.PUBLISH_TO_GITHUB_REPO_TOKEN }}
       REGISTRY_PASSWORD_DOCKER: ${{ secrets.REGISTRY_PASSWORD_DOCKER }}

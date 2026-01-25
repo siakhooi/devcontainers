@@ -1,7 +1,7 @@
-name: Build Python
+name: Build Python 3.14
 
 env:
-  BUILD_CONTEXT: ./python
+  BUILD_CONTEXT: ./python314
 
 on:
   workflow_dispatch:
@@ -15,13 +15,13 @@ on:
     branches:
       - main
     paths:
-      - "python/**"
+      - "python314/**"
       - "variables.env"
   pull_request:
     branches:
       - main
     paths:
-      - "python/**"
+      - "python314/**"
       - "variables.env"
 
   workflow_call:

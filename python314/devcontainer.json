@@ -1,6 +1,6 @@
 {
-	"name": "Python Development Dev Container",
-	"image": "siakhooi/devcontainer:python-0.1.0",
+	"name": "Python 3.14 Development Dev Container",
+	"image": "siakhooi/devcontainer:python314",
 	"remoteUser": "maui",
 	"containerUser": "maui",
 	"updateRemoteUserUID": true,
