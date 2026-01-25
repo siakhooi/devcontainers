@@ -19,7 +19,7 @@ my devcontainers
 
 - siakhooi/devcontainer:base-ubuntu2404
 - siakhooi/devcontainer:base-fedora43
-- siakhooi/devcontainer:bash-deb-0.1.0
+- siakhooi/devcontainer:bash-deb
 - siakhooi/devcontainer:bash-rpm-0.1.0
 - siakhooi/devcontainer:jdk21
 - siakhooi/devcontainer:nodejs24
