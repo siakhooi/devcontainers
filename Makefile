@@ -2,7 +2,7 @@ help:
 
 base: base-ubuntu base-fedora
 bash: bash-deb bash-rpm
-lang: jdk21 nodejs24 go python314 jupyter312
+lang: jdk nodejs go python jupyter
 
 run-ubuntu:
 	docker run -it --rm  ubuntu:24.04 bash
@@ -29,29 +29,39 @@ bash-rpm:
 run-bash-rpm:
 	docker run -it --rm  siakhooi/devcontainer:bash-rpm  bash
 
+jdk: jdk21
+run-jdk: run-jdk21
 jdk21:
 	.scripts/build.sh jdk21
 run-jdk21:
 	docker run -it --rm  siakhooi/devcontainer:jdk21  bash
 
+nodejs: nodejs24
+run-nodejs: run-nodejs24
 nodejs24:
 	.scripts/build.sh nodejs24
 run-nodejs24:
 	docker run -it --rm  siakhooi/devcontainer:nodejs24  bash
 
-go:
+go: go125
+run-go: run-go125
+go125:
 	.scripts/build.sh go125
-run-go:
+run-go125:
 	docker run -it --rm  siakhooi/devcontainer:go125  bash
 
-python:
+python: python314
+run-python: run-python314
+python314:
 	.scripts/build.sh python314
-run-python:
+run-python314:
 	docker run -it --rm  siakhooi/devcontainer:python314  bash
 
-jupyter:
+jupyter: jupyter312
+run-jupyter: run-jupyter312
+jupyter312:
 	.scripts/build.sh jupyter312
-run-jupyter:
+run-jupyter312:
 	docker run -it --rm  siakhooi/devcontainer:jupyter312  bash
 
 # find binary in rpm package
@@ -71,7 +81,7 @@ docker-pull:
 	docker pull siakhooi/devcontainer:go125
 	docker pull siakhooi/devcontainer:python314
 	docker pull siakhooi/devcontainer:jupyter312
-.PHONY: base-ubuntu base-fedora bash-deb bash-rpm jdk21 nodejs24 go python314 jupyter312
+.PHONY: base-ubuntu base-fedora bash-deb bash-rpm jdk21 nodejs24 go125 python314 jupyter312
 
 run-wf-base:
 	gh workflow run workflow-build-base.yml -f push-images=true
