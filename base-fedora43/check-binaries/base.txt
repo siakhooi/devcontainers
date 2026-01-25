@@ -2,14 +2,10 @@ ack
 sed
 awk
 grep
-gzip
-zip
-unzip
 make
 man
 nano
 sudo
-tar
 tree
 vi
 gpg
