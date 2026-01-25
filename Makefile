@@ -40,9 +40,9 @@ run-nodejs24:
 	docker run -it --rm  siakhooi/devcontainer:nodejs24  bash
 
 go:
-	.scripts/build.sh go
+	.scripts/build.sh go125
 run-go:
-	docker run -it --rm  siakhooi/devcontainer:go-0.1.0  bash
+	docker run -it --rm  siakhooi/devcontainer:go125  bash
 
 python:
 	.scripts/build.sh python314
@@ -68,7 +68,7 @@ docker-pull:
 	docker pull siakhooi/devcontainer:bash-rpm
 	docker pull siakhooi/devcontainer:jdk21
 	docker pull siakhooi/devcontainer:nodejs24
-	docker pull siakhooi/devcontainer:go-0.1.0
+	docker pull siakhooi/devcontainer:go125
 	docker pull siakhooi/devcontainer:python314
 	docker pull siakhooi/devcontainer:jupyter312
 .PHONY: base-ubuntu base-fedora bash-deb bash-rpm jdk21 nodejs24 go python314 jupyter312

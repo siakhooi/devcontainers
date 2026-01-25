@@ -23,7 +23,7 @@ my devcontainers
 - siakhooi/devcontainer:bash-rpm
 - siakhooi/devcontainer:jdk21
 - siakhooi/devcontainer:nodejs24
-- siakhooi/devcontainer:go-0.1.0
+- siakhooi/devcontainer:go125
 - siakhooi/devcontainer:python314
 - siakhooi/devcontainer:jupyter312
 
@@ -41,7 +41,7 @@ my devcontainers
 │   └── base-ubuntu2404
 │       ├── bash-deb
 │       ├── jdk21
-│       ├── go
+│       ├── go125
 │       ├── python314
 │       ├── jupyter312
 │       └── nodejs24
@@ -105,7 +105,7 @@ my devcontainers
 
 ### languages
 
-| Component        | type      | jdk21 | go   | python314 | nodejs24 |
+| Component        | type      | jdk21 | go125| python314 | nodejs24 |
 | ---------------- | --------- | ----- | ---- | --------- | -------- |
 | jdk21            | lang      | curl  | -    | -         | -        |
 | maven            | build     | curl  | -    | -         | -        |

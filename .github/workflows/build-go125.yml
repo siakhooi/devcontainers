@@ -1,7 +1,7 @@
-name: Build GO
+name: Build GO 1.25
 
 env:
-  BUILD_CONTEXT: ./go
+  BUILD_CONTEXT: ./go125
 
 on:
   workflow_dispatch:
@@ -15,13 +15,13 @@ on:
     branches:
       - main
     paths:
-      - "go/**"
+      - "go125/**"
       - "variables.env"
   pull_request:
     branches:
       - main
     paths:
-      - "go/**"
+      - "go125/**"
       - "variables.env"
 
   workflow_call:
