@@ -1,7 +1,7 @@
-name: Build Bash RPM
+name: Build RPM
 
 env:
-  BUILD_CONTEXT: ./bash-rpm
+  BUILD_CONTEXT: ./rpm
 
 on:
   workflow_dispatch:
@@ -15,13 +15,13 @@ on:
     branches:
       - main
     paths:
-      - "bash-rpm/**"
+      - "rpm/**"
       - "variables.env"
   pull_request:
     branches:
       - main
     paths:
-      - "bash-rpm/**"
+      - "rpm/**"
       - "variables.env"
 
   workflow_call:

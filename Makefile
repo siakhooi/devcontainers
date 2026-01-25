@@ -1,8 +1,7 @@
 help:
 
 base: base-ubuntu base-fedora
-bash: deb bash-rpm
-lang: jdk nodejs go python jupyter
+lang: deb rpm jdk nodejs go python jupyter
 
 run-ubuntu:
 	docker run -it --rm  ubuntu:24.04 bash
@@ -24,10 +23,10 @@ deb:
 run-deb:
 	docker run -it --rm  siakhooi/devcontainer:deb  bash
 
-bash-rpm:
-	.scripts/build.sh bash-rpm
-run-bash-rpm:
-	docker run -it --rm  siakhooi/devcontainer:bash-rpm  bash
+rpm:
+	.scripts/build.sh rpm
+run-rpm:
+	docker run -it --rm  siakhooi/devcontainer:rpm  bash
 
 jdk: jdk21
 run-jdk: run-jdk21
@@ -75,13 +74,13 @@ docker-pull:
 	docker pull siakhooi/devcontainer:base-ubuntu2404
 	docker pull siakhooi/devcontainer:base-fedora43
 	docker pull siakhooi/devcontainer:deb
-	docker pull siakhooi/devcontainer:bash-rpm
+	docker pull siakhooi/devcontainer:rpm
 	docker pull siakhooi/devcontainer:jdk21
 	docker pull siakhooi/devcontainer:nodejs24
 	docker pull siakhooi/devcontainer:go125
 	docker pull siakhooi/devcontainer:python314
 	docker pull siakhooi/devcontainer:jupyter312
-.PHONY: base-ubuntu base-fedora deb bash-rpm jdk21 nodejs24 go125 python314 jupyter312
+.PHONY: base-ubuntu base-fedora deb rpm jdk21 nodejs24 go125 python314 jupyter312
 
 run-wf-base:
 	gh workflow run workflow-build-base.yml -f push-images=true

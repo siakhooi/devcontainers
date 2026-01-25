@@ -20,7 +20,7 @@ my devcontainers
 - siakhooi/devcontainer:base-ubuntu2404
 - siakhooi/devcontainer:base-fedora43
 - siakhooi/devcontainer:deb
-- siakhooi/devcontainer:bash-rpm
+- siakhooi/devcontainer:rpm
 - siakhooi/devcontainer:jdk21
 - siakhooi/devcontainer:nodejs24
 - siakhooi/devcontainer:go125
@@ -47,7 +47,7 @@ my devcontainers
 │       └── nodejs24
 └── fedora:43
     └── base-fedora43
-        └── bash-rpm
+        └── rpm
 ```
 
 ### Base
@@ -91,17 +91,17 @@ my devcontainers
 
 ### bash
 
-| Component   | type      | deb   | bash-rpm |
-| ----------- | --------- | ----- | -------- |
-| dpkg-dev    | deb build | apt   | -        |
-| fakeroot    | deb build | apt   | -        |
-| shellcheck  | linting   | apt   | dnf      |
-| bats        | testing   | apt   | dnf      |
-| rpm-sign    | rpm build | -     | dnf      |
-| rpmdevtools | rpm build | -     | dnf      |
-| rpmlint     | rpm build | -     | dnf      |
-| pandoc      | manpage   | todo  | todo     |
-| man         | help      | todo  | todo     |
+| Component   | type      | deb   | rpm  |
+| ----------- | --------- | ----- | ---- |
+| dpkg-dev    | deb build | apt   | -    |
+| fakeroot    | deb build | apt   | -    |
+| shellcheck  | linting   | apt   | dnf  |
+| bats        | testing   | apt   | dnf  |
+| rpm-sign    | rpm build | -     | dnf  |
+| rpmdevtools | rpm build | -     | dnf  |
+| rpmlint     | rpm build | -     | dnf  |
+| pandoc      | manpage   | todo  | todo |
+| man         | help      | todo  | todo |
 
 ### languages
 
