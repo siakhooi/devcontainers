@@ -12,8 +12,8 @@ on:
         default: false
 
 jobs:
-  build-bash-deb:
-    uses: ./.github/workflows/build-bash-deb.yml
+  build-deb:
+    uses: ./.github/workflows/build-deb.yml
     secrets:
       PUBLISH_TO_GITHUB_REPO_TOKEN: ${{ secrets.PUBLISH_TO_GITHUB_REPO_TOKEN }}
       REGISTRY_PASSWORD_DOCKER: ${{ secrets.REGISTRY_PASSWORD_DOCKER }}
