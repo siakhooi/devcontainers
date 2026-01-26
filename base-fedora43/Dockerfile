@@ -31,6 +31,12 @@ RUN dnf install -y 'dnf-command(config-manager)' \
     && dnf install -y gh \
     && dnf clean all
 
+RUN dnf config-manager addrepo --from-repofile https://download.docker.com/linux/fedora/docker-ce.repo \
+    && dnf install -y docker-ce-cli docker-buildx-plugin docker-compose-plugin \
+    && dnf clean all \
+    && groupadd -f docker \
+    && usermod -aG docker maui
+
 USER maui
 WORKDIR /workspace
 

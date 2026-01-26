@@ -23,6 +23,7 @@ RUN apt update \
         ssh \
         unzip \
         podman \
+        lsb-release \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -57,6 +58,16 @@ RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg -o 
     && apt install -y gh \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
+
+RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc \
+    && chmod a+r /etc/apt/keyrings/docker.asc \
+    && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list \
+    && apt update \
+    && apt install -y docker-ce-cli docker-buildx-plugin docker-compose-plugin \
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/* \
+    && groupadd -f docker \
+    && usermod -aG docker maui
 
 USER maui
 # disable sudo message

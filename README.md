@@ -76,6 +76,7 @@ my devcontainers
 | wget            | http           | apt             | dnf           |                        |
 | ack             | matching       | apt             | dnf           |                        |
 | openssl         | crypto         | apt             | dnf           |                        |
+| docker          | container      | apt             | dnf           |
 | podman          | container      | apt             | dnf           |                        |
 | gh              | github cli     | apt             | dnf           | with completion        |
 | yq              | stream editor  | curl            | curl          | with completion        |
@@ -91,50 +92,49 @@ my devcontainers
 
 ### bash
 
-| Component   | type      | deb   | rpm  |
-| ----------- | --------- | ----- | ---- |
-| dpkg-dev    | deb build | apt   | -    |
-| fakeroot    | deb build | apt   | -    |
-| shellcheck  | linting   | apt   | dnf  |
-| bats        | testing   | apt   | dnf  |
-| rpm-sign    | rpm build | -     | dnf  |
-| rpmdevtools | rpm build | -     | dnf  |
-| rpmlint     | rpm build | -     | dnf  |
-| pandoc      | manpage   | todo  | todo |
-| man         | help      | todo  | todo |
+| Component   | type      | deb  | rpm  |
+| ----------- | --------- | ---- | ---- |
+| dpkg-dev    | deb build | apt  | -    |
+| fakeroot    | deb build | apt  | -    |
+| shellcheck  | linting   | apt  | dnf  |
+| bats        | testing   | apt  | dnf  |
+| rpm-sign    | rpm build | -    | dnf  |
+| rpmdevtools | rpm build | -    | dnf  |
+| rpmlint     | rpm build | -    | dnf  |
+| pandoc      | manpage   | todo | todo |
+| man         | help      | todo | todo |
 
 ### languages
 
-| Component        | type      | jdk21 | go125| python314 | nodejs24 |
-| ---------------- | --------- | ----- | ---- | --------- | -------- |
-| jdk21            | lang      | curl  | -    | -         | -        |
-| maven            | build     | curl  | -    | -         | -        |
-| gradle           | build     | curl  | -    | -         | -        |
-| spring-boot-cli  | build     | curl  | -    | -         | -        |
-| groovy           | lang      | curl  | -    | -         | -        |
-| go               | lang      | -     | curl | -         | -        |
-| golangci-lint    | quality   | -     | curl | -         | -        |
-| goreleaser       | deploy    | -     | curl | -         | -        |
-| pyenv            | env       | -     | -    | git clone | -        |
-| pyenv-virtualenv | env       | -     | -    | git clone | -        |
-| python 3.10      | lang      | -     | -    | pyenv     | -        |
-| python 3.11      | lang      | -     | -    | pyenv     | -        |
-| python 3.12      | lang      | -     | -    | pyenv     | -        |
-| python 3.13      | lang      | -     | -    | pyenv     | -        |
-| python 3.14      | lang      | -     | -    | pyenv     | -        |
-| poetry           | lang      | -     | -    | pip       | -        |
-| nvm              | env       | -     | -    | -         | curl     |
-| node             | lang      | -     | -    | -         | nvm      |
-| yarn             | build     | -     | -    | -         | npm      |
-| firebase         | firebase  | -     | -    | -         | npm      |
-| jacoco           | coverage  | todo  | -    | -         | -        |
-| qlty             | quality   | todo  | todo | todo      | todo     |
-| sonar            | quality   | todo  | todo | todo      | todo     |
-| docker           | container | todo  | todo | todo      | todo     |
-| kubectl          | container | todo  | todo | todo      | todo     |
-| helm             | container | todo  | todo | todo      | todo     |
-| helm-unit-test   | container | todo  | todo | todo      | todo     |
-| kind             | container | todo  | todo | todo      | todo     |
+| Component        | type      | jdk21 | go125 | python314 | nodejs24 |
+| ---------------- | --------- | ----- | ----- | --------- | -------- |
+| jdk21            | lang      | curl  | -     | -         | -        |
+| maven            | build     | curl  | -     | -         | -        |
+| gradle           | build     | curl  | -     | -         | -        |
+| spring-boot-cli  | build     | curl  | -     | -         | -        |
+| groovy           | lang      | curl  | -     | -         | -        |
+| go               | lang      | -     | curl  | -         | -        |
+| golangci-lint    | quality   | -     | curl  | -         | -        |
+| goreleaser       | deploy    | -     | curl  | -         | -        |
+| pyenv            | env       | -     | -     | git clone | -        |
+| pyenv-virtualenv | env       | -     | -     | git clone | -        |
+| python 3.10      | lang      | -     | -     | pyenv     | -        |
+| python 3.11      | lang      | -     | -     | pyenv     | -        |
+| python 3.12      | lang      | -     | -     | pyenv     | -        |
+| python 3.13      | lang      | -     | -     | pyenv     | -        |
+| python 3.14      | lang      | -     | -     | pyenv     | -        |
+| poetry           | lang      | -     | -     | pip       | -        |
+| nvm              | env       | -     | -     | -         | curl     |
+| node             | lang      | -     | -     | -         | nvm      |
+| yarn             | build     | -     | -     | -         | npm      |
+| firebase         | firebase  | -     | -     | -         | npm      |
+| jacoco           | coverage  | todo  | -     | -         | -        |
+| qlty             | quality   | todo  | todo  | todo      | todo     |
+| sonar            | quality   | todo  | todo  | todo      | todo     |
+| kubectl          | container | todo  | todo  | todo      | todo     |
+| helm             | container | todo  | todo  | todo      | todo     |
+| helm-unit-test   | container | todo  | todo  | todo      | todo     |
+| kind             | container | todo  | todo  | todo      | todo     |
 
 ### Jupyter AI
 
