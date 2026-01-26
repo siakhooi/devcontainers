@@ -8,9 +8,18 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				"github.copilot",
 				"github.copilot-chat",
 				"ms-python.python",
-				"ms-python.vscode-pylance"
+				"ms-python.debugpy",
+				"ms-python.black-formatter",
+				"ms-python.vscode-pylance",
+				"ms-python.vscode-python-envs",
+				"humao.rest-client",
+				"ms-vscode.live-server",
+				"redhat.vscode-yaml",
+				"tim-koehler.helm-intellisense",
+				"github.vscode-github-actions"
 			]
 		}
 	},

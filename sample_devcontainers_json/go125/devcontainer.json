@@ -7,7 +7,15 @@
 	"features": {},
 	"customizations": {
 		"vscode": {
-			"extensions": []
+			"extensions": [
+				"github.copilot",
+				"github.copilot-chat",
+				"golang.go",
+				"humao.rest-client",
+				"ms-vscode.live-server",
+				"redhat.vscode-yaml",
+				"github.vscode-github-actions"
+			]
 		}
 	},
 	"mounts": [

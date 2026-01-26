@@ -8,10 +8,19 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				"github.copilot",
 				"github.copilot-chat",
-				"ms-toolsai.jupyter",
 				"ms-python.python",
-				"ms-python.vscode-pylance"
+				"ms-python.vscode-pylance",
+				"ms-toolsai.jupyter-ai",
+				"ms-toolsai.jupyter",
+				"ms-toolsai.jupyter-keymap",
+				"ms-toolsai.jupyter-renderers",
+				"ms-toolsai.vscode-jupyter-cell-tags",
+				"ms-toolsai.vscode-jupyter-slideshow",
+				"ms-toolsai.datawrangler",
+				"mechatroner.rainbow-csv",
+				"github.vscode-github-actions"
 			]
 		}
 	},

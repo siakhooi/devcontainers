@@ -7,7 +7,21 @@
 	"features": {},
 	"customizations": {
 		"vscode": {
-			"extensions": []
+			"extensions": [
+				"github.copilot",
+				"github.copilot-chat",
+				"vscjava.vscode-java-pack",
+				"NicolasVuillamy.vscode-groovy-lint",
+				"marlon407.code-groovy",
+				"vscjava.vscode-spring-initializr",
+				"vscjava.vscode-spring-boot-dashboard",
+				"humao.rest-client",
+				"ms-vscode.live-server",
+				"redhat.vscode-xml",
+				"redhat.vscode-yaml",
+				"tim-koehler.helm-intellisense",
+				"github.vscode-github-actions"
+			]
 		}
 	},
 	"mounts": [
