@@ -26,6 +26,7 @@ my devcontainers
 - siakhooi/devcontainer:go125
 - siakhooi/devcontainer:python314
 - siakhooi/devcontainer:jupyter312
+- siakhooi/devcontainer:minizinc
 
 ## Deliverables
 
@@ -44,7 +45,8 @@ my devcontainers
 │       ├── go125
 │       ├── python314
 │       ├── jupyter312
-│       └── nodejs24
+│       ├── nodejs24
+│       └── minizinc
 └── fedora:43
     └── base-fedora43
         └── rpm
@@ -106,8 +108,8 @@ my devcontainers
 
 ### languages
 
-| Component        | type      | jdk21 | go125 | python314 | nodejs24 |
-| ---------------- | --------- | ----- | ----- | --------- | -------- |
+| Component        | type      | jdk21 | go125 | python314 | nodejs24 | minizinc |
+| ---------------- | --------- | ----- | ----- | --------- | -------- | -------- |
 | jdk21            | lang      | curl  | -     | -         | -        |
 | maven            | build     | curl  | -     | -         | -        |
 | gradle           | build     | curl  | -     | -         | -        |
@@ -135,6 +137,7 @@ my devcontainers
 | helm             | container | todo  | todo  | todo      | todo     |
 | helm-unit-test   | container | todo  | todo  | todo      | todo     |
 | kind             | container | todo  | todo  | todo      | todo     |
+| minizinc         | -         | -     | -     | -         | -        | curl     |
 
 ### Jupyter AI
 
