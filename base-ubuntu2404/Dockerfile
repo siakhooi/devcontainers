@@ -72,6 +72,6 @@ RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings
 USER maui
 # disable sudo message
 RUN touch ~/.sudo_as_admin_successful
-WORKDIR /workspace
+WORKDIR /workspaces
 
 ENTRYPOINT [ "/usr/local/bin/devcontainer-entrypoint.sh" ]

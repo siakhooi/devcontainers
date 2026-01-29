@@ -38,6 +38,6 @@ RUN dnf config-manager addrepo --from-repofile https://download.docker.com/linux
     && usermod -aG docker maui
 
 USER maui
-WORKDIR /workspace
+WORKDIR /workspaces
 
 ENTRYPOINT [ "/usr/local/bin/devcontainer-entrypoint.sh" ]
