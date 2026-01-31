@@ -40,9 +40,8 @@
       "matchStrings": [
         "ARG GO_VERSION=(?<currentValue>[0-9.]+)"
       ],
-      "depNameTemplate": "golang/go",
-      "datasourceTemplate": "github-releases",
-      "versioningTemplate": "semver"
+      "depNameTemplate": "golang",
+      "datasourceTemplate": "golang-version"
     },
     {
       "customType": "regex",
@@ -70,11 +69,19 @@
       ],
       "depNameTemplate": "MiniZinc/MiniZincIDE",
       "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["^jdk.*/Dockerfile$"],
+      "matchStrings": [
+        "ARG GRADLE_VERSION=(?<currentValue>[0-9.]+)"
+      ],
+      "datasourceTemplate": "gradle-version"
     }
   ],
   "packageRules": [
     {
-      "matchDepNames": ["golang/go"],
+      "matchDepNames": ["golang"],
       "allowedVersions": "^1\\.25"
     }
   ]
