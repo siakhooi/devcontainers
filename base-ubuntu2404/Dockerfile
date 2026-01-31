@@ -1,7 +1,7 @@
 FROM ubuntu:24.04
 
 ARG JQ_VERSION=1.8.1
-ARG YQ_VERSION=4.50.1
+ARG YQ_VERSION=4.52.1
 
 RUN apt update \
     && apt upgrade -y \
