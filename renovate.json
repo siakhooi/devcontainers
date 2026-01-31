@@ -87,6 +87,15 @@
       ],
       "depNameTemplate": "gradle",
       "datasourceTemplate": "gradle-version"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["^jdk.*/Dockerfile$"],
+      "matchStrings": [
+        "ARG MAVEN_VERSION=(?<currentValue>[0-9.]+)"
+      ],
+      "depNameTemplate": "org.springframework.boot:spring-boot-cli",
+      "datasourceTemplate": "maven"
     }
   ],
   "packageRules": [
