@@ -36,6 +36,15 @@
     },
     {
       "customType": "regex",
+      "fileMatch": ["Dockerfile"],
+      "matchStrings": [
+        "ARG NVM_VERSION=(?<currentValue>[0-9.]+)"
+      ],
+      "depNameTemplate": "nvm-sh/nvm",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
       "fileMatch": ["^go125/Dockerfile$"],
       "matchStrings": [
         "ARG GO_VERSION=(?<currentValue>[0-9.]+)"
