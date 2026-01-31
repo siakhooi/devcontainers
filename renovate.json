@@ -30,8 +30,7 @@
       ],
       "depNameTemplate": "golang/go",
       "datasourceTemplate": "github-releases",
-      "versioningTemplate": "semver",
-      "allowedVersions": "^1\\.25"
+      "versioningTemplate": "semver"
     },
     {
       "customType": "regex",
@@ -50,6 +49,12 @@
       ],
       "depNameTemplate": "goreleaser/goreleaser",
       "datasourceTemplate": "github-releases"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchDepNames": ["golang/go"],
+      "allowedVersions": "^1\\.25"
     }
   ]
 }
