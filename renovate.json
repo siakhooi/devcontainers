@@ -3,6 +3,9 @@
   "dependencyDashboard": false,
   "assignees": ["@me"],
   "reviewers": ["@me"],
+  "dockerfile": {
+    "enabled": false
+  },
   "customManagers": [
     {
       "customType": "regex",
