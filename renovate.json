@@ -76,6 +76,7 @@
       "matchStrings": [
         "ARG GRADLE_VERSION=(?<currentValue>[0-9.]+)"
       ],
+      "depNameTemplate": "gradle",
       "datasourceTemplate": "gradle-version"
     }
   ],
