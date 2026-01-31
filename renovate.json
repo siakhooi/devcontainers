@@ -52,6 +52,15 @@
       ],
       "depNameTemplate": "goreleaser/goreleaser",
       "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["^minizinc/Dockerfile$"],
+      "matchStrings": [
+        "ARG MINIZINC_VERSION=(?<currentValue>[0-9.]+)"
+      ],
+      "depNameTemplate": "MiniZinc/MiniZincIDE",
+      "datasourceTemplate": "github-releases"
     }
   ],
   "packageRules": [
