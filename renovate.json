@@ -105,6 +105,15 @@
       ],
       "depNameTemplate": "org.apache.maven:apache-maven",
       "datasourceTemplate": "maven"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["^jdk.*/Dockerfile$"],
+      "matchStrings": [
+        "ARG GROOVY_VERSION=(?<currentValue>[0-9.]+)"
+      ],
+      "depNameTemplate": "org.apache.groovy:groovy-all",
+      "datasourceTemplate": "maven"
     }
   ],
   "packageRules": [
