@@ -21,6 +21,35 @@
       ],
       "depNameTemplate": "mikefarah/yq",
       "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["^go125/Dockerfile$"],
+      "matchStrings": [
+        "ARG GO_VERSION=(?<currentValue>[0-9.]+)"
+      ],
+      "depNameTemplate": "golang/go",
+      "datasourceTemplate": "github-releases",
+      "versioningTemplate": "semver",
+      "allowedVersions": "^1\\.25"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["^go125/Dockerfile$"],
+      "matchStrings": [
+        "ARG GOLANGCI_LINT_VERSION=(?<currentValue>[0-9.]+)"
+      ],
+      "depNameTemplate": "golangci/golangci-lint",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["^go125/Dockerfile$"],
+      "matchStrings": [
+        "ARG GORELEASER_VERSION=(?<currentValue>[0-9.]+)"
+      ],
+      "depNameTemplate": "goreleaser/goreleaser",
+      "datasourceTemplate": "github-releases"
     }
   ]
 }
