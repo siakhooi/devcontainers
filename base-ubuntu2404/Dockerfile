@@ -41,6 +41,7 @@ COPY --chown=root:root --chmod=755 bashrc.d /etc/devcontainer/bashrc.d
 COPY check-binaries /etc/devcontainer/check-binaries
 
 RUN echo 'source /usr/local/bin/devcontainer-init-shell.sh' >> /home/maui/.bashrc
+RUN echo 'source /usr/local/bin/devcontainer-init-shell.sh' >> /root/.bashrc
 
 ADD --chown=root:root --chmod=755 https://github.com/jqlang/jq/releases/download/jq-${JQ_VERSION}/jq-linux-amd64 /usr/local/bin/jq
 ADD --chown=root:root --chmod=755 https://github.com/mikefarah/yq/releases/download/v${YQ_VERSION}/yq_linux_amd64 /usr/local/bin/yq
