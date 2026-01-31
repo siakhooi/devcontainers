@@ -1,4 +1,4 @@
-FROM  fedora:43
+FROM  fedora:44
 
 ARG JQ_VERSION=1.8.1
 ARG YQ_VERSION=4.52.1
