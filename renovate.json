@@ -1,8 +1,8 @@
 {
   "extends": ["config:base"],
   "dependencyDashboard": false,
-  "assignees": ["@me"],
-  "reviewers": ["@me"],
+  "assignees": ["siakhooi"],
+  "reviewers": ["siakhooi"],
   "dockerfile": {
     "enabled": false
   },
