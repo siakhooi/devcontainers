@@ -27,6 +27,15 @@
     },
     {
       "customType": "regex",
+      "fileMatch": ["Dockerfile"],
+      "matchStrings": [
+        "ARG SHFMT_VERSION=(?<currentValue>[0-9.]+)"
+      ],
+      "depNameTemplate": "mvdan/sh",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
       "fileMatch": ["^go125/Dockerfile$"],
       "matchStrings": [
         "ARG GO_VERSION=(?<currentValue>[0-9.]+)"

@@ -2,6 +2,7 @@ FROM ubuntu:24.04
 
 ARG JQ_VERSION=1.8.1
 ARG YQ_VERSION=4.52.1
+ARG SHFMT_VERSION=3.11.0
 
 RUN apt update \
     && apt upgrade -y \
@@ -68,6 +69,10 @@ RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings
     && rm -rf /var/lib/apt/lists/* \
     && groupadd -f docker \
     && usermod -aG docker maui
+
+RUN curl -L -o /usr/local/bin/shfmt \
+    https://github.com/mvdan/sh/releases/download/v${SHFMT_VERSION}/shfmt_v${SHFMT_VERSION}_linux_amd64 \
+    && chmod +x /usr/local/bin/shfmt
 
 USER maui
 # disable sudo message

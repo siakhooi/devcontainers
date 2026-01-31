@@ -91,6 +91,7 @@ my devcontainers
 | siakhooi-ore    | utilities      | todo            | todo          |                        |
 | pinentry        | crypto         | todo            | todo          |                        |
 | glab            | gitlab cli     | todo            | todo          |                        |
+| shfmt           | shell format   | curl            | curl          |                        |
 
 ### bash
 
