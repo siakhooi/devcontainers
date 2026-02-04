@@ -20,6 +20,7 @@
 		}
 	},
 	"mounts": [
+		"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
 		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/maui/.ssh,type=bind,consistency=cached"
 	],
 	"remoteEnv": {
