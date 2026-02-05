@@ -1,36 +1,36 @@
 {
-	"name": "JDK21 Development Dev Container",
-	"image": "siakhooi/devcontainer:jdk21",
-	"remoteUser": "maui",
-	"containerUser": "maui",
-	"updateRemoteUserUID": true,
-	"features": {},
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"github.copilot",
-				"github.copilot-chat",
-				"lfm.vscode-makefile-term",
-				"vscjava.vscode-java-pack",
-				"NicolasVuillamy.vscode-groovy-lint",
-				"marlon407.code-groovy",
-				"vscjava.vscode-spring-initializr",
-				"vscjava.vscode-spring-boot-dashboard",
-				"humao.rest-client",
-				"ms-vscode.live-server",
-				"redhat.vscode-xml",
-				"redhat.vscode-yaml",
-				"tim-koehler.helm-intellisense",
-				"github.vscode-github-actions"
-			]
-		}
-	},
-	"mounts": [
-		"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
-		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/maui/.ssh,type=bind,consistency=cached",
-		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.m2,target=/home/maui/.m2,type=bind,consistency=cached"
-	],
-	"remoteEnv": {
-		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
-	}
+  "name": "JDK21 Development Dev Container",
+  "image": "siakhooi/devcontainer:jdk21",
+  "remoteUser": "maui",
+  "containerUser": "maui",
+  "updateRemoteUserUID": true,
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "github.copilot",
+        "github.copilot-chat",
+        "lfm.vscode-makefile-term",
+        "vscjava.vscode-java-pack",
+        "NicolasVuillamy.vscode-groovy-lint",
+        "marlon407.code-groovy",
+        "vscjava.vscode-spring-initializr",
+        "vscjava.vscode-spring-boot-dashboard",
+        "humao.rest-client",
+        "ms-vscode.live-server",
+        "redhat.vscode-xml",
+        "redhat.vscode-yaml",
+        "tim-koehler.helm-intellisense",
+        "github.vscode-github-actions"
+      ]
+    }
+  },
+  "mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.m2,target=/home/maui/.m2,type=bind,consistency=cached",
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/maui/.ssh,type=bind,consistency=cached",
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+  ],
+  "remoteEnv": {
+    "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+  }
 }

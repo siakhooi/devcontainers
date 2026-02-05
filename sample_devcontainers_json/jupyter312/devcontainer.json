@@ -1,35 +1,35 @@
 {
-	"name": "Jupyter AI Python 3.12 Development Dev Container",
-	"image": "siakhooi/devcontainer:jupyter312",
-	"remoteUser": "maui",
-	"containerUser": "maui",
-	"updateRemoteUserUID": true,
-	"features": {},
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"github.copilot",
-				"github.copilot-chat",
-				"lfm.vscode-makefile-term",
-				"ms-python.python",
-				"ms-python.vscode-pylance",
-				"ms-toolsai.jupyter-ai",
-				"ms-toolsai.jupyter",
-				"ms-toolsai.jupyter-keymap",
-				"ms-toolsai.jupyter-renderers",
-				"ms-toolsai.vscode-jupyter-cell-tags",
-				"ms-toolsai.vscode-jupyter-slideshow",
-				"ms-toolsai.datawrangler",
-				"mechatroner.rainbow-csv",
-				"github.vscode-github-actions"
-			]
-		}
-	},
-	"mounts": [
-		"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
-		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/maui/.ssh,type=bind,consistency=cached"
-	],
-	"remoteEnv": {
-		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
-	}
+  "name": "Jupyter AI Python 3.12 Development Dev Container",
+  "image": "siakhooi/devcontainer:jupyter312",
+  "remoteUser": "maui",
+  "containerUser": "maui",
+  "updateRemoteUserUID": true,
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "github.copilot",
+        "github.copilot-chat",
+        "lfm.vscode-makefile-term",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter-ai",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.jupyter-keymap",
+        "ms-toolsai.jupyter-renderers",
+        "ms-toolsai.vscode-jupyter-cell-tags",
+        "ms-toolsai.vscode-jupyter-slideshow",
+        "ms-toolsai.datawrangler",
+        "mechatroner.rainbow-csv",
+        "github.vscode-github-actions"
+      ]
+    }
+  },
+  "mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/maui/.ssh,type=bind,consistency=cached",
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+  ],
+  "remoteEnv": {
+    "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+  }
 }
