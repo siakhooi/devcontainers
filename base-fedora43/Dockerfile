@@ -6,6 +6,7 @@ ARG SHFMT_VERSION=3.12.0
 
 RUN dnf update -y \
     && dnf install -y ack tree zip git nano make wget sudo git-lfs openssl unzip podman \
+       shellcheck \
     && dnf clean all
 
 # use maui as user

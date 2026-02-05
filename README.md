@@ -85,13 +85,14 @@ my devcontainers
 | jq              | stream editor  | curl            | curl          |                        |
 | siakhooi-devy   | utilities      | apt             | dnf           | incl siakhooi-devutils |
 | ssh             | remote         | apt             | -             | dnf provided by ?      |
+| shfmt           | shell format   | curl            | curl          |                        |
+| shellcheck      | linting        | apt             | dnf           |
 | jv              | json viewer    | todo            | todo          |                        |
 | httpie          | http client    | todo            | todo          |                        |
 | siakhooi-buildo | utilities      | todo            | todo          |                        |
 | siakhooi-ore    | utilities      | todo            | todo          |                        |
 | pinentry        | crypto         | todo            | todo          |                        |
 | glab            | gitlab cli     | todo            | todo          |                        |
-| shfmt           | shell format   | curl            | curl          |                        |
 
 ### bash
 
@@ -99,7 +100,6 @@ my devcontainers
 | ----------- | --------- | ---- | ---- |
 | dpkg-dev    | deb build | apt  | -    |
 | fakeroot    | deb build | apt  | -    |
-| shellcheck  | linting   | apt  | dnf  |
 | bats        | testing   | apt  | dnf  |
 | rpm-sign    | rpm build | -    | dnf  |
 | rpmdevtools | rpm build | -    | dnf  |

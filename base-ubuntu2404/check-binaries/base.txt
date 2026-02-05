@@ -15,3 +15,5 @@ openssl
 curl
 wget
 ssh
+shfmt
+shellcheck

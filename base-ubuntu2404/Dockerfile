@@ -20,6 +20,7 @@ RUN apt update \
         sudo \
         openssl \
         ca-certificates \
+        shellcheck \
         git-lfs \
         ssh \
         unzip \

@@ -3,8 +3,6 @@ FROM  siakhooi/devcontainer:base-fedora43
 USER root
 RUN dnf -y update \
     && dnf -y install \
-    # linting
-    shellcheck \
     # testing
     bats \
     # rpm packaging

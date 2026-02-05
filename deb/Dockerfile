@@ -4,8 +4,6 @@ USER root
 RUN apt update \
     && apt upgrade -y \
     && apt install -y \
-    # linting
-    shellcheck \
     # testing
     bats \
     # debian packaging
