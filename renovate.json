@@ -119,7 +119,7 @@
   "packageRules": [
     {
       "matchDepNames": ["golang"],
-      "allowedVersions": "^1.25"
+      "allowedVersions": "~1.25"
     }
   ]
 }
