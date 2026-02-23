@@ -8,6 +8,7 @@ RUN apt update \
     && apt upgrade -y \
     && apt install -y --no-install-recommends \
         ack \
+        bzip2 \
         zip \
         nano \
         make \

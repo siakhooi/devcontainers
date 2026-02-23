@@ -70,6 +70,7 @@ my devcontainers
 | curl            | http           | apt             | (baseimage)   |                        |
 | gnupg           | crypto         | apt             | (baseimage)   |                        |
 | vi/vim          | editor         | apt             | (baseimage)   |                        |
+| bzip2           | compression    | apt             | (baseimage)   |                        |
 | ca-certificates | crypto         | apt             | -             |                        |
 | sudo            | admin          | apt             | dnf           |                        |
 | zip             | compression    | apt             | dnf           |                        |
