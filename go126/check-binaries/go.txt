@@ -1,0 +1,4 @@
+go
+golangci-lint
+goreleaser
+qlty

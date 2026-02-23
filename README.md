@@ -24,6 +24,7 @@ my devcontainers
 - siakhooi/devcontainer:jdk21
 - siakhooi/devcontainer:nodejs24
 - siakhooi/devcontainer:go125
+- siakhooi/devcontainer:go126
 - siakhooi/devcontainer:python314
 - siakhooi/devcontainer:jupyter312
 - siakhooi/devcontainer:minizinc
@@ -43,6 +44,7 @@ my devcontainers
 │       ├── deb
 │       ├── jdk21
 │       ├── go125
+│       ├── go126
 │       ├── python314
 │       ├── jupyter312
 │       ├── nodejs24
@@ -109,36 +111,36 @@ my devcontainers
 
 ### languages
 
-| Component        | type      | jdk21 | go125 | python314 | nodejs24 | minizinc |
-| ---------------- | --------- | ----- | ----- | --------- | -------- | -------- |
-| jdk21            | lang      | curl  | -     | -         | -        |
-| maven            | build     | curl  | -     | -         | -        |
-| gradle           | build     | curl  | -     | -         | -        |
-| spring-boot-cli  | build     | curl  | -     | -         | -        |
-| groovy           | lang      | curl  | -     | -         | -        |
-| go               | lang      | -     | curl  | -         | -        |
-| golangci-lint    | quality   | -     | curl  | -         | -        |
-| goreleaser       | deploy    | -     | curl  | -         | -        |
-| pyenv            | env       | -     | -     | git clone | -        |
-| pyenv-virtualenv | env       | -     | -     | git clone | -        |
-| python 3.10      | lang      | -     | -     | pyenv     | -        |
-| python 3.11      | lang      | -     | -     | pyenv     | -        |
-| python 3.12      | lang      | -     | -     | pyenv     | -        |
-| python 3.13      | lang      | -     | -     | pyenv     | -        |
-| python 3.14      | lang      | -     | -     | pyenv     | -        |
-| poetry           | lang      | -     | -     | pip       | -        |
-| nvm              | env       | -     | -     | -         | curl     |
-| node             | lang      | -     | -     | -         | nvm      |
-| yarn             | build     | -     | -     | -         | npm      |
-| firebase         | firebase  | -     | -     | -         | npm      |
-| jacoco           | coverage  | todo  | -     | -         | -        |
-| qlty             | quality   | todo  | todo  | todo      | todo     |
-| sonar            | quality   | todo  | todo  | todo      | todo     |
-| kubectl          | container | todo  | todo  | todo      | todo     |
-| helm             | container | todo  | todo  | todo      | todo     |
-| helm-unit-test   | container | todo  | todo  | todo      | todo     |
-| kind             | container | todo  | todo  | todo      | todo     |
-| minizinc         | -         | -     | -     | -         | -        | curl     |
+| Component        | type      | jdk21 | go125 | go126 | python314 | nodejs24 | minizinc |
+| ---------------- | --------- | ----- | ----- | ----- | --------- | -------- | -------- |
+| jdk21            | lang      | curl  | -     | -     | -         | -        |
+| maven            | build     | curl  | -     | -     | -         | -        |
+| gradle           | build     | curl  | -     | -     | -         | -        |
+| spring-boot-cli  | build     | curl  | -     | -     | -         | -        |
+| groovy           | lang      | curl  | -     | -     | -         | -        |
+| go               | lang      | -     | curl  | curl  | -         | -        |
+| golangci-lint    | quality   | -     | curl  | curl  | -         | -        |
+| goreleaser       | deploy    | -     | curl  | curl  | -         | -        |
+| pyenv            | env       | -     | -     | -     | git clone | -        |
+| pyenv-virtualenv | env       | -     | -     | -     | git clone | -        |
+| python 3.10      | lang      | -     | -     | -     | pyenv     | -        |
+| python 3.11      | lang      | -     | -     | -     | pyenv     | -        |
+| python 3.12      | lang      | -     | -     | -     | pyenv     | -        |
+| python 3.13      | lang      | -     | -     | -     | pyenv     | -        |
+| python 3.14      | lang      | -     | -     | -     | pyenv     | -        |
+| poetry           | lang      | -     | -     | -     | pip       | -        |
+| nvm              | env       | -     | -     | -     | -         | curl     |
+| node             | lang      | -     | -     | -     | -         | nvm      |
+| yarn             | build     | -     | -     | -     | -         | npm      |
+| firebase         | firebase  | -     | -     | -     | -         | npm      |
+| jacoco           | coverage  | todo  | -     | -     | -         | -        |
+| qlty             | quality   | todo  | todo  | todo  | todo      | todo     |
+| sonar            | quality   | todo  | todo  | todo  | todo      | todo     |
+| kubectl          | container | todo  | todo  | todo  | todo      | todo     |
+| helm             | container | todo  | todo  | todo  | todo      | todo     |
+| helm-unit-test   | container | todo  | todo  | todo  | todo      | todo     |
+| kind             | container | todo  | todo  | todo  | todo      | todo     |
+| minizinc         | -         | -     | -     | -     | -         | -        | curl     |
 
 ### Jupyter AI
 

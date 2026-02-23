@@ -49,7 +49,7 @@
       "matchStrings": [
         "ARG GO_VERSION=(?<currentValue>[0-9.]+)"
       ],
-      "depNameTemplate": "golang",
+      "depNameTemplate": "golang125",
       "datasourceTemplate": "golang-version"
     },
     {
@@ -64,6 +64,33 @@
     {
       "customType": "regex",
       "fileMatch": ["^go125/Dockerfile$"],
+      "matchStrings": [
+        "ARG GORELEASER_VERSION=(?<currentValue>[0-9.]+)"
+      ],
+      "depNameTemplate": "goreleaser/goreleaser",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["^go126/Dockerfile$"],
+      "matchStrings": [
+        "ARG GO_VERSION=(?<currentValue>[0-9.]+)"
+      ],
+      "depNameTemplate": "golang126",
+      "datasourceTemplate": "golang-version"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["^go126/Dockerfile$"],
+      "matchStrings": [
+        "ARG GOLANGCI_LINT_VERSION=(?<currentValue>[0-9.]+)"
+      ],
+      "depNameTemplate": "golangci/golangci-lint",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["^go126/Dockerfile$"],
       "matchStrings": [
         "ARG GORELEASER_VERSION=(?<currentValue>[0-9.]+)"
       ],
@@ -118,8 +145,12 @@
   ],
   "packageRules": [
     {
-      "matchDepNames": ["golang"],
+      "matchDepNames": ["golang125"],
       "allowedVersions": "~1.25"
+    },
+    {
+      "matchDepNames": ["golang126"],
+      "allowedVersions": "~1.26"
     }
   ]
 }
