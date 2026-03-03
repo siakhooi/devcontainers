@@ -1,0 +1,4 @@
+xelatex
+pdfinfo
+fc-list
+fc-cache

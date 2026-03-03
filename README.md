@@ -29,6 +29,7 @@ my devcontainers
 - siakhooi/devcontainer:python314
 - siakhooi/devcontainer:jupyter312
 - siakhooi/devcontainer:minizinc
+- siakhooi/devcontainer:latex
 
 ## Deliverables
 
@@ -50,6 +51,7 @@ my devcontainers
 │       ├── python314
 │       ├── jupyter312
 │       ├── nodejs24
+│       ├── latex
 │       └── minizinc
 └── fedora:43
     └── base-fedora43
@@ -114,8 +116,8 @@ my devcontainers
 
 ### languages
 
-| Component        | type      | jdk21 | jdk25 | go125 | go126 | python314 | nodejs24 | minizinc |
-| ---------------- | --------- | ----- | ----- | ----- | ----- | --------- | -------- | -------- |
+| Component        | type      | jdk21 | jdk25 | go125 | go126 | python314 | nodejs24 |
+| ---------------- | --------- | ----- | ----- | ----- | ----- | --------- | -------- |
 | jdk              | lang      | curl  | curl  | -     | -     | -         | -        |
 | maven            | build     | curl  | curl  | -     | -     | -         | -        |
 | gradle           | build     | curl  | curl  | -     | -     | -         | -        |
@@ -143,7 +145,14 @@ my devcontainers
 | helm             | container | todo  | todo  | todo  | todo  | todo      | todo     |
 | helm-unit-test   | container | todo  | todo  | todo  | todo  | todo      | todo     |
 | kind             | container | todo  | todo  | todo  | todo  | todo      | todo     |
-| minizinc         | -         | -     | -     | -     | -     | -         | -        | curl     |
+
+### Others
+| Component | type | minizinc | latex |
+| --------- | ---- | -------- | ----- |
+| minizinc  | -    | curl     |       |
+| xetex     | -    | -        | apt   |
+| pdfinfo   | -    | -        | apt   |
+
 
 ### Jupyter AI
 
@@ -167,6 +176,4 @@ my devcontainers
 | matplotlib       |      | pip        |
 
 [![Wise](https://img.shields.io/badge/Funding-Wise-33cb56.svg?logo=wise)](https://wise.com/pay/me/siakn3)
-[![Buy Me a Coffee](https://img.shields.io/badge/Funding-BuyMeACoffee-33cb56.svg?logo=buymeacoffee)](https://www.buymeacoffee.com/siakhooi)
-[![Ko-Fi](https://img.shields.io/badge/Funding-Ko%20Fi-33cb56.svg?logo=kofi)](https://ko-fi.com/siakhooi)
 ![visitors](https://hit-tztugwlsja-uc.a.run.app/?outputtype=badge&counter=ghmd-devcontainers)
