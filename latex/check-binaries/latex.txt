@@ -2,3 +2,6 @@ xelatex
 pdfinfo
 fc-list
 fc-cache
+tlmgr
+pdflatex
+latexmk

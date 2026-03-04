@@ -147,11 +147,12 @@ my devcontainers
 | kind             | container | todo  | todo  | todo  | todo  | todo      | todo     |
 
 ### Others
-| Component | type | minizinc | latex |
-| --------- | ---- | -------- | ----- |
-| minizinc  | -    | curl     |       |
-| xetex     | -    | -        | apt   |
-| pdfinfo   | -    | -        | apt   |
+| Component  | type | minizinc | latex |
+| ---------- | ---- | -------- | ----- |
+| minizinc   | -    | curl     |       |
+| texlive    | -    | -        | wget  |
+| fontconfig | -    | -        | apt   |
+| pdfinfo    | -    | -        | apt   |
 
 
 ### Jupyter AI
