@@ -147,12 +147,15 @@ my devcontainers
 | kind             | container | todo  | todo  | todo  | todo  | todo      | todo     |
 
 ### Others
-| Component  | type | minizinc | latex |
-| ---------- | ---- | -------- | ----- |
-| minizinc   | -    | curl     |       |
-| texlive    | -    | -        | wget  |
-| fontconfig | -    | -        | apt   |
-| pdfinfo    | -    | -        | apt   |
+| Component        | minizinc | latex     |
+| ---------------- | -------- | --------- |
+| minizinc         | curl     |           |
+| texlive          | -        | wget      |
+| fontconfig       | -        | apt       |
+| pdfinfo          | -        | apt       |
+| pyenv            | -        | git clone |
+| pyenv-virtualenv | -        | git clone |
+| python 3.14      | -        | pyenv     |
 
 
 ### Jupyter AI

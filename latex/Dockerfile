@@ -9,6 +9,11 @@ RUN apt-get update \
     poppler-utils \
     fontconfig \
     fonts-arphic-bkai00mp \
+    # by python
+    make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev \
+    libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+    xz-utils tk-dev libffi-dev liblzma-dev python3-openssl \
+    # clean up
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -31,3 +36,13 @@ RUN PATH=/usr/local/texlive/bin/x86_64-linux:$PATH \
 ENV PATH="$PATH:/usr/local/texlive/bin/x86_64-linux"
 
 USER maui
+
+RUN export PYENV_ROOT="${HOME}/.pyenv" \
+    && export PATH="${PYENV_ROOT}/bin:${PATH}" \
+    && git clone https://github.com/pyenv/pyenv.git ${PYENV_ROOT} \
+    && git clone https://github.com/pyenv/pyenv-virtualenv.git ${PYENV_ROOT}/plugins/pyenv-virtualenv \
+    && pyenv install 3.14 \
+    && pyenv global 3.14 \
+    && eval "$(pyenv init -)" \
+    && pip install --upgrade pip \
+    && pip install pypinyin
