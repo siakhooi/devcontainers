@@ -2,7 +2,7 @@ FROM ubuntu:24.04
 
 ARG JQ_VERSION=1.8.1
 ARG YQ_VERSION=4.52.4
-ARG SHFMT_VERSION=3.12.0
+ARG SHFMT_VERSION=3.13.0
 
 RUN apt update \
     && apt upgrade -y \
