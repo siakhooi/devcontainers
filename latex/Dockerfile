@@ -1,5 +1,7 @@
 FROM  siakhooi/devcontainer:base-ubuntu2404
 
+ARG PYTHON_VERSION=3.14
+
 USER root
 
 COPY check-binaries /etc/devcontainer/check-binaries
@@ -41,8 +43,8 @@ RUN export PYENV_ROOT="${HOME}/.pyenv" \
     && export PATH="${PYENV_ROOT}/bin:${PATH}" \
     && git clone https://github.com/pyenv/pyenv.git ${PYENV_ROOT} \
     && git clone https://github.com/pyenv/pyenv-virtualenv.git ${PYENV_ROOT}/plugins/pyenv-virtualenv \
-    && pyenv install 3.14 \
-    && pyenv global 3.14 \
+    && pyenv install $PYTHON_VERSION \
+    && pyenv global $PYTHON_VERSION \
     && eval "$(pyenv init -)" \
     && pip install --upgrade pip \
     && pip install pypinyin
