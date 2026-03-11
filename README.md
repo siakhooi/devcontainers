@@ -156,6 +156,8 @@ my devcontainers
 | pyenv            | -        | git clone |
 | pyenv-virtualenv | -        | git clone |
 | python 3.14      | -        | pyenv     |
+| pypinyin         | -        | pip       |
+| PyYAML           | -        | pip       |
 
 
 ### Jupyter AI

@@ -4,6 +4,7 @@ ARG PYTHON_VERSION=3.14
 
 USER root
 
+COPY --chown=root:root --chmod=755 bashrc.d/00-setup-python.sh /etc/devcontainer/bashrc.d/00-setup-python.sh
 COPY check-binaries /etc/devcontainer/check-binaries
 
 RUN apt-get update \
@@ -47,4 +48,4 @@ RUN export PYENV_ROOT="${HOME}/.pyenv" \
     && pyenv global $PYTHON_VERSION \
     && eval "$(pyenv init -)" \
     && pip install --upgrade pip \
-    && pip install pypinyin
+    && pip install pypinyin PyYAML
