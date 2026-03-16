@@ -26,3 +26,7 @@ RUN \
     && rm /opt/goreleaser.tar.gz
 
 USER maui
+    # install Dlv
+RUN PATH=/opt/go/bin:$PATH \
+    && go install github.com/go-delve/delve/cmd/dlv@latest \
+    && go install golang.org/x/tools/gopls@latest

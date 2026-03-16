@@ -126,6 +126,8 @@ my devcontainers
 | go               | lang      | -     | -     | curl  | curl  | -         | -        |
 | golangci-lint    | quality   | -     | -     | curl  | curl  | -         | -        |
 | goreleaser       | deploy    | -     | -     | curl  | curl  | -         | -        |
+| dlv              | debugger  | -     | -     | go    | go    | -         | -        |
+| gopls            | lang      | -     | -     | go    | go    | -         | -        |
 | pyenv            | env       | -     | -     | -     | -     | git clone | -        |
 | pyenv-virtualenv | env       | -     | -     | -     | -     | git clone | -        |
 | python 3.10      | lang      | -     | -     | -     | -     | pyenv     | -        |
