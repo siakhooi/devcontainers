@@ -5,3 +5,5 @@ fc-cache
 tlmgr
 pdflatex
 latexmk
+kpsewhich
+mktexlsr

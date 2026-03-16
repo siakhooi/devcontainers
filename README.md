@@ -160,7 +160,8 @@ my devcontainers
 | python 3.14      | -        | pyenv     |
 | pypinyin         | -        | pip       |
 | PyYAML           | -        | pip       |
-
+| ctex             | -        | tlmgr     |
+| titlesec         | -        | tlmgr     |
 
 ### Jupyter AI
 

@@ -33,7 +33,7 @@ RUN wget https://mirrors.mit.edu/CTAN/systems/texlive/tlnet/install-tl-unx.tar.g
     && rm -rf install-tl-*
 
 RUN PATH=/usr/local/texlive/bin/x86_64-linux:$PATH \
-    && tlmgr install ctex \
+    && tlmgr install ctex titlesec \
     && tlmgr update --self --all
 
 ENV PATH="$PATH:/usr/local/texlive/bin/x86_64-linux"
