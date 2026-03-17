@@ -11,10 +11,11 @@
         "github.copilot",
         "github.copilot-chat",
         "lfm.vscode-makefile-term",
+        "yzhang.markdown-all-in-one",
+        "redhat.vscode-yaml",
         "golang.go",
         "humao.rest-client",
         "ms-vscode.live-server",
-        "redhat.vscode-yaml",
         "github.vscode-github-actions"
       ]
     }
