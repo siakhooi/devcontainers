@@ -11,6 +11,15 @@
       "customType": "regex",
       "fileMatch": ["Dockerfile"],
       "matchStrings": [
+        "ARG GLAB_VERSION=(?<currentValue>[0-9.]+)"
+      ],
+      "packageName": "gitlab-org/cli",
+      "datasourceTemplate": "gitlab-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["Dockerfile"],
+      "matchStrings": [
         "ARG JQ_VERSION=(?<currentValue>[0-9.]+)"
       ],
       "depNameTemplate": "jqlang/jq",

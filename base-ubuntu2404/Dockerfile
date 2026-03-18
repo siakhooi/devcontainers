@@ -3,6 +3,7 @@ FROM ubuntu:24.04
 ARG JQ_VERSION=1.8.1
 ARG YQ_VERSION=4.52.4
 ARG SHFMT_VERSION=3.13.0
+ARG GLAB_VERSION=1.89.0
 
 RUN apt update \
     && apt upgrade -y \
@@ -47,6 +48,11 @@ RUN echo 'source /usr/local/bin/devcontainer-init-shell.sh' >> /root/.bashrc
 
 ADD --chown=root:root --chmod=755 https://github.com/jqlang/jq/releases/download/jq-${JQ_VERSION}/jq-linux-amd64 /usr/local/bin/jq
 ADD --chown=root:root --chmod=755 https://github.com/mikefarah/yq/releases/download/v${YQ_VERSION}/yq_linux_amd64 /usr/local/bin/yq
+ADD --chown=root:root --chmod=755 https://github.com/mvdan/sh/releases/download/v${SHFMT_VERSION}/shfmt_v${SHFMT_VERSION}_linux_amd64 /usr/local/bin/shfmt
+
+RUN curl -L -o /tmp/glab.deb https://gitlab.com/gitlab-org/cli/-/releases/v${GLAB_VERSION}/downloads/glab_${GLAB_VERSION}_linux_amd64.deb \
+    && dpkg -i /tmp/glab.deb \
+    && rm /tmp/glab.deb
 
 RUN wget https://siakhooi.github.io/apt/siakhooi-apt.list -O /etc/apt/sources.list.d/siakhooi-apt.list \
     && wget https://siakhooi.github.io/apt/siakhooi-apt.gpg  -O /usr/share/keyrings/siakhooi-apt.gpg \
@@ -72,10 +78,6 @@ RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings
     && rm -rf /var/lib/apt/lists/* \
     && groupadd -f docker \
     && usermod -aG docker maui
-
-RUN curl -L -o /usr/local/bin/shfmt \
-    https://github.com/mvdan/sh/releases/download/v${SHFMT_VERSION}/shfmt_v${SHFMT_VERSION}_linux_amd64 \
-    && chmod +x /usr/local/bin/shfmt
 
 USER maui
 # disable sudo message

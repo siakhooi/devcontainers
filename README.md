@@ -85,21 +85,21 @@ my devcontainers
 | wget            | http           | apt             | dnf           |                        |
 | ack             | matching       | apt             | dnf           |                        |
 | openssl         | crypto         | apt             | dnf           |                        |
-| docker          | container      | apt             | dnf           |
+| docker          | container      | apt             | dnf           |                        |
 | podman          | container      | apt             | dnf           |                        |
 | gh              | github cli     | apt             | dnf           | with completion        |
+| glab            | gitlab cli     | curl            | curl          | with completion        |
 | yq              | stream editor  | curl            | curl          | with completion        |
 | jq              | stream editor  | curl            | curl          |                        |
 | siakhooi-devy   | utilities      | apt             | dnf           | incl siakhooi-devutils |
 | ssh             | remote         | apt             | -             | dnf provided by ?      |
 | shfmt           | shell format   | curl            | curl          |                        |
-| shellcheck      | linting        | apt             | dnf           |
+| shellcheck      | linting        | apt             | dnf           |                        |
 | jv              | json viewer    | todo            | todo          |                        |
 | httpie          | http client    | todo            | todo          |                        |
 | siakhooi-buildo | utilities      | todo            | todo          |                        |
 | siakhooi-ore    | utilities      | todo            | todo          |                        |
 | pinentry        | crypto         | todo            | todo          |                        |
-| glab            | gitlab cli     | todo            | todo          |                        |
 
 ### bash
 
