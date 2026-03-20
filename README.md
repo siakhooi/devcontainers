@@ -149,19 +149,21 @@ my devcontainers
 | kind             | container | todo  | todo  | todo  | todo  | todo      | todo     |
 
 ### Others
-| Component        | minizinc | latex     |
-| ---------------- | -------- | --------- |
-| minizinc         | curl     |           |
-| texlive          | -        | wget      |
-| fontconfig       | -        | apt       |
-| pdfinfo          | -        | apt       |
-| pyenv            | -        | git clone |
-| pyenv-virtualenv | -        | git clone |
-| python 3.14      | -        | pyenv     |
-| pypinyin         | -        | pip       |
-| PyYAML           | -        | pip       |
-| ctex             | -        | tlmgr     |
-| titlesec         | -        | tlmgr     |
+| Component             | minizinc | latex     | remark            |
+| --------------------- | -------- | --------- | ----------------- |
+| minizinc              | curl     |           |
+| texlive               | -        | wget      |
+| fontconfig            | -        | apt       |
+| pdfinfo               | -        | apt       |
+| pyenv                 | -        | git clone |
+| pyenv-virtualenv      | -        | git clone |
+| python 3.14           | -        | pyenv     |
+| pypinyin              | -        | pip       |
+| PyYAML                | -        | pip       |
+| ctex                  | -        | tlmgr     |
+| titlesec              | -        | tlmgr     |
+| fonts-arphic-bkai00mp | -        | apt       | AR PL KaitiM Big5 |
+| fonts-noto-cjk        | -        | apt       | Noto Serif CJK SC |
 
 ### Jupyter AI
 
