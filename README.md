@@ -128,6 +128,7 @@ my devcontainers
 | goreleaser       | deploy    | -     | -     | curl  | curl  | -         | -        |
 | dlv              | debugger  | -     | -     | go    | go    | -         | -        |
 | gopls            | lang      | -     | -     | go    | go    | -         | -        |
+| locales          | env       | -     | -     | -     | -     | apt       | -        |
 | pyenv            | env       | -     | -     | -     | -     | git clone | -        |
 | pyenv-virtualenv | env       | -     | -     | -     | -     | git clone | -        |
 | python 3.10      | lang      | -     | -     | -     | -     | pyenv     | -        |
@@ -136,6 +137,7 @@ my devcontainers
 | python 3.13      | lang      | -     | -     | -     | -     | pyenv     | -        |
 | python 3.14      | lang      | -     | -     | -     | -     | pyenv     | -        |
 | poetry           | lang      | -     | -     | -     | -     | pip       | -        |
+| tox              | test      | -     | -     | -     | -     | pip       | -        |
 | nvm              | env       | -     | -     | -     | -     | -         | curl     |
 | node             | lang      | -     | -     | -     | -     | -         | nvm      |
 | yarn             | build     | -     | -     | -     | -     | -         | npm      |

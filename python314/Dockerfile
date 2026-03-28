@@ -10,6 +10,9 @@ RUN apt-get update \
     build-essential curl git make zlib1g-dev libssl-dev \
     libbz2-dev libreadline-dev libsqlite3-dev libffi-dev \
     libncursesw5-dev liblzma-dev tk-dev wget \
+    locales \
+    && locale-gen en_US.UTF-8 \
+    && update-locale LANG=en_US.UTF-8 \
     && rm -rf /var/lib/apt/lists/*
 
 USER maui
@@ -26,4 +29,4 @@ RUN export PYENV_ROOT="${HOME}/.pyenv" \
     && pyenv global 3.14 \
     && eval "$(pyenv init -)" \
     && pip install --upgrade pip \
-    && pip install poetry
+    && pip install poetry tox tox-pyenv
