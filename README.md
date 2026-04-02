@@ -100,7 +100,8 @@ my devcontainers
 | siakhooi-buildo | utilities      | todo            | todo          |                        |
 | siakhooi-ore    | utilities      | todo            | todo          |                        |
 | pinentry        | crypto         | todo            | todo          |                        |
-
+| json2table      |
+| xmlstarlet      |
 ### bash
 
 | Component   | type      | deb  | rpm  |

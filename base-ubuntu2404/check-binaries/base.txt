@@ -17,3 +17,5 @@ wget
 ssh
 shfmt
 shellcheck
+json2table
+xmlstarlet
