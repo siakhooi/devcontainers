@@ -6,5 +6,8 @@ export PATH="${PYENV_ROOT}/bin:${PYENV_ROOT}/shims:${PATH}"
 if command -v pyenv 1>/dev/null 2>&1; then
 	eval "$(pyenv init -)"
 	eval "$(pyenv virtualenv-init -)"
-	pyenv versions
+
+  if [[ ! -f .python-version ]]; then
+    pyenv versions --bare > .python-version
+  fi
 fi
