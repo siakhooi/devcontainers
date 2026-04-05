@@ -11,3 +11,5 @@ if command -v pyenv 1>/dev/null 2>&1; then
     pyenv versions --bare > .python-version
   fi
 fi
+
+export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
