@@ -57,7 +57,7 @@ RUN curl -L -o /tmp/glab.deb https://gitlab.com/gitlab-org/cli/-/releases/v${GLA
 RUN wget https://siakhooi.github.io/apt/siakhooi-apt.list -O /etc/apt/sources.list.d/siakhooi-apt.list \
     && wget https://siakhooi.github.io/apt/siakhooi-apt.gpg  -O /usr/share/keyrings/siakhooi-apt.gpg \
     && apt update \
-    && apt install -y --no-install-recommends siakhooi-devy \
+    && apt install -y --no-install-recommends siakhooi-devy siakhooi-json2table \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
 

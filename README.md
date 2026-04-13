@@ -91,6 +91,7 @@ my devcontainers
 | glab            | gitlab cli     | curl            | curl          | with completion        |
 | yq              | stream editor  | curl            | curl          | with completion        |
 | jq              | stream editor  | curl            | curl          |                        |
+| json2table      | utilities      | apt             | dnf           |                        |
 | siakhooi-devy   | utilities      | apt             | dnf           | incl siakhooi-devutils |
 | ssh             | remote         | apt             | -             | dnf provided by ?      |
 | shfmt           | shell format   | curl            | curl          |                        |

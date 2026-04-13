@@ -32,7 +32,7 @@ RUN curl -L -o /tmp/glab.rpm https://gitlab.com/gitlab-org/cli/-/releases/v${GLA
     && rm /tmp/glab.rpm
 
 RUN curl -L -o /etc/yum.repos.d/siakhooi-rpms.repo https://siakhooi.github.io/rpms/siakhooi-rpms.repo \
-    && dnf install -y siakhooi-devy \
+    && dnf install -y siakhooi-devy siakhooi-json2table \
     && dnf clean all
 
 RUN dnf install -y 'dnf-command(config-manager)' \
