@@ -153,6 +153,7 @@ my devcontainers
 | kind             | container | todo  | todo  | todo  | todo  | todo      | todo     |
 
 ### Others
+
 | Component             | minizinc | latex     | remark            |
 | --------------------- | -------- | --------- | ----------------- |
 | minizinc              | curl     |           |
@@ -171,24 +172,25 @@ my devcontainers
 
 ### Jupyter AI
 
-| Component        | type | jupyter312 | Remark              |
-| ---------------- | ---- | ---------- | ------------------- |
-| openjdk-17-jdk   |      | apt        | required by pyspark |
-| pyenv            |      | git clone  |
-| pyenv-virtualenv |      | git clone  |
-| python 3.12      |      | pyenv      |
-| ipykernel        |      | pip        |
-| papermill        |      | pip        |
-| jupyterlab       |      | pip        |
-| pyarrow          |      | pip        |
-| pandas           |      | pip        |
-| pyspark          |      | pip        |
-| numpy            |      | pip        |
-| tensorflow       |      | pip        |
-| tf2onnx          |      | pip        |
-| onnx             |      | pip        |
-| scikit-learn     |      | pip        |
-| matplotlib       |      | pip        |
+| Component           | type | jupyter312 | Remark              |
+| ------------------- | ---- | ---------- | ------------------- |
+| openjdk-17-jdk      |      | apt        | required by pyspark |
+| pyenv               |      | git clone  |
+| pyenv-virtualenv    |      | git clone  |
+| python 3.12         |      | pyenv      |
+| ipykernel           |      | pip        |
+| papermill           |      | pip        |
+| jupyterlab          |      | pip        |
+| pyarrow             |      | pip        |
+| pandas              |      | pip        |
+| pyspark             |      | pip        |
+| numpy               |      | pip        |
+| tensorflow          |      | pip        |
+| tf2onnx             |      | pip        |
+| onnx                |      | pip        |
+| scikit-learn        |      | pip        |
+| matplotlib          |      | pip        |
+| importlib_resources |      | pip        |
 
 [![Wise](https://img.shields.io/badge/Funding-Wise-33cb56.svg?logo=wise)](https://wise.com/pay/me/siakn3)
 ![visitors](https://hit-tztugwlsja-uc.a.run.app/?outputtype=badge&counter=ghmd-devcontainers)
