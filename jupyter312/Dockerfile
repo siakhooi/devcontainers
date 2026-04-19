@@ -29,4 +29,5 @@ RUN export PYENV_ROOT="${HOME}/.pyenv" \
     && pip install ipykernel papermill jupyterlab \
     pyarrow pandas pyspark matplotlib \
     numpy tensorflow tf2onnx onnx scikit-learn seaborn \
+    lightning \
     tensorflow_datasets importlib_resources

@@ -191,6 +191,7 @@ my devcontainers
 | scikit-learn        |      | pip        |
 | matplotlib          |      | pip        |
 | importlib_resources |      | pip        |
+| lightning           |      | pip        |
 
 [![Wise](https://img.shields.io/badge/Funding-Wise-33cb56.svg?logo=wise)](https://wise.com/pay/me/siakn3)
 ![visitors](https://hit-tztugwlsja-uc.a.run.app/?outputtype=badge&counter=ghmd-devcontainers)
