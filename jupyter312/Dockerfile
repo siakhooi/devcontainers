@@ -30,4 +30,5 @@ RUN export PYENV_ROOT="${HOME}/.pyenv" \
     pyarrow pandas pyspark matplotlib \
     numpy tensorflow tf2onnx onnx scikit-learn seaborn \
     lightning \
+    kaggle kagglehub \
     tensorflow_datasets importlib_resources
