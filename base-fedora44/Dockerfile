@@ -13,7 +13,7 @@ ARG SHFMT_VERSION=3.13.1
 ARG GLAB_VERSION=1.93.0
 
 RUN dnf update -y \
-    && dnf install -y ack tree zip git nano make wget git openssl unzip podman \
+    && dnf install -y ack tree zip git nano make wget git-lfs openssl unzip podman \
        shellcheck \
     && dnf clean all
 
