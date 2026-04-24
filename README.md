@@ -44,7 +44,8 @@ my devcontainers
 .
 ├── ubuntu:24.04
 │   └── base-ubuntu2404
-│       ├── deb
+│       ├── deb (to be deprecated)
+│       ├── deb2404
 │       ├── jdk21
 │       ├── jdk25
 │       ├── go125
@@ -109,16 +110,16 @@ my devcontainers
 
 ### bash
 
-| Component   | type      | deb  | rpm  | rpm43 |
-| ----------- | --------- | ---- | ---- | ----- |
-| dpkg-dev    | deb build | apt  | -    | -     |
-| fakeroot    | deb build | apt  | -    | -     |
-| bats        | testing   | apt  | dnf  | dnf   |
-| rpm-sign    | rpm build | -    | dnf  | dnf   |
-| rpmdevtools | rpm build | -    | dnf  | dnf   |
-| rpmlint     | rpm build | -    | dnf  | dnf   |
-| pandoc      | manpage   | todo | todo | todo  |
-| man         | help      | todo | todo | todo  |
+| Component   | type      | deb  | deb2404 | rpm  | rpm43 |
+| ----------- | --------- | ---- | ------- | ---- | ----- |
+| dpkg-dev    | deb build | apt  | apt     | -    | -     |
+| fakeroot    | deb build | apt  | apt     | -    | -     |
+| bats        | testing   | apt  | apt     | dnf  | dnf   |
+| rpm-sign    | rpm build | -    | -       | dnf  | dnf   |
+| rpmdevtools | rpm build | -    | -       | dnf  | dnf   |
+| rpmlint     | rpm build | -    | -       | dnf  | dnf   |
+| pandoc      | manpage   | todo | todo    | todo | todo  |
+| man         | help      | todo | todo    | todo | todo  |
 
 ### languages
 
