@@ -1,4 +1,11 @@
 FROM  fedora:44
+LABEL org.opencontainers.image.url="https://github.com/siakhooi/devcontainer" \
+      org.opencontainers.image.source="https://github.com/siakhooi/devcontainer" \
+      org.opencontainers.image.licenses="MIT" \
+      org.opencontainers.image.authors="Siak Hooi" \
+      org.opencontainers.image.base.name="fedora:44" \
+      org.opencontainers.image.title="siakhooi/devcontainer:base-fedora44" \
+      org.opencontainers.image.description="Base image for Fedora 44-based devcontainers"
 
 ARG JQ_VERSION=1.8.1
 ARG YQ_VERSION=4.53.2

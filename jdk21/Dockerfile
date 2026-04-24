@@ -1,4 +1,11 @@
 FROM  siakhooi/devcontainer:base-ubuntu2404
+LABEL org.opencontainers.image.url="https://github.com/siakhooi/devcontainer" \
+      org.opencontainers.image.source="https://github.com/siakhooi/devcontainer" \
+      org.opencontainers.image.licenses="MIT" \
+      org.opencontainers.image.authors="Siak Hooi" \
+      org.opencontainers.image.base.name="siakhooi/devcontainer:base-ubuntu2404" \
+      org.opencontainers.image.title="siakhooi/devcontainer:jdk21" \
+      org.opencontainers.image.description="Devcontainer for JDK 21 development based on Ubuntu 24.04"
 
 ARG JDK_VERSION=21
 ARG MAVEN_VERSION=3.9.15
