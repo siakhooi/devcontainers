@@ -1,6 +1,6 @@
 help:
 
-base: base-ubuntu base-fedora
+base: base-ubuntu base-fedora base-fedora44
 lang: deb rpm jdk nodejs go python jupyter minizinc latex
 
 run-ubuntu:
@@ -13,10 +13,16 @@ base-ubuntu:
 run-base-ubuntu:
 	docker run -it --rm  siakhooi/devcontainer:base-ubuntu2404  bash
 
-base-fedora:
+base-fedora: base-fedora43
+run-base-fedora: run-base-fedora43
+base-fedora43:
 	.scripts/build.sh base-fedora43
-run-base-fedora:
+run-base-fedora43:
 	docker run -it --rm  siakhooi/devcontainer:base-fedora43  bash
+base-fedora44:
+	.scripts/build.sh base-fedora44
+run-base-fedora44:
+	docker run -it --rm  siakhooi/devcontainer:base-fedora44  bash
 
 deb:
 	.scripts/build.sh deb
@@ -90,6 +96,7 @@ deb-find:
 docker-pull:
 	docker pull siakhooi/devcontainer:base-ubuntu2404
 	docker pull siakhooi/devcontainer:base-fedora43
+	docker pull siakhooi/devcontainer:base-fedora44
 	docker pull siakhooi/devcontainer:deb
 	docker pull siakhooi/devcontainer:rpm
 	docker pull siakhooi/devcontainer:jdk21
@@ -100,7 +107,7 @@ docker-pull:
 	docker pull siakhooi/devcontainer:python314
 	docker pull siakhooi/devcontainer:jupyter312
 	docker pull siakhooi/devcontainer:minizinc
-.PHONY: base-ubuntu base-fedora deb rpm jdk21 jdk25 nodejs24 go125 go126 python314 jupyter312 minizinc latex
+.PHONY: base-ubuntu base-fedora base-fedora44 deb rpm jdk21 jdk25 nodejs24 go125 go126 python314 jupyter312 minizinc latex
 
 run-wf-base:
 	gh workflow run workflow-build-base.yml -f push-images=true
