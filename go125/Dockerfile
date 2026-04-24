@@ -7,6 +7,7 @@ ARG GORELEASER_VERSION=2.15.4
 USER root
 
 COPY --chown=root:root --chmod=755 bashrc.d/00-setup-go.sh /etc/devcontainer/bashrc.d/00-setup-go.sh
+COPY --chown=root:root --chmod=755 bashrc.d/zzz-show-new-image-available.sh /etc/devcontainer/bashrc.d/zzz-show-new-image-available.sh
 COPY check-binaries /etc/devcontainer/check-binaries
 
 RUN \
