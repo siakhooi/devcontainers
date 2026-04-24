@@ -8,16 +8,13 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "github.copilot",
-        "github.copilot-chat",
         "lfm.vscode-makefile-term",
         "yzhang.markdown-all-in-one",
         "james-yu.latex-workshop",
         "redhat.vscode-yaml",
         "mkhl.shfmt",
         "timonwong.shellcheck",
-        "foxundermoon.shell-format",
-        "github.vscode-github-actions"
+        "foxundermoon.shell-format"
       ]
     }
   },

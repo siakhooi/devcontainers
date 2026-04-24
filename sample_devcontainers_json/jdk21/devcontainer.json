@@ -8,8 +8,6 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "github.copilot",
-        "github.copilot-chat",
         "lfm.vscode-makefile-term",
         "yzhang.markdown-all-in-one",
         "vscjava.vscode-java-pack",
@@ -21,8 +19,7 @@
         "ms-vscode.live-server",
         "redhat.vscode-xml",
         "redhat.vscode-yaml",
-        "tim-koehler.helm-intellisense",
-        "github.vscode-github-actions"
+        "tim-koehler.helm-intellisense"
       ]
     }
   },
