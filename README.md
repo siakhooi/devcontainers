@@ -63,6 +63,7 @@ my devcontainers
 │       └── rpm43
 └── fedora:44
 │   └── base-fedora44
+│       └── rpm44
 
 ```
 
@@ -113,16 +114,16 @@ my devcontainers
 
 ### bash
 
-| Component   | type      | deb  | deb2404 | rpm  | rpm43 |
-| ----------- | --------- | ---- | ------- | ---- | ----- |
-| dpkg-dev    | deb build | apt  | apt     | -    | -     |
-| fakeroot    | deb build | apt  | apt     | -    | -     |
-| bats        | testing   | apt  | apt     | dnf  | dnf   |
-| rpm-sign    | rpm build | -    | -       | dnf  | dnf   |
-| rpmdevtools | rpm build | -    | -       | dnf  | dnf   |
-| rpmlint     | rpm build | -    | -       | dnf  | dnf   |
-| pandoc      | manpage   | todo | todo    | todo | todo  |
-| man         | help      | todo | todo    | todo | todo  |
+| Component   | type      | deb  | deb2404 | rpm  | rpm43 | rpm44 |
+| ----------- | --------- | ---- | ------- | ---- | ----- | ----- |
+| dpkg-dev    | deb build | apt  | apt     | -    | -     | -     |
+| fakeroot    | deb build | apt  | apt     | -    | -     | -     |
+| bats        | testing   | apt  | apt     | dnf  | dnf   | dnf   |
+| rpm-sign    | rpm build | -    | -       | dnf  | dnf   | dnf   |
+| rpmdevtools | rpm build | -    | -       | dnf  | dnf   | dnf   |
+| rpmlint     | rpm build | -    | -       | dnf  | dnf   | dnf   |
+| pandoc      | manpage   | todo | todo    | todo | todo  | todo  |
+| man         | help      | todo | todo    | todo | todo  | todo  |
 
 ### languages
 
