@@ -1,0 +1,7 @@
+docker
+podman
+gh
+git
+glab
+jq
+yq

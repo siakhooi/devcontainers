@@ -55,58 +55,61 @@ my devcontainers
 │       ├── nodejs24
 │       ├── latex
 │       └── minizinc
+├── ubuntu:26.04
+│   └── base-ubuntu2604
 ├── fedora:43
 │   └── base-fedora43
 │       ├── rpm  (to be deprecated)
 │       └── rpm43
 └── fedora:44
+│   └── base-fedora44
 
 ```
 
 ### Base
 
-| Component       | type           | base-ubuntu2404 | base-fedora43 | base-fedora44 | Remark                 |
-| --------------- | -------------- | --------------- | ------------- | ------------- | ---------------------- |
-| tar             | compression    | (baseimage)     | (baseimage)   | (baseimage)   |                        |
-| gzip            | compression    | (baseimage)     | (baseimage)   | (baseimage)   |                        |
-| sed             | stream editor  | (baseimage)     | (baseimage)   | (baseimage)   |                        |
-| awk             | stream editor  | (baseimage)     | (baseimage)   | (baseimage)   |                        |
-| grep            | matching       | (baseimage)     | (baseimage)   | (baseimage)   |                        |
-| sha256sum       | crypto         | (baseimage)     | (baseimage)   | (baseimage)   |                        |
-| sha512sum       | crypto         | (baseimage)     | (baseimage)   | (baseimage)   |                        |
-| curl            | http           | apt             | (baseimage)   | (baseimage)   |                        |
-| gnupg           | crypto         | apt             | (baseimage)   | (baseimage)   |                        |
-| vi/vim          | editor         | apt             | (baseimage)   | (baseimage)   |                        |
-| bzip2           | compression    | apt             | (baseimage)   | (baseimage)   |                        |
-| ca-certificates | crypto         | apt             | -             | -             |                        |
-| sudo            | admin          | apt             | dnf           | (baseimage)   |                        |
-| zip             | compression    | apt             | dnf           | dnf           |                        |
-| unzip           | compression    | apt             | dnf           | dnf           |                        |
-| nano            | editor         | apt             | dnf           | dnf           |                        |
-| make            | build          | apt             | dnf           | dnf           |                        |
-| git             | source control | apt             | dnf           | dnf           |                        |
-| git-lfs         | git lfs        | apt             | dnf           | dnf           |                        |
-| tree            | file           | apt             | dnf           | dnf           |                        |
-| wget            | http           | apt             | dnf           | dnf           |                        |
-| ack             | matching       | apt             | dnf           | dnf           |                        |
-| openssl         | crypto         | apt             | dnf           | dnf           |                        |
-| docker          | container      | apt             | dnf           | dnf           |                        |
-| podman          | container      | apt             | dnf           | dnf           |                        |
-| gh              | github cli     | apt             | dnf           | dnf           | with completion        |
-| glab            | gitlab cli     | curl            | curl          | curl          | with completion        |
-| yq              | stream editor  | curl            | curl          | curl          | with completion        |
-| jq              | stream editor  | curl            | curl          | curl          |                        |
-| json2table      | utilities      | apt             | dnf           | dnf           |                        |
-| siakhooi-devy   | utilities      | apt             | dnf           | dnf           | incl siakhooi-devutils |
-| ssh             | remote         | apt             | -             | -             | dnf provided by ?      |
-| shfmt           | shell format   | curl            | curl          | curl          |                        |
-| shellcheck      | linting        | apt             | dnf           | dnf           |                        |
-| jv              | json viewer    | todo            | todo          | todo          |                        |
-| httpie          | http client    | todo            | todo          | todo          |                        |
-| siakhooi-buildo | utilities      | todo            | todo          | todo          |                        |
-| siakhooi-ore    | utilities      | todo            | todo          | todo          |                        |
-| pinentry        | crypto         | todo            | todo          | todo          |                        |
-| xmlstarlet      | utilities      | todo            | todo          | todo          |                        |
+| Component       | type           | base-ubuntu2404 | base-ubuntu2604 | base-fedora43 | base-fedora44 | Remark                 |
+| --------------- | -------------- | --------------- | --------------- | ------------- | ------------- | ---------------------- |
+| tar             | compression    | (baseimage)     | (baseimage)     | (baseimage)   | (baseimage)   |                        |
+| gzip            | compression    | (baseimage)     | (baseimage)     | (baseimage)   | (baseimage)   |                        |
+| sed             | stream editor  | (baseimage)     | (baseimage)     | (baseimage)   | (baseimage)   |                        |
+| awk             | stream editor  | (baseimage)     | (baseimage)     | (baseimage)   | (baseimage)   |                        |
+| grep            | matching       | (baseimage)     | (baseimage)     | (baseimage)   | (baseimage)   |                        |
+| sha256sum       | crypto         | (baseimage)     | (baseimage)     | (baseimage)   | (baseimage)   |                        |
+| sha512sum       | crypto         | (baseimage)     | (baseimage)     | (baseimage)   | (baseimage)   |                        |
+| curl            | http           | apt             | apt             | (baseimage)   | (baseimage)   |                        |
+| gnupg           | crypto         | apt             | apt             | (baseimage)   | (baseimage)   |                        |
+| vi/vim          | editor         | apt             | apt             | (baseimage)   | (baseimage)   |                        |
+| bzip2           | compression    | apt             | apt             | (baseimage)   | (baseimage)   |                        |
+| ca-certificates | crypto         | apt             | apt             | -             | -             |                        |
+| sudo            | admin          | apt             | apt             | dnf           | (baseimage)   |                        |
+| zip             | compression    | apt             | apt             | dnf           | dnf           |                        |
+| unzip           | compression    | apt             | apt             | dnf           | dnf           |                        |
+| nano            | editor         | apt             | apt             | dnf           | dnf           |                        |
+| make            | build          | apt             | apt             | dnf           | dnf           |                        |
+| git             | source control | apt             | apt             | dnf           | dnf           |                        |
+| git-lfs         | git lfs        | apt             | apt             | dnf           | dnf           |                        |
+| tree            | file           | apt             | apt             | dnf           | dnf           |                        |
+| wget            | http           | apt             | apt             | dnf           | dnf           |                        |
+| ack             | matching       | apt             | apt             | dnf           | dnf           |                        |
+| openssl         | crypto         | apt             | -               | dnf           | dnf           |                        |
+| docker          | container      | apt             | apt             | dnf           | dnf           |                        |
+| podman          | container      | apt             | apt             | dnf           | dnf           |                        |
+| gh              | github cli     | apt             | apt             | dnf           | dnf           | with completion        |
+| glab            | gitlab cli     | curl            | curl            | curl          | curl          | with completion        |
+| yq              | stream editor  | curl            | curl            | curl          | curl          | with completion        |
+| jq              | stream editor  | curl            | curl            | curl          | curl          |                        |
+| json2table      | utilities      | apt             | apt             | dnf           | dnf           |                        |
+| siakhooi-devy   | utilities      | apt             | apt             | dnf           | dnf           | incl siakhooi-devutils |
+| ssh             | remote         | apt             | apt             | -             | -             | dnf provided by ?      |
+| shfmt           | shell format   | curl            | curl            | curl          | curl          |                        |
+| shellcheck      | linting        | apt             | apt             | dnf           | dnf           |                        |
+| jv              | json viewer    | todo            | todo            | todo          | todo          |                        |
+| httpie          | http client    | todo            | todo            | todo          | todo          |                        |
+| siakhooi-buildo | utilities      | todo            | todo            | todo          | todo          |                        |
+| siakhooi-ore    | utilities      | todo            | todo            | todo          | todo          |                        |
+| pinentry        | crypto         | todo            | todo            | todo          | todo          |                        |
+| xmlstarlet      | utilities      | todo            | todo            | todo          | todo          |                        |
 
 ### bash
 
