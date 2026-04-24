@@ -9,6 +9,7 @@ ARG GROOVY_VERSION=5.0.5
 USER root
 
 COPY --chown=root:root --chmod=755 bashrc.d/00-setup-jdk.sh /etc/devcontainer/bashrc.d/00-setup-jdk.sh
+COPY --chown=root:root --chmod=755 bashrc.d/zzz-show-new-image-available.sh /etc/devcontainer/bashrc.d/zzz-show-new-image-available.sh
 COPY check-binaries /etc/devcontainer/check-binaries
 
 RUN \
