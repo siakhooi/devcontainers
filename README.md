@@ -23,7 +23,6 @@ my devcontainers
 - siakhooi/devcontainer:base-fedora44
 - siakhooi/devcontainer:deb2404
 - siakhooi/devcontainer:deb2604
-- siakhooi/devcontainer:rpm
 - siakhooi/devcontainer:rpm43
 - siakhooi/devcontainer:rpm44
 - siakhooi/devcontainer:jdk21
@@ -64,7 +63,7 @@ my devcontainers
 │       └── deb2604
 ├── fedora:43
 │   └── base-fedora43
-│       ├── rpm  (to be deprecated)
+│       ├── rpm  (deprecated)
 │       └── rpm43
 └── fedora:44
 │   └── base-fedora44
