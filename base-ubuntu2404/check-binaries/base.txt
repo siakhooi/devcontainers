@@ -19,3 +19,4 @@ shfmt
 shellcheck
 json2table
 xmlstarlet
+update-ca-certificates

@@ -125,7 +125,7 @@ docker-pull:
 	docker pull siakhooi/devcontainer:python314
 	docker pull siakhooi/devcontainer:jupyter312
 	docker pull siakhooi/devcontainer:minizinc
-.PHONY: base-ubuntu base-ubuntu2604 base-fedora base-fedora44 deb deb2404 rpm rpm43 jdk21 jdk25 nodejs24 go125 go126 python314 jupyter312 minizinc latex
+.PHONY: base-ubuntu2404 base-ubuntu2604 base-fedora43 base-fedora44 deb deb2404 rpm rpm43 jdk21 jdk25 nodejs24 go125 go126 python314 jupyter312 minizinc latex
 
 run-wf-base:
 	gh workflow run workflow-build-base.yml -f push-images=true
