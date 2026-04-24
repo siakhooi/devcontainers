@@ -57,6 +57,7 @@ my devcontainers
 │       └── minizinc
 ├── ubuntu:26.04
 │   └── base-ubuntu2604
+│       └── deb2604
 ├── fedora:43
 │   └── base-fedora43
 │       ├── rpm  (to be deprecated)
@@ -114,16 +115,16 @@ my devcontainers
 
 ### bash
 
-| Component   | type      | deb  | deb2404 | rpm  | rpm43 | rpm44 |
-| ----------- | --------- | ---- | ------- | ---- | ----- | ----- |
-| dpkg-dev    | deb build | apt  | apt     | -    | -     | -     |
-| fakeroot    | deb build | apt  | apt     | -    | -     | -     |
-| bats        | testing   | apt  | apt     | dnf  | dnf   | dnf   |
-| rpm-sign    | rpm build | -    | -       | dnf  | dnf   | dnf   |
-| rpmdevtools | rpm build | -    | -       | dnf  | dnf   | dnf   |
-| rpmlint     | rpm build | -    | -       | dnf  | dnf   | dnf   |
-| pandoc      | manpage   | todo | todo    | todo | todo  | todo  |
-| man         | help      | todo | todo    | todo | todo  | todo  |
+| Component   | type      | deb  | deb2404 | deb2604 | rpm  | rpm43 | rpm44 |
+| ----------- | --------- | ---- | ------- | ------- | ---- | ----- | ----- |
+| dpkg-dev    | deb build | apt  | apt     | apt     | -    | -     | -     |
+| fakeroot    | deb build | apt  | apt     | apt     | -    | -     | -     |
+| bats        | testing   | apt  | apt     | apt     | dnf  | dnf   | dnf   |
+| rpm-sign    | rpm build | -    | -       | -       | dnf  | dnf   | dnf   |
+| rpmdevtools | rpm build | -    | -       | -       | dnf  | dnf   | dnf   |
+| rpmlint     | rpm build | -    | -       | -       | dnf  | dnf   | dnf   |
+| pandoc      | manpage   | todo | todo    | todo    | todo | todo  | todo  |
+| man         | help      | todo | todo    | todo    | todo | todo  | todo  |
 
 ### languages
 
