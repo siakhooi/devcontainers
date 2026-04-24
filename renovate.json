@@ -13,7 +13,7 @@
       "matchStrings": [
         "ARG GLAB_VERSION=(?<currentValue>[0-9.]+)"
       ],
-      "packageName": "gitlab-org/cli",
+      "depNameTemplate": "gitlab-org/cli",
       "datasourceTemplate": "gitlab-releases"
     },
     {
