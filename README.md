@@ -21,7 +21,6 @@ my devcontainers
 - siakhooi/devcontainer:base-ubuntu2604
 - siakhooi/devcontainer:base-fedora43
 - siakhooi/devcontainer:base-fedora44
-- siakhooi/devcontainer:deb
 - siakhooi/devcontainer:deb2404
 - siakhooi/devcontainer:deb2604
 - siakhooi/devcontainer:rpm
@@ -49,7 +48,7 @@ my devcontainers
 .
 ├── ubuntu:24.04
 │   └── base-ubuntu2404
-│       ├── deb (to be deprecated)
+│       ├── deb (deprecated)
 │       ├── deb2404
 │       ├── jdk21
 │       ├── jdk25
