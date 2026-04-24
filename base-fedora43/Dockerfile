@@ -3,7 +3,7 @@ FROM  fedora:43
 ARG JQ_VERSION=1.8.1
 ARG YQ_VERSION=4.53.2
 ARG SHFMT_VERSION=3.13.1
-ARG GLAB_VERSION=1.89.0
+ARG GLAB_VERSION=1.93.0
 
 RUN dnf update -y \
     && dnf install -y ack tree zip git nano make wget sudo git-lfs openssl unzip podman \
