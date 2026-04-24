@@ -56,7 +56,8 @@ my devcontainers
 │       └── minizinc
 ├── fedora:43
 │   └── base-fedora43
-│       └── rpm
+│       ├── rpm  (to be deprecated)
+│       └── rpm43
 └── fedora:44
 
 ```
@@ -108,16 +109,16 @@ my devcontainers
 
 ### bash
 
-| Component   | type      | deb  | rpm  |
-| ----------- | --------- | ---- | ---- |
-| dpkg-dev    | deb build | apt  | -    |
-| fakeroot    | deb build | apt  | -    |
-| bats        | testing   | apt  | dnf  |
-| rpm-sign    | rpm build | -    | dnf  |
-| rpmdevtools | rpm build | -    | dnf  |
-| rpmlint     | rpm build | -    | dnf  |
-| pandoc      | manpage   | todo | todo |
-| man         | help      | todo | todo |
+| Component   | type      | deb  | rpm  | rpm43 |
+| ----------- | --------- | ---- | ---- | ----- |
+| dpkg-dev    | deb build | apt  | -    | -     |
+| fakeroot    | deb build | apt  | -    | -     |
+| bats        | testing   | apt  | dnf  | dnf   |
+| rpm-sign    | rpm build | -    | dnf  | dnf   |
+| rpmdevtools | rpm build | -    | dnf  | dnf   |
+| rpmlint     | rpm build | -    | dnf  | dnf   |
+| pandoc      | manpage   | todo | todo | todo  |
+| man         | help      | todo | todo | todo  |
 
 ### languages
 
