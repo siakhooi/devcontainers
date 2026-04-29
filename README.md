@@ -30,6 +30,7 @@ my devcontainers
 - siakhooi/devcontainer:nodejs24
 - siakhooi/devcontainer:go125
 - siakhooi/devcontainer:go126
+- siakhooi/devcontainer:go126_2604
 - siakhooi/devcontainer:python314
 - siakhooi/devcontainer:jupyter312
 - siakhooi/devcontainer:minizinc
@@ -60,6 +61,7 @@ my devcontainers
 │       └── minizinc
 ├── ubuntu:26.04
 │   └── base-ubuntu2604
+│       ├── go126_2604
 │       └── deb2604
 ├── fedora:43
 │   └── base-fedora43
@@ -131,39 +133,39 @@ my devcontainers
 
 ### languages
 
-| Component        | type      | jdk21 | jdk25 | go125 | go126 | python314 | nodejs24 |
-| ---------------- | --------- | ----- | ----- | ----- | ----- | --------- | -------- |
-| jdk              | lang      | curl  | curl  | -     | -     | -         | -        |
-| maven            | build     | curl  | curl  | -     | -     | -         | -        |
-| gradle           | build     | curl  | curl  | -     | -     | -         | -        |
-| spring-boot-cli  | build     | curl  | curl  | -     | -     | -         | -        |
-| groovy           | lang      | curl  | curl  | -     | -     | -         | -        |
-| go               | lang      | -     | -     | curl  | curl  | -         | -        |
-| golangci-lint    | quality   | -     | -     | curl  | curl  | -         | -        |
-| goreleaser       | deploy    | -     | -     | curl  | curl  | -         | -        |
-| dlv              | debugger  | -     | -     | go    | go    | -         | -        |
-| gopls            | lang      | -     | -     | go    | go    | -         | -        |
-| locales          | env       | -     | -     | -     | -     | apt       | -        |
-| pyenv            | env       | -     | -     | -     | -     | git clone | -        |
-| pyenv-virtualenv | env       | -     | -     | -     | -     | git clone | -        |
-| python 3.10      | lang      | -     | -     | -     | -     | pyenv     | -        |
-| python 3.11      | lang      | -     | -     | -     | -     | pyenv     | -        |
-| python 3.12      | lang      | -     | -     | -     | -     | pyenv     | -        |
-| python 3.13      | lang      | -     | -     | -     | -     | pyenv     | -        |
-| python 3.14      | lang      | -     | -     | -     | -     | pyenv     | -        |
-| poetry           | lang      | -     | -     | -     | -     | pip       | -        |
-| tox              | test      | -     | -     | -     | -     | pip       | -        |
-| nvm              | env       | -     | -     | -     | -     | -         | curl     |
-| node             | lang      | -     | -     | -     | -     | -         | nvm      |
-| yarn             | build     | -     | -     | -     | -     | -         | npm      |
-| firebase         | firebase  | -     | -     | -     | -     | -         | npm      |
-| jacoco           | coverage  | todo  | todo  | -     | -     | -         | -        |
-| qlty             | quality   | todo  | todo  | todo  | todo  | todo      | todo     |
-| sonar            | quality   | todo  | todo  | todo  | todo  | todo      | todo     |
-| kubectl          | container | todo  | todo  | todo  | todo  | todo      | todo     |
-| helm             | container | todo  | todo  | todo  | todo  | todo      | todo     |
-| helm-unit-test   | container | todo  | todo  | todo  | todo  | todo      | todo     |
-| kind             | container | todo  | todo  | todo  | todo  | todo      | todo     |
+| Component        | type      | jdk21 | jdk25 | go125 | go126 | go126_2604 | python314 | nodejs24 |
+| ---------------- | --------- | ----- | ----- | ----- | ----- | ---------- | --------- | -------- |
+| jdk              | lang      | curl  | curl  | -     | -     | -          | -         | -        |
+| maven            | build     | curl  | curl  | -     | -     | -          | -         | -        |
+| gradle           | build     | curl  | curl  | -     | -     | -          | -         | -        |
+| spring-boot-cli  | build     | curl  | curl  | -     | -     | -          | -         | -        |
+| groovy           | lang      | curl  | curl  | -     | -     | -          | -         | -        |
+| go               | lang      | -     | -     | curl  | curl  | curl       | -         | -        |
+| golangci-lint    | quality   | -     | -     | curl  | curl  | curl       | -         | -        |
+| goreleaser       | deploy    | -     | -     | curl  | curl  | curl       | -         | -        |
+| dlv              | debugger  | -     | -     | go    | go    | go         | -         | -        |
+| gopls            | lang      | -     | -     | go    | go    | go         | -         | -        |
+| locales          | env       | -     | -     | -     | -     | -          | apt       | -        |
+| pyenv            | env       | -     | -     | -     | -     | -          | git clone | -        |
+| pyenv-virtualenv | env       | -     | -     | -     | -     | -          | git clone | -        |
+| python 3.10      | lang      | -     | -     | -     | -     | -          | pyenv     | -        |
+| python 3.11      | lang      | -     | -     | -     | -     | -          | pyenv     | -        |
+| python 3.12      | lang      | -     | -     | -     | -     | -          | pyenv     | -        |
+| python 3.13      | lang      | -     | -     | -     | -     | -          | pyenv     | -        |
+| python 3.14      | lang      | -     | -     | -     | -     | -          | pyenv     | -        |
+| poetry           | lang      | -     | -     | -     | -     | -          | pip       | -        |
+| tox              | test      | -     | -     | -     | -     | -          | pip       | -        |
+| nvm              | env       | -     | -     | -     | -     | -          | -         | curl     |
+| node             | lang      | -     | -     | -     | -     | -          | -         | nvm      |
+| yarn             | build     | -     | -     | -     | -     | -          | -         | npm      |
+| firebase         | firebase  | -     | -     | -     | -     | -          | -         | npm      |
+| jacoco           | coverage  | todo  | todo  | -     | -     | -          | -         | -        |
+| qlty             | quality   | todo  | todo  | todo  | todo  | todo       | todo      | todo     |
+| sonar            | quality   | todo  | todo  | todo  | todo  | todo       | todo      | todo     |
+| kubectl          | container | todo  | todo  | todo  | todo  | todo       | todo      | todo     |
+| helm             | container | todo  | todo  | todo  | todo  | todo       | todo      | todo     |
+| helm-unit-test   | container | todo  | todo  | todo  | todo  | todo       | todo      | todo     |
+| kind             | container | todo  | todo  | todo  | todo  | todo       | todo      | todo     |
 
 ### Others
 

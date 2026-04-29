@@ -63,7 +63,7 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["^go126/Dockerfile$"],
+      "fileMatch": ["^go126.*/Dockerfile$"],
       "matchStrings": [
         "ARG GO_VERSION=(?<currentValue>[0-9.]+)"
       ],
