@@ -15,26 +15,27 @@ my devcontainers
 - `/opt/devcontainer/bashrc.d` - to be mounted by user to add custom shell logic
 - `/etc/devcontainer/check-binaries` - to be mounted by user to add custom binaries list to check
 
-## List of Containers
-
-- siakhooi/devcontainer:base-ubuntu2404
-- siakhooi/devcontainer:base-ubuntu2604
-- siakhooi/devcontainer:base-fedora43
-- siakhooi/devcontainer:base-fedora44
-- siakhooi/devcontainer:deb2404
-- siakhooi/devcontainer:deb2604
-- siakhooi/devcontainer:rpm43
-- siakhooi/devcontainer:rpm44
-- siakhooi/devcontainer:jdk21
-- siakhooi/devcontainer:jdk25
-- siakhooi/devcontainer:nodejs24
-- siakhooi/devcontainer:go125
-- siakhooi/devcontainer:go126
-- siakhooi/devcontainer:go126_2604
-- siakhooi/devcontainer:python314
-- siakhooi/devcontainer:jupyter312
-- siakhooi/devcontainer:minizinc
-- siakhooi/devcontainer:latex
+## List of Images
+| Image                                 | Expired Date                                              |
+| ------------------------------------- | --------------------------------------------------------- |
+| siakhooi/devcontainer:base-ubuntu2404 | expire 2029-May                                           |
+| siakhooi/devcontainer:base-ubuntu2604 | expire 2031-May                                           |
+| siakhooi/devcontainer:base-fedora43   | expire 2026-Dec                                           |
+| siakhooi/devcontainer:base-fedora44   | expire 2027-Jun                                           |
+| siakhooi/devcontainer:deb2404         | expire 2029-May                                           |
+| siakhooi/devcontainer:deb2604         | expire 2031-May                                           |
+| siakhooi/devcontainer:rpm43           | expire 2026-Dec                                           |
+| siakhooi/devcontainer:rpm44           | expire 2027-Jun                                           |
+| siakhooi/devcontainer:jdk21           | expire 2029-May, 2029-Dec (jdk21)                         |
+| siakhooi/devcontainer:jdk25           | expire 2029-May, 2031-Sep (jdk25)                         |
+| siakhooi/devcontainer:nodejs24        | expire 2029-May, 2028-Apr (nodejs24)                      |
+| siakhooi/devcontainer:go125           | expire 2029-May, 2026-Aug (go125)                         |
+| siakhooi/devcontainer:go126           | expire 2029-May, 2027-Feb (go126)                         |
+| siakhooi/devcontainer:go126_2604      | expire 2031-May, 2027-Feb (go126)                         |
+| siakhooi/devcontainer:python314       | expire 2029-May, 2026-Oct (python 3.10)                   |
+| siakhooi/devcontainer:jupyter312      | expire 2029-May, 2028-Oct (python 3.12), 2029-Sep (jdk17) |
+| siakhooi/devcontainer:minizinc        | expire 2029-May                                           |
+| siakhooi/devcontainer:latex           | expire 2029-May, 2030-Oct (python 3.14)                   |
 
 ## Deliverables
 
