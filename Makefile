@@ -57,6 +57,10 @@ minizinc:
 	.scripts/build.sh minizinc
 run-minizinc:
 	docker run -it --rm  siakhooi/devcontainer:minizinc  bash
+minizinc_2604:
+	.scripts/build.sh minizinc_2604
+run-minizinc_2604:
+	docker run -it --rm  siakhooi/devcontainer:minizinc_2604  bash
 latex:
 	.scripts/build.sh latex
 run-latex:
@@ -139,7 +143,8 @@ docker-pull:
 	docker pull siakhooi/devcontainer:python314
 	docker pull siakhooi/devcontainer:jupyter312
 	docker pull siakhooi/devcontainer:minizinc
-.PHONY: base-ubuntu2404 base-ubuntu2604 base-fedora43 base-fedora44 deb2404 deb2604 rpm43 rpm44 jdk21 jdk25 jdk25_2604 nodejs24 go125 go126 go126_2604 python314 jupyter312 minizinc latex
+	docker pull siakhooi/devcontainer:minizinc_2604
+.PHONY: base-ubuntu2404 base-ubuntu2604 base-fedora43 base-fedora44 deb2404 deb2604 rpm43 rpm44 jdk21 jdk25 jdk25_2604 nodejs24 go125 go126 go126_2604 python314 jupyter312 minizinc minizinc_2604 latex
 
 run-wf-base:
 	gh workflow run workflow-build-base.yml -f push-images=true

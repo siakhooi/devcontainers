@@ -1,11 +1,11 @@
-FROM  siakhooi/devcontainer:base-ubuntu2404
+FROM  siakhooi/devcontainer:base-ubuntu2604
 LABEL org.opencontainers.image.url="https://github.com/siakhooi/devcontainer" \
       org.opencontainers.image.source="https://github.com/siakhooi/devcontainer" \
       org.opencontainers.image.licenses="MIT" \
       org.opencontainers.image.authors="Siak Hooi" \
-      org.opencontainers.image.base.name="siakhooi/devcontainer:base-ubuntu2404" \
-      org.opencontainers.image.title="siakhooi/devcontainer:minizinc" \
-      org.opencontainers.image.description="Devcontainer for MiniZinc development based on Ubuntu 24.04"
+      org.opencontainers.image.base.name="siakhooi/devcontainer:base-ubuntu2604" \
+      org.opencontainers.image.title="siakhooi/devcontainer:minizinc_2604" \
+      org.opencontainers.image.description="Devcontainer for MiniZinc development based on Ubuntu 26.04"
 
 ARG MINIZINC_VERSION=2.9.7
 
@@ -15,7 +15,6 @@ RUN curl -L -o /opt/minizinc.tgz https://github.com/MiniZinc/MiniZincIDE/release
     && tar xf /opt/minizinc.tgz -C /opt \
     && rm /opt/minizinc.tgz
 
-COPY --chown=root:root --chmod=755 bashrc.d/zzz-show-new-image-available.sh /etc/devcontainer/bashrc.d/zzz-show-new-image-available.sh
 COPY check-binaries /etc/devcontainer/check-binaries
 
 USER maui

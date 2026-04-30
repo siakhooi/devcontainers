@@ -35,7 +35,8 @@ my devcontainers
 | siakhooi/devcontainer:go126_2604      | expire 2031-May, 2027-Feb (go126)                         |
 | siakhooi/devcontainer:python314       | expire 2029-May, 2026-Oct (python 3.10)                   |
 | siakhooi/devcontainer:jupyter312      | expire 2029-May, 2028-Oct (python 3.12), 2029-Sep (jdk17) |
-| siakhooi/devcontainer:minizinc        | expire 2029-May                                           |
+| siakhooi/devcontainer:minizinc        | expire **2029-May**                                       |
+| siakhooi/devcontainer:minizinc_2604   | expire 2031-May                                           |
 | siakhooi/devcontainer:latex           | expire 2029-May, 2030-Oct (python 3.14)                   |
 
 ## Deliverables
@@ -65,6 +66,7 @@ my devcontainers
 │   └── base-ubuntu2604
 │       ├── jdk25_2604
 │       ├── go126_2604
+│       ├── minizinc_2604
 │       └── deb2604
 ├── fedora:43
 │   └── base-fedora43
@@ -172,21 +174,21 @@ my devcontainers
 
 ### Others
 
-| Component             | minizinc | latex     | remark            |
-| --------------------- | -------- | --------- | ----------------- |
-| minizinc              | curl     |           |
-| texlive               | -        | wget      |
-| fontconfig            | -        | apt       |
-| pdfinfo               | -        | apt       |
-| pyenv                 | -        | git clone |
-| pyenv-virtualenv      | -        | git clone |
-| python 3.14           | -        | pyenv     |
-| pypinyin              | -        | pip       |
-| PyYAML                | -        | pip       |
-| ctex                  | -        | tlmgr     |
-| titlesec              | -        | tlmgr     |
-| fonts-arphic-bkai00mp | -        | apt       | AR PL KaitiM Big5 |
-| fonts-noto-cjk        | -        | apt       | Noto Serif CJK SC |
+| Component             | minizinc | minizinc_2604 | latex     | remark            |
+| --------------------- | -------- | ------------- | --------- | ----------------- |
+| minizinc              | curl     | curl          |           |
+| texlive               | -        | -             | wget      |
+| fontconfig            | -        | -             | apt       |
+| pdfinfo               | -        | -             | apt       |
+| pyenv                 | -        | -             | git clone |
+| pyenv-virtualenv      | -        | -             | git clone |
+| python 3.14           | -        | -             | pyenv     |
+| pypinyin              | -        | -             | pip       |
+| PyYAML                | -        | -             | pip       |
+| ctex                  | -        | -             | tlmgr     |
+| titlesec              | -        | -             | tlmgr     |
+| fonts-arphic-bkai00mp | -        | -             | apt       | AR PL KaitiM Big5 |
+| fonts-noto-cjk        | -        | -             | apt       | Noto Serif CJK SC |
 
 ### Jupyter AI
 
