@@ -64,6 +64,10 @@ run-latex:
 
 jdk: jdk21
 run-jdk: run-jdk21
+jdk25_2604:
+	.scripts/build.sh jdk25_2604
+run-jdk25_2604:
+	docker run -it --rm  siakhooi/devcontainer:jdk25_2604  bash
 jdk25:
 	.scripts/build.sh jdk25
 run-jdk25:
@@ -127,6 +131,7 @@ docker-pull:
 	docker pull siakhooi/devcontainer:rpm44
 	docker pull siakhooi/devcontainer:jdk21
 	docker pull siakhooi/devcontainer:jdk25
+	docker pull siakhooi/devcontainer:jdk25_2604
 	docker pull siakhooi/devcontainer:nodejs24
 	docker pull siakhooi/devcontainer:go125
 	docker pull siakhooi/devcontainer:go126
@@ -134,7 +139,7 @@ docker-pull:
 	docker pull siakhooi/devcontainer:python314
 	docker pull siakhooi/devcontainer:jupyter312
 	docker pull siakhooi/devcontainer:minizinc
-.PHONY: base-ubuntu2404 base-ubuntu2604 base-fedora43 base-fedora44 deb2404 deb2604 rpm43 rpm44 jdk21 jdk25 nodejs24 go125 go126 go126_2604 python314 jupyter312 minizinc latex
+.PHONY: base-ubuntu2404 base-ubuntu2604 base-fedora43 base-fedora44 deb2404 deb2604 rpm43 rpm44 jdk21 jdk25 jdk25_2604 nodejs24 go125 go126 go126_2604 python314 jupyter312 minizinc latex
 
 run-wf-base:
 	gh workflow run workflow-build-base.yml -f push-images=true

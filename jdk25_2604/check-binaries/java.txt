@@ -1,0 +1,8 @@
+java
+javac
+mvn
+gradle
+spring
+jacoco
+groovy
+qlty
