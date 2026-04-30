@@ -1,6 +1,6 @@
 #!/bin/bash
 
-readonly new_devcontainer="siakhooi/devcontainer:jdk25_2604"
+readonly new_devcontainer="siakhooi/devcontainer:deb2604"
 readonly expire_date='May 2029'
 
 echo.info -n "

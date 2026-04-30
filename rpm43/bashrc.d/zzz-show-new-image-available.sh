@@ -1,7 +1,7 @@
 #!/bin/bash
 
-readonly new_devcontainer="siakhooi/devcontainer:jdk25_2604"
-readonly expire_date='May 2029'
+readonly new_devcontainer="siakhooi/devcontainer:rpm44"
+readonly expire_date='Dec 2026'
 
 echo.info -n "
 A new devcontainer image is available: "
