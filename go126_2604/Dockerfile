@@ -3,9 +3,9 @@ LABEL org.opencontainers.image.url="https://github.com/siakhooi/devcontainer" \
       org.opencontainers.image.source="https://github.com/siakhooi/devcontainer" \
       org.opencontainers.image.licenses="MIT" \
       org.opencontainers.image.authors="Siak Hooi" \
-      org.opencontainers.image.base.name="siakhooi/devcontainer:base-ubuntu2404" \
-      org.opencontainers.image.title="siakhooi/devcontainer:go126" \
-      org.opencontainers.image.description="Devcontainer for Go 1.26 development based on Ubuntu 24.04"
+      org.opencontainers.image.base.name="siakhooi/devcontainer:base-ubuntu2604" \
+      org.opencontainers.image.title="siakhooi/devcontainer:go126_2604" \
+      org.opencontainers.image.description="Devcontainer for Go 1.26 development based on Ubuntu 26.04"
 
 ARG GO_VERSION=1.26.2
 ARG GOLANGCI_LINT_VERSION=2.11.4
