@@ -1,6 +1,0 @@
-fakeroot
-shellcheck
-bats
-pandoc
-dpkg-name
-dpkg

@@ -12,14 +12,6 @@ on:
         default: false
 
 jobs:
-  build-deb:
-    uses: ./.github/workflows/build-deb.yml
-    secrets:
-      PUBLISH_TO_GITHUB_REPO_TOKEN: ${{ secrets.PUBLISH_TO_GITHUB_REPO_TOKEN }}
-      REGISTRY_PASSWORD_DOCKER: ${{ secrets.REGISTRY_PASSWORD_DOCKER }}
-    with:
-      push-images: ${{ inputs.push-images || false }}
-
   build-deb2404:
     uses: ./.github/workflows/build-deb2404.yml
     secrets:
@@ -30,14 +22,6 @@ jobs:
 
   build-deb2604:
     uses: ./.github/workflows/build-deb2604.yml
-    secrets:
-      PUBLISH_TO_GITHUB_REPO_TOKEN: ${{ secrets.PUBLISH_TO_GITHUB_REPO_TOKEN }}
-      REGISTRY_PASSWORD_DOCKER: ${{ secrets.REGISTRY_PASSWORD_DOCKER }}
-    with:
-      push-images: ${{ inputs.push-images || false }}
-
-  build-rpm:
-    uses: ./.github/workflows/build-rpm.yml
     secrets:
       PUBLISH_TO_GITHUB_REPO_TOKEN: ${{ secrets.PUBLISH_TO_GITHUB_REPO_TOKEN }}
       REGISTRY_PASSWORD_DOCKER: ${{ secrets.REGISTRY_PASSWORD_DOCKER }}

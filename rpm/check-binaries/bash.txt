@@ -1,7 +1,0 @@
-shellcheck
-bats
-rpmsign
-rpmlint
-rpmbuild
-rpmdev-setuptree
-pandoc

@@ -51,7 +51,6 @@ my devcontainers
 .
 ├── ubuntu:24.04
 │   └── base-ubuntu2404
-│       ├── deb (deprecated)
 │       ├── deb2404
 │       ├── jdk21
 │       ├── jdk25
@@ -70,7 +69,6 @@ my devcontainers
 │       └── deb2604
 ├── fedora:43
 │   └── base-fedora43
-│       ├── rpm  (deprecated)
 │       └── rpm43
 └── fedora:44
 │   └── base-fedora44
@@ -126,15 +124,15 @@ my devcontainers
 
 ### bash
 
-| Component   | type      | deb  | deb2404 | deb2604 | rpm  | rpm43 | rpm44 |
-| ----------- | --------- | ---- | ------- | ------- | ---- | ----- | ----- |
-| dpkg-dev    | deb build | apt  | apt     | apt     | -    | -     | -     |
-| fakeroot    | deb build | apt  | apt     | apt     | -    | -     | -     |
-| bats        | testing   | apt  | apt     | apt     | dnf  | dnf   | dnf   |
-| rpm-sign    | rpm build | -    | -       | -       | dnf  | dnf   | dnf   |
-| rpmdevtools | rpm build | -    | -       | -       | dnf  | dnf   | dnf   |
-| rpmlint     | rpm build | -    | -       | -       | dnf  | dnf   | dnf   |
-| pandoc      | manpage   | todo | todo    | todo    | todo | todo  | todo  |
+| Component   | type      | deb2404 | deb2604 | rpm43 | rpm44 |
+| ----------- | --------- | ------- | ------- | ----- | ----- |
+| dpkg-dev    | deb build | apt     | apt     | -     | -     |
+| fakeroot    | deb build | apt     | apt     | -     | -     |
+| bats        | testing   | apt     | apt     | dnf   | dnf   |
+| rpm-sign    | rpm build | -       | -       | dnf   | dnf   |
+| rpmdevtools | rpm build | -       | -       | dnf   | dnf   |
+| rpmlint     | rpm build | -       | -       | dnf   | dnf   |
+| pandoc      | manpage   | todo    | todo    | todo  | todo  |
 
 ### languages
 

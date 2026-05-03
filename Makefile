@@ -31,8 +31,8 @@ base-fedora44:
 run-base-fedora44:
 	docker run -it --rm  siakhooi/devcontainer:base-fedora44  bash
 
-deb: deb2404
-run-deb: run-deb2404
+deb: deb2604
+run-deb: run-deb2604
 deb2404:
 	.scripts/build.sh deb2404
 run-deb2404:
@@ -42,8 +42,8 @@ deb2604:
 run-deb2604:
 	docker run -it --rm  siakhooi/devcontainer:deb2604  bash
 
-rpm: rpm43
-run-rpm: run-rpm43
+rpm: rpm44
+run-rpm: run-rpm44
 rpm43:
 	.scripts/build.sh rpm43
 run-rpm43:
@@ -88,8 +88,8 @@ nodejs24:
 run-nodejs24:
 	docker run -it --rm  siakhooi/devcontainer:nodejs24  bash
 
-go: go126
-run-go: run-go126
+go: go126_2604
+run-go: run-go126_2604
 go126_2604:
 	.scripts/build.sh go126_2604
 run-go126_2604:
