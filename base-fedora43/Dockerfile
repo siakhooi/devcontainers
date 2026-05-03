@@ -12,9 +12,14 @@ ARG YQ_VERSION=4.53.2
 ARG SHFMT_VERSION=3.13.1
 ARG GLAB_VERSION=1.93.0
 
-RUN dnf update -y \
+RUN sed -i '/^tsflags=nodocs/d' /etc/dnf/dnf.conf \
+    && dnf update -y \
     && dnf install -y ack tree zip git nano make wget sudo git-lfs openssl unzip podman \
        shellcheck \
+    && dnf install -y man-db man-pages \
+    # ensure man pages are installed for these packages
+    && dnf reinstall -y bash coreutils-common \
+    && mandb \
     && dnf clean all
 
 # use maui as user

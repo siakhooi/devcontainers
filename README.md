@@ -107,7 +107,7 @@ my devcontainers
 | openssl         | crypto         | apt             | -               | dnf           | dnf           |                        |
 | docker          | container      | apt             | apt             | dnf           | dnf           |                        |
 | podman          | container      | apt             | apt             | dnf           | dnf           |                        |
-| man             | help           | apt             | apt             | todo          | todo          |                        |
+| man             | help           | apt             | apt             | dnf           | dnf           |                        |
 | gh              | github cli     | apt             | apt             | dnf           | dnf           | with completion        |
 | glab            | gitlab cli     | curl            | curl            | curl          | curl          | with completion        |
 | yq              | stream editor  | curl            | curl            | curl          | curl          | with completion        |
