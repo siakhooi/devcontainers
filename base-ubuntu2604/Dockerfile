@@ -34,6 +34,9 @@ RUN apt update \
         unzip \
         podman \
         lsb-release \
+        unminimize \
+        man \
+    && (yes | unminimize) \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
 

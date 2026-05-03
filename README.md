@@ -107,6 +107,7 @@ my devcontainers
 | openssl         | crypto         | apt             | -               | dnf           | dnf           |                        |
 | docker          | container      | apt             | apt             | dnf           | dnf           |                        |
 | podman          | container      | apt             | apt             | dnf           | dnf           |                        |
+| man             | help           | apt             | apt             | todo          | todo          |                        |
 | gh              | github cli     | apt             | apt             | dnf           | dnf           | with completion        |
 | glab            | gitlab cli     | curl            | curl            | curl          | curl          | with completion        |
 | yq              | stream editor  | curl            | curl            | curl          | curl          | with completion        |
@@ -134,7 +135,6 @@ my devcontainers
 | rpmdevtools | rpm build | -    | -       | -       | dnf  | dnf   | dnf   |
 | rpmlint     | rpm build | -    | -       | -       | dnf  | dnf   | dnf   |
 | pandoc      | manpage   | todo | todo    | todo    | todo | todo  | todo  |
-| man         | help      | todo | todo    | todo    | todo | todo  | todo  |
 
 ### languages
 
