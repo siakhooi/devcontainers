@@ -140,12 +140,14 @@ my devcontainers
 
 | Component        | type      | jdk21 | jdk25 | jdk25_2604 | go125 | go126 | go126_2604 | python314 | nodejs24 |
 | ---------------- | --------- | ----- | ----- | ---------- | ----- | ----- | ---------- | --------- | -------- |
-| jdk              | lang      | curl  | curl  | curl       | -     | -     | -          | -         | -        |
+| jdk 21           | lang      | curl  | -     | -          | -     | -     | -          | -         | -        |
+| jdk 25           | lang      | -     | curl  | curl       | -     | -     | -          | -         | -        |
 | maven            | build     | curl  | curl  | curl       | -     | -     | -          | -         | -        |
 | gradle           | build     | curl  | curl  | curl       | -     | -     | -          | -         | -        |
 | spring-boot-cli  | build     | curl  | curl  | curl       | -     | -     | -          | -         | -        |
 | groovy           | lang      | curl  | curl  | curl       | -     | -     | -          | -         | -        |
-| go               | lang      | -     | -     | -          | curl  | curl  | curl       | -         | -        |
+| go 1.25          | lang      | -     | -     | -          | curl  | -     | -          | -         | -        |
+| go 1.26          | lang      | -     | -     | -          | -     | curl  | curl       | -         | -        |
 | golangci-lint    | quality   | -     | -     | -          | curl  | curl  | curl       | -         | -        |
 | goreleaser       | deploy    | -     | -     | -          | curl  | curl  | curl       | -         | -        |
 | dlv              | debugger  | -     | -     | -          | go    | go    | go         | -         | -        |
@@ -161,7 +163,7 @@ my devcontainers
 | poetry           | lang      | -     | -     | -          | -     | -     | -          | pip       | -        |
 | tox              | test      | -     | -     | -          | -     | -     | -          | pip       | -        |
 | nvm              | env       | -     | -     | -          | -     | -     | -          | -         | curl     |
-| node             | lang      | -     | -     | -          | -     | -     | -          | -         | nvm      |
+| node 24          | lang      | -     | -     | -          | -     | -     | -          | -         | nvm      |
 | yarn             | build     | -     | -     | -          | -     | -     | -          | -         | npm      |
 | firebase         | firebase  | -     | -     | -          | -     | -     | -          | -         | npm      |
 | jacoco           | coverage  | todo  | todo  | todo       | -     | -     | -          | -         | -        |
