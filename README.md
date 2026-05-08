@@ -97,6 +97,7 @@ my devcontainers
 | unzip           | compression    | apt             | apt             | dnf           | dnf           |                        |
 | nano            | editor         | apt             | apt             | dnf           | dnf           |                        |
 | make            | build          | apt             | apt             | dnf           | dnf           |                        |
+| just            | build          | curl            | curl            | curl          | curl          |                        |
 | git             | source control | apt             | apt             | dnf           | dnf           |                        |
 | git-lfs         | git lfs        | apt             | apt             | dnf           | dnf           |                        |
 | tree            | file           | apt             | apt             | dnf           | dnf           |                        |

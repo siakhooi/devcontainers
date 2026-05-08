@@ -59,6 +59,8 @@ ADD --chown=root:root --chmod=755 https://github.com/jqlang/jq/releases/download
 ADD --chown=root:root --chmod=755 https://github.com/mikefarah/yq/releases/download/v${YQ_VERSION}/yq_linux_amd64 /usr/local/bin/yq
 ADD --chown=root:root --chmod=755 https://github.com/mvdan/sh/releases/download/v${SHFMT_VERSION}/shfmt_v${SHFMT_VERSION}_linux_amd64 /usr/local/bin/shfmt
 
+RUN curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /usr/local/bin
+
 RUN curl -L -o /tmp/glab.deb https://gitlab.com/gitlab-org/cli/-/releases/v${GLAB_VERSION}/downloads/glab_${GLAB_VERSION}_linux_amd64.deb \
     && dpkg -i /tmp/glab.deb \
     && rm /tmp/glab.deb

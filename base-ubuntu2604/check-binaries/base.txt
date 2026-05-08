@@ -1,6 +1,7 @@
 ack
 sed
 awk
+just
 grep
 make
 man

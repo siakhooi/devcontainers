@@ -2,6 +2,7 @@ ack
 sed
 awk
 grep
+just
 make
 man
 nano
