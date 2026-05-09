@@ -1,7 +1,7 @@
 help:
 
 base: base-ubuntu base-ubuntu2604 base-fedora base-fedora44
-lang: deb2404 deb2604 rpm43 rpm44 jdk nodejs go python jupyter minizinc latex
+lang: repoctl deb2404 deb2604 rpm43 rpm44 jdk nodejs go python jupyter minizinc latex
 
 run-ubuntu:
 	docker run -it --rm  ubuntu:24.04 bash
@@ -41,6 +41,10 @@ deb2604:
 	.scripts/build.sh deb2604
 run-deb2604:
 	docker run -it --rm  siakhooi/devcontainer:deb2604  bash
+repoctl:
+	.scripts/build.sh repoctl
+run-repoctl:
+	docker run -it --rm  siakhooi/devcontainer:repoctl  bash
 
 rpm: rpm44
 run-rpm: run-rpm44
@@ -133,6 +137,7 @@ docker-pull:
 	docker pull siakhooi/devcontainer:deb2604
 	docker pull siakhooi/devcontainer:rpm43
 	docker pull siakhooi/devcontainer:rpm44
+	docker pull siakhooi/devcontainer:repoctl
 	docker pull siakhooi/devcontainer:jdk21
 	docker pull siakhooi/devcontainer:jdk25
 	docker pull siakhooi/devcontainer:jdk25_2604
@@ -144,7 +149,7 @@ docker-pull:
 	docker pull siakhooi/devcontainer:jupyter312
 	docker pull siakhooi/devcontainer:minizinc
 	docker pull siakhooi/devcontainer:minizinc_2604
-.PHONY: base-ubuntu2404 base-ubuntu2604 base-fedora43 base-fedora44 deb2404 deb2604 rpm43 rpm44 jdk21 jdk25 jdk25_2604 nodejs24 go125 go126 go126_2604 python314 jupyter312 minizinc minizinc_2604 latex
+.PHONY: base-ubuntu2404 base-ubuntu2604 base-fedora43 base-fedora44 repoctl deb2404 deb2604 rpm43 rpm44 jdk21 jdk25 jdk25_2604 nodejs24 go125 go126 go126_2604 python314 jupyter312 minizinc minizinc_2604 latex
 
 run-wf-base:
 	gh workflow run workflow-build-base.yml -f push-images=true

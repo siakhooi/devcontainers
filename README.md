@@ -24,6 +24,7 @@ my devcontainers
 | siakhooi/devcontainer:base-fedora44   | expire 2027-Jun                                           |
 | siakhooi/devcontainer:deb2404         | expire **2029-May**                                       |
 | siakhooi/devcontainer:deb2604         | expire 2031-May                                           |
+| siakhooi/devcontainer:repoctl         | expire 2031-May                                           |
 | siakhooi/devcontainer:rpm43           | expire **2026-Dec**                                       |
 | siakhooi/devcontainer:rpm44           | expire 2027-Jun                                           |
 | siakhooi/devcontainer:jdk21           | expire **2029-May**, 2029-Dec (jdk21)                     |
@@ -63,6 +64,7 @@ my devcontainers
 │       └── minizinc
 ├── ubuntu:26.04
 │   └── base-ubuntu2604
+│       ├── repoctl
 │       ├── jdk25_2604
 │       ├── go126_2604
 │       ├── minizinc_2604
@@ -122,6 +124,14 @@ my devcontainers
 | siakhooi-ore    | utilities      | todo            | todo            | todo          | todo          |                        |
 | pinentry        | crypto         | todo            | todo            | todo          | todo          |                        |
 | xmlstarlet      | utilities      | todo            | todo            | todo          | todo          |                        |
+
+### Repo Tooling
+| Component        | type | repoctl   |
+| ---------------- | ---- | --------- |
+| pyenv            | -    | git clone |
+| pyenv-virtualenv | -    | git clone |
+| python 3.14      | -    | pyenv     |
+| copier           | -    | pip       |
 
 ### bash
 
