@@ -139,11 +139,11 @@ my devcontainers
 | ----------- | --------- | ------- | ------- | ----- | ----- |
 | dpkg-dev    | deb build | apt     | apt     | -     | -     |
 | fakeroot    | deb build | apt     | apt     | -     | -     |
-| bats        | testing   | apt     | apt     | dnf   | dnf   |
 | rpm-sign    | rpm build | -       | -       | dnf   | dnf   |
 | rpmdevtools | rpm build | -       | -       | dnf   | dnf   |
 | rpmlint     | rpm build | -       | -       | dnf   | dnf   |
-| pandoc      | manpage   | todo    | todo    | todo  | todo  |
+| bats        | testing   | apt     | apt     | dnf   | dnf   |
+| pandoc      | manpage   | apt     | apt     | dnf   | dnf   |
 
 ### languages
 

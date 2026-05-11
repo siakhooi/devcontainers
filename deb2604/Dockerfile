@@ -15,6 +15,8 @@ RUN apt update \
     bats \
     # debian packaging
     dpkg-dev fakeroot \
+    # man page
+    pandoc \
     #
     && apt clean \
     && rm -rf /var/lib/apt/lists/*

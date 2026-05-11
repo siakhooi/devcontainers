@@ -12,6 +12,8 @@ RUN dnf -y update \
     && dnf -y install \
     # testing
     bats \
+    # man page
+    pandoc \
     # rpm packaging
     rpmdevtools rpmlint rpm-sign
 
