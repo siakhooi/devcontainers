@@ -15,6 +15,6 @@ RUN curl -L -o /opt/minizinc.tgz https://github.com/MiniZinc/MiniZincIDE/release
     && tar xf /opt/minizinc.tgz -C /opt \
     && rm /opt/minizinc.tgz
 
-COPY check-binaries /etc/devcontainer/check-binaries
+COPY --chown=root:root --chmod=644 check-binaries /etc/devcontainer/check-binaries
 
 USER maui

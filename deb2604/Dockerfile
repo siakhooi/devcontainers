@@ -21,6 +21,6 @@ RUN apt update \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
 
-COPY check-binaries /etc/devcontainer/check-binaries
+COPY --chown=root:root --chmod=644 check-binaries /etc/devcontainer/check-binaries
 
 USER maui

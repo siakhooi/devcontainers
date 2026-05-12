@@ -15,8 +15,8 @@ ARG GROOVY_VERSION=5.0.6
 
 USER root
 
-COPY --chown=root:root --chmod=755 bashrc.d/00-setup-jdk.sh /etc/devcontainer/bashrc.d/00-setup-jdk.sh
-COPY check-binaries /etc/devcontainer/check-binaries
+COPY --chown=root:root --chmod=755 bashrc.d /etc/devcontainer/bashrc.d
+COPY --chown=root:root --chmod=644 check-binaries /etc/devcontainer/check-binaries
 
 RUN \
     # Install JDK

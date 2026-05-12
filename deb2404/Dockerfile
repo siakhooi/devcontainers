@@ -21,7 +21,7 @@ RUN apt update \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
 
-COPY check-binaries /etc/devcontainer/check-binaries
-COPY --chown=root:root --chmod=755 bashrc.d/zzz-show-new-image-available.sh /etc/devcontainer/bashrc.d/zzz-show-new-image-available.sh
+COPY --chown=root:root --chmod=755 bashrc.d /etc/devcontainer/bashrc.d
+COPY --chown=root:root --chmod=644 check-binaries /etc/devcontainer/check-binaries
 
 USER maui

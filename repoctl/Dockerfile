@@ -11,8 +11,9 @@ ARG PYTHON_VERSION=3.14
 ARG GLAB_VERSION=1.95.0
 
 USER root
-COPY --chown=root:root --chmod=755 bashrc.d/00-setup-python.sh /etc/devcontainer/bashrc.d/00-setup-python.sh
-COPY check-binaries /etc/devcontainer/check-binaries
+
+COPY --chown=root:root --chmod=755 bashrc.d /etc/devcontainer/bashrc.d
+COPY --chown=root:root --chmod=644 check-binaries /etc/devcontainer/check-binaries
 
 RUN apt update \
     && apt upgrade -y \

@@ -12,8 +12,8 @@ ARG NODE_VERSION=24
 
 USER root
 
-COPY --chown=root:root --chmod=755 bashrc.d/00-init-nvm.sh /etc/devcontainer/bashrc.d/00-init-nvm.sh
-COPY check-binaries /etc/devcontainer/check-binaries
+COPY --chown=root:root --chmod=755 bashrc.d /etc/devcontainer/bashrc.d
+COPY --chown=root:root --chmod=644 check-binaries /etc/devcontainer/check-binaries
 
 USER maui
 

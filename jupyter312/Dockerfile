@@ -11,8 +11,8 @@ ARG PYTHON_VERSION=3.12
 
 USER root
 
-COPY --chown=root:root --chmod=755 bashrc.d/00-setup-python.sh /etc/devcontainer/bashrc.d/00-setup-python.sh
-COPY check-binaries /etc/devcontainer/check-binaries
+COPY --chown=root:root --chmod=755 bashrc.d /etc/devcontainer/bashrc.d
+COPY --chown=root:root --chmod=644 check-binaries /etc/devcontainer/check-binaries
 
 RUN apt-get update \
     && apt-get install -y \
