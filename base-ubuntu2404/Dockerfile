@@ -10,7 +10,6 @@ LABEL org.opencontainers.image.url="https://github.com/siakhooi/devcontainer" \
 ARG JQ_VERSION=1.8.1
 ARG YQ_VERSION=4.53.2
 ARG SHFMT_VERSION=3.13.1
-ARG GLAB_VERSION=1.96.0
 
 RUN apt update \
     && apt upgrade -y \
@@ -60,10 +59,6 @@ ADD --chown=root:root --chmod=755 https://github.com/mikefarah/yq/releases/downl
 ADD --chown=root:root --chmod=755 https://github.com/mvdan/sh/releases/download/v${SHFMT_VERSION}/shfmt_v${SHFMT_VERSION}_linux_amd64 /usr/local/bin/shfmt
 
 RUN curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /usr/local/bin
-
-RUN curl -L -o /tmp/glab.deb https://gitlab.com/gitlab-org/cli/-/releases/v${GLAB_VERSION}/downloads/glab_${GLAB_VERSION}_linux_amd64.deb \
-    && dpkg -i /tmp/glab.deb \
-    && rm /tmp/glab.deb
 
 RUN wget https://siakhooi.github.io/apt/siakhooi-apt.list -O /etc/apt/sources.list.d/siakhooi-apt.list \
     && wget https://siakhooi.github.io/apt/siakhooi-apt.gpg  -O /usr/share/keyrings/siakhooi-apt.gpg \

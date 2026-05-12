@@ -8,6 +8,7 @@ LABEL org.opencontainers.image.url="https://github.com/siakhooi/devcontainer" \
       org.opencontainers.image.description="Devcontainer for managing git repositories"
 
 ARG PYTHON_VERSION=3.14
+ARG GLAB_VERSION=1.95.0
 
 USER root
 COPY --chown=root:root --chmod=755 bashrc.d/00-setup-python.sh /etc/devcontainer/bashrc.d/00-setup-python.sh
@@ -23,6 +24,10 @@ RUN apt update \
     # clean up
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
+
+RUN curl -L -o /tmp/glab.deb https://gitlab.com/gitlab-org/cli/-/releases/v${GLAB_VERSION}/downloads/glab_${GLAB_VERSION}_linux_amd64.deb \
+    && dpkg -i /tmp/glab.deb \
+    && rm /tmp/glab.deb
 
 USER maui
 

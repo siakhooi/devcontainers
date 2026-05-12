@@ -110,7 +110,6 @@ my devcontainers
 | podman          | container      | apt             | apt             | dnf           | dnf           |                        |
 | man             | help           | apt             | apt             | dnf           | dnf           |                        |
 | gh              | github cli     | apt             | apt             | dnf           | dnf           | with completion        |
-| glab            | gitlab cli     | curl            | curl            | curl          | curl          | with completion        |
 | yq              | stream editor  | curl            | curl            | curl          | curl          | with completion        |
 | jq              | stream editor  | curl            | curl            | curl          | curl          |                        |
 | json2table      | utilities      | apt             | apt             | dnf           | dnf           |                        |
@@ -126,12 +125,13 @@ my devcontainers
 | xmlstarlet      | utilities      | todo            | todo            | todo          | todo          |                        |
 
 ### Repo Tooling
-| Component        | type | repoctl   |
-| ---------------- | ---- | --------- |
-| pyenv            | -    | git clone |
-| pyenv-virtualenv | -    | git clone |
-| python 3.14      | -    | pyenv     |
-| copier           | -    | pip       |
+| Component        | type       | repoctl   | Remark          |
+| ---------------- | ---------- | --------- | --------------- |
+| pyenv            | -          | git clone |
+| pyenv-virtualenv | -          | git clone |
+| python 3.14      | -          | pyenv     |
+| copier           | -          | pip       |
+| glab             | gitlab cli | curl      | with completion |
 
 ### bash
 

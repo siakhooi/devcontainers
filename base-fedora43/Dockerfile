@@ -10,7 +10,6 @@ LABEL org.opencontainers.image.url="https://github.com/siakhooi/devcontainer" \
 ARG JQ_VERSION=1.8.1
 ARG YQ_VERSION=4.53.2
 ARG SHFMT_VERSION=3.13.1
-ARG GLAB_VERSION=1.96.0
 
 RUN sed -i '/^tsflags=nodocs/d' /etc/dnf/dnf.conf \
     && dnf update -y \
@@ -40,10 +39,6 @@ ADD --chown=root:root --chmod=755 https://github.com/mikefarah/yq/releases/downl
 ADD --chown=root:root --chmod=755 https://github.com/mvdan/sh/releases/download/v${SHFMT_VERSION}/shfmt_v${SHFMT_VERSION}_linux_amd64 /usr/local/bin/shfmt
 
 RUN curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /usr/local/bin
-
-RUN curl -L -o /tmp/glab.rpm https://gitlab.com/gitlab-org/cli/-/releases/v${GLAB_VERSION}/downloads/glab_${GLAB_VERSION}_linux_amd64.rpm \
-    && dnf install -y /tmp/glab.rpm \
-    && rm /tmp/glab.rpm
 
 RUN curl -L -o /etc/yum.repos.d/siakhooi-rpms.repo https://siakhooi.github.io/rpms/siakhooi-rpms.repo \
     && dnf install -y siakhooi-devy siakhooi-json2table \
