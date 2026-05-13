@@ -112,6 +112,7 @@ my devcontainers
 | gh              | github cli     | apt             | apt             | dnf           | dnf           | with completion        |
 | yq              | stream editor  | curl            | curl            | curl          | curl          | with completion        |
 | jq              | stream editor  | curl            | curl            | curl          | curl          |                        |
+| actionlint      | linter         | curl            | curl            | curl          | curl          |                        |
 | json2table      | utilities      | apt             | apt             | dnf           | dnf           |                        |
 | siakhooi-devy   | utilities      | apt             | apt             | dnf           | dnf           | incl siakhooi-devutils |
 | ssh             | remote         | apt             | apt             | -             | -             | dnf provided by ?      |

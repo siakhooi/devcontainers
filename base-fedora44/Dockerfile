@@ -40,6 +40,8 @@ ADD --chown=root:root --chmod=755 https://github.com/mvdan/sh/releases/download/
 
 RUN curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /usr/local/bin
 
+RUN curl -fsSL https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash | bash -s -- latest /usr/local/bin
+
 RUN curl -L -o /etc/yum.repos.d/siakhooi-rpms.repo https://siakhooi.github.io/rpms/siakhooi-rpms.repo \
     && dnf install -y siakhooi-devy siakhooi-json2table \
     && dnf clean all
