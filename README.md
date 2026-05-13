@@ -13,7 +13,11 @@ my devcontainers
 
 - `/opt/devcontainer/entrypoint.d` - to be mounted by user to add custom init logic
 - `/opt/devcontainer/bashrc.d` - to be mounted by user to add custom shell logic
-- `/etc/devcontainer/check-binaries` - to be mounted by user to add custom binaries list to check
+- `/opt/devcontainer/check-binaries` - to be mounted by user to add custom binaries list to check
+
+## Deliverables
+
+- https://hub.docker.com/r/siakhooi/devcontainer
 
 ## List of Images
 | Image                                 | Expired Date                                              |
@@ -40,13 +44,7 @@ my devcontainers
 | siakhooi/devcontainer:minizinc_2604   | expire 2031-May                                           |
 | siakhooi/devcontainer:latex           | expire 2029-May, 2030-Oct (python 3.14)                   |
 
-## Deliverables
-
-- https://hub.docker.com/r/siakhooi/devcontainer
-
-## Components
-
-## Images Tree
+### Images Tree
 
 ```
 .
