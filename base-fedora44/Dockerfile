@@ -10,6 +10,7 @@ LABEL org.opencontainers.image.url="https://github.com/siakhooi/devcontainer" \
 ARG JQ_VERSION=1.8.1
 ARG YQ_VERSION=4.53.2
 ARG SHFMT_VERSION=3.13.1
+ARG FZF_VERSION=0.72.0
 
 RUN sed -i '/^tsflags=nodocs/d' /etc/dnf/dnf.conf \
     && dnf update -y \
@@ -41,6 +42,7 @@ ADD --chown=root:root --chmod=755 https://github.com/mvdan/sh/releases/download/
 RUN curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /usr/local/bin
 RUN curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/nektos/act/master/install.sh | sudo bash
 RUN curl -fsSL https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash | bash -s -- latest /usr/local/bin
+RUN curl -fsSL https://github.com/junegunn/fzf/releases/download/v${FZF_VERSION}/fzf-${FZF_VERSION}-linux_amd64.tar.gz | tar -xz -C /usr/local/bin
 
 RUN curl -L -o /etc/yum.repos.d/siakhooi-rpms.repo https://siakhooi.github.io/rpms/siakhooi-rpms.repo \
     && dnf install -y siakhooi-devy siakhooi-json2table \

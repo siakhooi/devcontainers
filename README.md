@@ -112,6 +112,7 @@ my devcontainers
 | jq              | stream editor  | curl            | curl            | curl          | curl          |                        |
 | actionlint      | linter         | curl            | curl            | curl          | curl          |                        |
 | act             | runner         | curl            | curl            | curl          | curl          |                        |
+| fzf             | finder         | curl            | curl            | curl          | curl          |                        |
 | json2table      | utilities      | apt             | apt             | dnf           | dnf           |                        |
 | siakhooi-devy   | utilities      | apt             | apt             | dnf           | dnf           | incl siakhooi-devutils |
 | ssh             | remote         | apt             | apt             | -             | -             | dnf provided by ?      |

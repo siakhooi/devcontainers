@@ -20,6 +20,15 @@
       "customType": "regex",
       "fileMatch": ["Dockerfile"],
       "matchStrings": [
+        "ARG FZF_VERSION=(?<currentValue>[0-9.]+)"
+      ],
+      "depNameTemplate": "junegunn/fzf",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["Dockerfile"],
+      "matchStrings": [
         "ARG JQ_VERSION=(?<currentValue>[0-9.]+)"
       ],
       "depNameTemplate": "jqlang/jq",
