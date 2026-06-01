@@ -8,7 +8,7 @@ LABEL org.opencontainers.image.url="https://github.com/siakhooi/devcontainer" \
       org.opencontainers.image.description="Devcontainer for managing git repositories"
 
 ARG PYTHON_VERSION=3.14
-ARG GLAB_VERSION=1.100.0
+ARG GLAB_VERSION=1.101.0
 
 USER root
 
