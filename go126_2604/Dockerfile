@@ -7,7 +7,7 @@ LABEL org.opencontainers.image.url="https://github.com/siakhooi/devcontainer" \
       org.opencontainers.image.title="siakhooi/devcontainer:go126_2604" \
       org.opencontainers.image.description="Devcontainer for Go 1.26 development based on Ubuntu 26.04"
 
-ARG GO_VERSION=1.26.3
+ARG GO_VERSION=1.26.4
 ARG GOLANGCI_LINT_VERSION=2.12.2
 ARG GORELEASER_VERSION=2.16.0
 
