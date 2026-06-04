@@ -7,7 +7,7 @@ LABEL org.opencontainers.image.url="https://github.com/siakhooi/devcontainer" \
       org.opencontainers.image.title="siakhooi/devcontainer:nodejs24" \
       org.opencontainers.image.description="Devcontainer for Node.js 24 development based on Ubuntu 24.04"
 
-ARG NVM_VERSION=0.40.4
+ARG NVM_VERSION=0.40.5
 ARG NODE_VERSION=24
 
 USER root
