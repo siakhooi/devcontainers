@@ -8,7 +8,7 @@ LABEL org.opencontainers.image.url="https://github.com/siakhooi/devcontainer" \
       org.opencontainers.image.description="Base image for Ubuntu 24.04-based devcontainers"
 
 ARG JQ_VERSION=1.8.1
-ARG YQ_VERSION=4.53.2
+ARG YQ_VERSION=4.53.3
 ARG SHFMT_VERSION=3.13.1
 ARG FZF_VERSION=0.73.1
 
