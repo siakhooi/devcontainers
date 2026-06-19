@@ -9,7 +9,7 @@ LABEL org.opencontainers.image.url="https://github.com/siakhooi/devcontainer" \
 
 ARG JDK_VERSION=25
 ARG MAVEN_VERSION=3.9.16
-ARG GRADLE_VERSION=9.5.1
+ARG GRADLE_VERSION=9.6.0
 ARG SPRING_BOOT_CLI_VERSION=4.1.0
 ARG GROOVY_VERSION=5.0.6
 
