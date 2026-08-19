@@ -28,6 +28,7 @@ my devcontainers
 | siakhooi/devcontainer:base-fedora44   | expire 2027-Jun                                           |
 | siakhooi/devcontainer:deb2404         | expire **2029-May**                                       |
 | siakhooi/devcontainer:deb2604         | expire 2031-May                                           |
+| siakhooi/devcontainer:nfpm            | expire 2031-May                                           |
 | siakhooi/devcontainer:repoctl         | expire 2031-May                                           |
 | siakhooi/devcontainer:rpm43           | expire **2026-Dec**                                       |
 | siakhooi/devcontainer:rpm44           | expire 2027-Jun                                           |
@@ -62,6 +63,7 @@ my devcontainers
 │       └── minizinc
 ├── ubuntu:26.04
 │   └── base-ubuntu2604
+│       ├── nfpm
 │       ├── repoctl
 │       ├── jdk25_2604
 │       ├── go126_2604
@@ -71,8 +73,8 @@ my devcontainers
 │   └── base-fedora43
 │       └── rpm43
 └── fedora:44
-│   └── base-fedora44
-│       └── rpm44
+    └── base-fedora44
+        └── rpm44
 
 ```
 
@@ -136,15 +138,17 @@ my devcontainers
 
 ### bash
 
-| Component   | type      | deb2404 | deb2604 | rpm43 | rpm44 |
-| ----------- | --------- | ------- | ------- | ----- | ----- |
-| dpkg-dev    | deb build | apt     | apt     | -     | -     |
-| fakeroot    | deb build | apt     | apt     | -     | -     |
-| rpm-sign    | rpm build | -       | -       | dnf   | dnf   |
-| rpmdevtools | rpm build | -       | -       | dnf   | dnf   |
-| rpmlint     | rpm build | -       | -       | dnf   | dnf   |
-| bats        | testing   | apt     | apt     | dnf   | dnf   |
-| pandoc      | manpage   | apt     | apt     | dnf   | dnf   |
+| Component   | type      | deb2404 | deb2604 | rpm43       | rpm44       | nfpm |
+| ----------- | --------- | ------- | ------- | ----------- | ----------- | ---- |
+| dpkg-dev    | deb build | apt     | apt     | -           | -           |      |
+| fakeroot    | deb build | apt     | apt     | -           | -           |      |
+| rpm-sign    | rpm build | -       | -       | dnf         | dnf         |      |
+| rpmdevtools | rpm build | -       | -       | dnf         | dnf         |      |
+| rpmlint     | rpm build | -       | -       | dnf         | dnf         |      |
+| bats        | testing   | apt     | apt     | dnf         | dnf         | apt  |
+| pandoc      | manpage   | apt     | apt     | dnf         | dnf         | apt  |
+| rpm         | rpm build | -       | -       | (baseimage) | (baseimage) | apt  |
+| nfpm        | packager  | -       | -       | -           | -           | apt  |
 
 ### languages
 
