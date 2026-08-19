@@ -1,0 +1,6 @@
+rpm
+nfpm
+bats
+pandoc
+shfmt
+shellcheck
