@@ -1,7 +1,7 @@
-help:
-
+default:
+	@just --list
 list:
-	ls -d base* deb* go* jdk* latex* minizinc* nodejs* python* repoctl* rpm* |cat
+	ls -d base* deb* go* jdk* latex* minizinc* nodejs* python* repoctl* rpm* nfpm* |cat
 
 run name:
 	docker run -it --rm  siakhooi/devcontainer:{{ name }}  bash
@@ -26,6 +26,7 @@ lang: deb rpm go jdk \
 	(make "minizinc_2604") \
 	(make "nodejs24") \
 	(make "python314") \
+	(make "nfpm") \
 	(make "repoctl")
 
 # find binary in rpm package

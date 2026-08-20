@@ -4,3 +4,4 @@ bats
 pandoc
 shfmt
 shellcheck
+dpkg-deb
