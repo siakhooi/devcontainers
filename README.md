@@ -161,11 +161,11 @@ my devcontainers
 | spring-boot-cli  | build     | curl  | curl  | curl       |  -     | -          | -     |-         | -        |
 | groovy           | lang      | curl  | curl  | curl       |  -     | -          | -     |-         | -        |
 | go 1.26          | lang      | -     | -     | -          |  curl  | curl       | -     |-         | -        |
-| go 1.27          | lang      | -     | -     | -          |  -     | -          | todo  |-         | -        |
-| golangci-lint    | quality   | -     | -     | -          |  curl  | curl       | todo  |-         | -        |
-| goreleaser       | deploy    | -     | -     | -          |  curl  | curl       | todo  |-         | -        |
-| dlv              | debugger  | -     | -     | -          |  go    | go         | todo  |-         | -        |
-| gopls            | lang      | -     | -     | -          |  go    | go         | todo  |-         | -        |
+| go 1.27          | lang      | -     | -     | -          |  -     | -          | curl  |-         | -        |
+| golangci-lint    | quality   | -     | -     | -          |  curl  | curl       | curl  |-         | -        |
+| goreleaser       | deploy    | -     | -     | -          |  curl  | curl       | curl  |-         | -        |
+| dlv              | debugger  | -     | -     | -          |  go    | go         | go    |-         | -        |
+| gopls            | lang      | -     | -     | -          |  go    | go         | go    |-         | -        |
 | locales          | env       | -     | -     | -          |  -     | -          | -     |apt       | -        |
 | pyenv            | env       | -     | -     | -          |  -     | -          | -     |git clone | -        |
 | pyenv-virtualenv | env       | -     | -     | -          |  -     | -          | -     |git clone | -        |
