@@ -14,6 +14,7 @@ USER root
 
 COPY --chown=root:root --chmod=755 bashrc.d /etc/devcontainer/bashrc.d
 COPY --chown=root:root --chmod=644 check-binaries /etc/devcontainer/check-binaries
+RUN chmod 755 /etc/devcontainer/check-binaries
 
 USER maui
 

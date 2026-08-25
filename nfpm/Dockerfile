@@ -10,6 +10,7 @@ LABEL org.opencontainers.image.url="https://github.com/siakhooi/devcontainer" \
 USER root
 
 COPY --chown=root:root --chmod=644 check-binaries /etc/devcontainer/check-binaries
+RUN chmod 755 /etc/devcontainer/check-binaries
 
 RUN apt update \
     && apt upgrade -y \
