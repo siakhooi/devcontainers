@@ -1,13 +1,13 @@
-FROM  siakhooi/devcontainer:base-ubuntu2404
+FROM  siakhooi/devcontainer:base-ubuntu2604
 LABEL org.opencontainers.image.url="https://github.com/siakhooi/devcontainer" \
       org.opencontainers.image.source="https://github.com/siakhooi/devcontainer" \
       org.opencontainers.image.licenses="MIT" \
       org.opencontainers.image.authors="Siak Hooi" \
-      org.opencontainers.image.base.name="siakhooi/devcontainer:base-ubuntu2404" \
-      org.opencontainers.image.title="siakhooi/devcontainer:go125" \
-      org.opencontainers.image.description="Devcontainer for Go 1.25 development based on Ubuntu 24.04"
+      org.opencontainers.image.base.name="siakhooi/devcontainer:base-ubuntu2604" \
+      org.opencontainers.image.title="siakhooi/devcontainer:go127" \
+      org.opencontainers.image.description="Devcontainer for Go 1.27 development based on Ubuntu 26.04"
 
-ARG GO_VERSION=1.25.13
+ARG GO_VERSION=1.27.0
 ARG GOLANGCI_LINT_VERSION=2.13.1
 ARG GORELEASER_VERSION=2.18.0
 
@@ -15,6 +15,7 @@ USER root
 
 COPY --chown=root:root --chmod=755 bashrc.d /etc/devcontainer/bashrc.d
 COPY --chown=root:root --chmod=644 check-binaries /etc/devcontainer/check-binaries
+RUN chmod 755 /etc/devcontainer/check-binaries
 
 RUN \
     # Install GO

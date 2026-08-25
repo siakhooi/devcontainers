@@ -1,6 +1,6 @@
 #!/bin/bash
 
-readonly new_devcontainer="siakhooi/devcontainer:go126_2604"
+readonly new_devcontainer="siakhooi/devcontainer:go127"
 readonly expire_date='Feb 2027'
 
 echo.info -n "

@@ -16,7 +16,7 @@ base: \
 
 deb: (make "deb2404") (make "deb2604")
 rpm: (make "rpm43")   (make "rpm44")
-go:  (make "go125") (make "go126") (make "go126_2604")
+go:  (make "go127") (make "go126") (make "go126_2604")
 jdk: (make "jdk21") (make "jdk25") (make "jdk25_2604")
 
 lang: deb rpm go jdk \

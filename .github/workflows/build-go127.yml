@@ -1,7 +1,7 @@
-name: Build GO 1.25
+name: Build GO 1.27 on Ubuntu 26.04
 
 env:
-  BUILD_CONTEXT: ./go125
+  BUILD_CONTEXT: ./go127
 
 on:
   workflow_dispatch:
@@ -15,13 +15,13 @@ on:
     branches:
       - main
     paths:
-      - "go125/**"
+      - "go127/**"
       - "variables.env"
   pull_request:
     branches:
       - main
     paths:
-      - "go125/**"
+      - "go127/**"
       - "variables.env"
 
   workflow_call:
