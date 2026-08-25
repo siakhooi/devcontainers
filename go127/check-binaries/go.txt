@@ -1,0 +1,6 @@
+go
+golangci-lint
+goreleaser
+qlty
+dlv
+gopls
