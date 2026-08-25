@@ -18,5 +18,6 @@ RUN dnf -y update \
     rpmdevtools rpmlint rpm-sign
 
 COPY --chown=root:root --chmod=644 check-binaries /etc/devcontainer/check-binaries
+RUN chmod 755 /etc/devcontainer/check-binaries
 
 USER maui

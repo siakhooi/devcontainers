@@ -31,6 +31,7 @@ COPY --chown=root:root --chmod=755 bin/devcontainer-entrypoint.sh /usr/local/bin
 COPY --chown=root:root --chmod=755 bin/devcontainer-init-shell.sh /usr/local/bin/devcontainer-init-shell.sh
 COPY --chown=root:root --chmod=755 bashrc.d /etc/devcontainer/bashrc.d
 COPY --chown=root:root --chmod=644 check-binaries /etc/devcontainer/check-binaries
+RUN chmod 755 /etc/devcontainer/check-binaries
 
 RUN echo 'source /usr/local/bin/devcontainer-init-shell.sh' >> /home/maui/.bashrc
 RUN echo 'source /usr/local/bin/devcontainer-init-shell.sh' >> /root/.bashrc
