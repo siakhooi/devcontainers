@@ -63,11 +63,11 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["^go125/Dockerfile$"],
+      "fileMatch": ["^go127/Dockerfile$"],
       "matchStrings": [
         "ARG GO_VERSION=(?<currentValue>[0-9.]+)"
       ],
-      "depNameTemplate": "golang125",
+      "depNameTemplate": "golang127",
       "datasourceTemplate": "golang-version"
     },
     {
@@ -145,8 +145,8 @@
   ],
   "packageRules": [
     {
-      "matchDepNames": ["golang125"],
-      "allowedVersions": "~1.25"
+      "matchDepNames": ["golang127"],
+      "allowedVersions": "~1.27"
     },
     {
       "matchDepNames": ["golang126"],
