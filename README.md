@@ -1,12 +1,11 @@
 # devcontainers
 
-my devcontainers
+my devcontainers, `siakhooi/devcontainer:<tag>`
 
 ## Usage
 
 ```
- docker run -it --rm  -v /path/to/custom-init-scripts:/opt/devcontainer/entrypoint.d siakhooi/devcontainer:base-ubuntu2404  bash
-
+$ docker run -it --rm  -v /path/to/custom-init-scripts:/opt/devcontainer/entrypoint.d siakhooi/devcontainer:base-ubuntu2404  bash
 ```
 
 ### Directories in container for Customization
@@ -20,30 +19,30 @@ my devcontainers
 - https://hub.docker.com/r/siakhooi/devcontainer
 
 ## List of Images
-| Image                                 | Upgrade To      | Delete Date | Component Expired Dates                                         |
-| ------------------------------------- | --------------- | ----------- | --------------------------------------------------------------- |
-| siakhooi/devcontainer:base-ubuntu2404 | base-ubuntu2604 | 2029-May    | 2029-May (ubuntu2404)                                           |
-| siakhooi/devcontainer:base-ubuntu2604 | -               | -           | 2031-May (ubuntu2604)                                           |
-| siakhooi/devcontainer:base-fedora43   | base-fedora44   | 2026-Dec    | 2026-Dec (fedora43)                                             |
-| siakhooi/devcontainer:base-fedora44   | -               | -           | 2027-Jun (fedora44)                                             |
-| siakhooi/devcontainer:deb2404         | deb2604         | 2029-May    | 2029-May (ubuntu2404)                                           |
-| siakhooi/devcontainer:deb2604         | -               | -           | 2031-May (ubuntu2604)                                           |
-| siakhooi/devcontainer:nfpm            | -               | -           | 2031-May (ubuntu2604)                                           |
-| siakhooi/devcontainer:repoctl         | -               | -           | 2031-May (ubuntu2604)                                           |
-| siakhooi/devcontainer:rpm43           | rpm44           | 2026-Dec    | 2026-Dec (fedora43)                                             |
-| siakhooi/devcontainer:rpm44           | -               | -           | 2027-Jun (fedora44)                                             |
-| siakhooi/devcontainer:jdk21           | jdk25_2604      | 2029-May    | 2029-May (ubuntu2404), 2029-Dec (jdk21)                         |
-| siakhooi/devcontainer:jdk25           | jdk25_2604      | 2029-May    | 2029-May (ubuntu2404), 2031-Sep (jdk25)                         |
-| siakhooi/devcontainer:jdk25_2604      | -               | -           | 2031-May (ubuntu2604), 2031-Sep (jdk25)                         |
-| siakhooi/devcontainer:nodejs24        | -               | -           | 2029-May (ubuntu2404), 2028-Apr (nodejs24)                      |
-| siakhooi/devcontainer:go126           | go127           | 2027-Feb    | 2029-May (ubuntu2404), 2027-Feb (go126)                         |
-| siakhooi/devcontainer:go126_2604      | go127           | 2027-Feb    | 2031-May (ubuntu2604), 2027-Feb (go126)                         |
-| siakhooi/devcontainer:go127           | -               | -           | 2031-May (ubuntu2604), 2027-Aug (go127)                         |
-| siakhooi/devcontainer:python314       | -               | -           | 2029-May (ubuntu2404), 2026-Oct (python 3.10)                   |
-| siakhooi/devcontainer:jupyter312      | -               | -           | 2029-May (ubuntu2404), 2028-Oct (python 3.12), 2029-Sep (jdk17) |
-| siakhooi/devcontainer:minizinc        | minizinc_2604   | 2029-May    | 2029-May (ubuntu2404)                                           |
-| siakhooi/devcontainer:minizinc_2604   | -               | -           | 2031-May (ubuntu2604)                                           |
-| siakhooi/devcontainer:latex           | -               | -           | 2029-May (ubuntu2404), 2030-Oct (python 3.14)                   |
+| Image Tag       | Upgrade To      | Delete Date | Component Expired Dates                                         |
+| --------------- | --------------- | ----------- | --------------------------------------------------------------- |
+| base-ubuntu2404 | base-ubuntu2604 | 2029-May    | 2029-May (ubuntu2404)                                           |
+| base-ubuntu2604 | -               | -           | 2031-May (ubuntu2604)                                           |
+| base-fedora43   | base-fedora44   | 2026-Dec    | 2026-Dec (fedora43)                                             |
+| base-fedora44   | -               | -           | 2027-Jun (fedora44)                                             |
+| deb2404         | deb2604         | 2029-May    | 2029-May (ubuntu2404)                                           |
+| deb2604         | -               | -           | 2031-May (ubuntu2604)                                           |
+| nfpm            | -               | -           | 2031-May (ubuntu2604)                                           |
+| repoctl         | -               | -           | 2031-May (ubuntu2604)                                           |
+| rpm43           | rpm44           | 2026-Dec    | 2026-Dec (fedora43)                                             |
+| rpm44           | -               | -           | 2027-Jun (fedora44)                                             |
+| jdk21           | jdk25_2604      | 2029-May    | 2029-May (ubuntu2404), 2029-Dec (jdk21)                         |
+| jdk25           | jdk25_2604      | 2029-May    | 2029-May (ubuntu2404), 2031-Sep (jdk25)                         |
+| jdk25_2604      | -               | -           | 2031-May (ubuntu2604), 2031-Sep (jdk25)                         |
+| nodejs24        | -               | -           | 2029-May (ubuntu2404), 2028-Apr (nodejs24)                      |
+| go126           | go127           | 2027-Feb    | 2029-May (ubuntu2404), 2027-Feb (go126)                         |
+| go126_2604      | go127           | 2027-Feb    | 2031-May (ubuntu2604), 2027-Feb (go126)                         |
+| go127           | -               | -           | 2031-May (ubuntu2604), 2027-Aug (go127)                         |
+| python314       | -               | -           | 2029-May (ubuntu2404), 2026-Oct (python 3.10)                   |
+| jupyter312      | -               | -           | 2029-May (ubuntu2404), 2028-Oct (python 3.12), 2029-Sep (jdk17) |
+| minizinc        | minizinc_2604   | 2029-May    | 2029-May (ubuntu2404)                                           |
+| minizinc_2604   | -               | -           | 2031-May (ubuntu2604)                                           |
+| latex           | -               | -           | 2029-May (ubuntu2404), 2030-Oct (python 3.14)                   |
 
 ### Images Tree
 
