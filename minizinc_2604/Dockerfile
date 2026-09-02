@@ -7,11 +7,11 @@ LABEL org.opencontainers.image.url="https://github.com/siakhooi/devcontainer" \
       org.opencontainers.image.title="siakhooi/devcontainer:minizinc_2604" \
       org.opencontainers.image.description="Devcontainer for MiniZinc development based on Ubuntu 26.04"
 
-ARG MINIZINC_VERSION=2.9.7
+ARG MINIZINC_VERSION=2.10.1
 
 USER root
 
-RUN curl -L -o /opt/minizinc.tgz https://github.com/MiniZinc/MiniZincIDE/releases/download/${MINIZINC_VERSION}/MiniZincIDE-${MINIZINC_VERSION}-bundle-linux-x86_64.tgz \
+RUN curl -L -o /opt/minizinc.tgz https://github.com/MiniZinc/MiniZincIDE/releases/download/${MINIZINC_VERSION}/MiniZincIDE-${MINIZINC_VERSION}-x86_64-linux-gnu.tgz \
     && tar xf /opt/minizinc.tgz -C /opt \
     && rm /opt/minizinc.tgz
 

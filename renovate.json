@@ -99,7 +99,7 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["^minizinc/Dockerfile$"],
+      "fileMatch": ["^minizinc.*/Dockerfile$"],
       "matchStrings": [
         "ARG MINIZINC_VERSION=(?<currentValue>[0-9.]+)"
       ],
