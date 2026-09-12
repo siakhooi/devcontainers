@@ -10,7 +10,7 @@ LABEL org.opencontainers.image.url="https://github.com/siakhooi/devcontainer" \
 ARG JQ_VERSION=1.8.1
 ARG YQ_VERSION=4.53.6
 ARG SHFMT_VERSION=3.14.1
-ARG FZF_VERSION=0.74.3
+ARG FZF_VERSION=0.74.4
 
 RUN apt update \
     && apt upgrade -y \
