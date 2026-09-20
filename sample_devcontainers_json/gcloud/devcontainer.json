@@ -1,0 +1,24 @@
+{
+  "name": "Gcloud Dev Container",
+  "image": "siakhooi/devcontainer:gcloud",
+  "remoteUser": "cloudsdk",
+  "containerUser": "cloudsdk",
+  "updateRemoteUserUID": true,
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "lfm.vscode-makefile-term",
+        "yzhang.markdown-all-in-one",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  },
+  "mounts": [
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+  ],
+  "postStartCommand": "sudo chmod 666 /var/run/docker.sock || true",
+  "remoteEnv": {
+    "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+  }
+}

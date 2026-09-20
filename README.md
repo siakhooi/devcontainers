@@ -43,11 +43,13 @@ $ docker run -it --rm  -v /path/to/custom-init-scripts:/opt/devcontainer/entrypo
 | minizinc        | minizinc_2604   | 2029-May    | 2029-May (ubuntu2404)                                           |
 | minizinc_2604   | -               | -           | 2031-May (ubuntu2604)                                           |
 | latex           | -               | -           | 2029-May (ubuntu2404), 2030-Oct (python 3.14)                   |
+| gcloud          | -               | -           | -                                                               |
 
 ### Images Tree
 
 ```
 .
+├── gcloud
 ├── ubuntu:24.04
 │   └── base-ubuntu2404
 │       ├── deb2404
@@ -126,6 +128,19 @@ $ docker run -it --rm  -v /path/to/custom-init-scripts:/opt/devcontainer/entrypo
 | pinentry        | crypto         | todo            | todo            | todo          | todo          |                        |
 | xmlstarlet      | utilities      | todo            | todo            | todo          | todo          |                        |
 
+### Cloud Tooling
+| Component       | type           | gcloud | Remark                 |
+| --------------- | -------------- | ------ | ---------------------- |
+| gcloud          | cloud cli      | (base) |                        |
+| just            | build          | curl   |                        |
+| docker          | container      | apt    |                        |
+| curl            | http           | apt    |                        |
+| gnupg           | crypto         | apt    |                        |
+| ca-certificates | crypto         | apt    |                        |
+| git             | source control | apt    |                        |
+| siakhooi-devy   | utilities      | apt    | incl siakhooi-devutils |
+| json2table      | utilities      | apt    |                        |
+
 ### Repo Tooling
 | Component        | type       | repoctl   | Remark          |
 | ---------------- | ---------- | --------- | --------------- |
@@ -151,41 +166,41 @@ $ docker run -it --rm  -v /path/to/custom-init-scripts:/opt/devcontainer/entrypo
 
 ### languages
 
-| Component        | type      | jdk21 | jdk25 | jdk25_2604 |  go126 | go126_2604 | go127 |python314 | nodejs24 |
-| ---------------- | --------- | ----- | ----- | ---------- |  ----- | ---------- | ----- |--------- | -------- |
-| jdk 21           | lang      | curl  | -     | -          |  -     | -          | -     |-         | -        |
-| jdk 25           | lang      | -     | curl  | curl       |  -     | -          | -     |-         | -        |
-| maven            | build     | curl  | curl  | curl       |  -     | -          | -     |-         | -        |
-| gradle           | build     | curl  | curl  | curl       |  -     | -          | -     |-         | -        |
-| spring-boot-cli  | build     | curl  | curl  | curl       |  -     | -          | -     |-         | -        |
-| groovy           | lang      | curl  | curl  | curl       |  -     | -          | -     |-         | -        |
-| go 1.26          | lang      | -     | -     | -          |  curl  | curl       | -     |-         | -        |
-| go 1.27          | lang      | -     | -     | -          |  -     | -          | curl  |-         | -        |
-| golangci-lint    | quality   | -     | -     | -          |  curl  | curl       | curl  |-         | -        |
-| goreleaser       | deploy    | -     | -     | -          |  curl  | curl       | curl  |-         | -        |
-| dlv              | debugger  | -     | -     | -          |  go    | go         | go    |-         | -        |
-| gopls            | lang      | -     | -     | -          |  go    | go         | go    |-         | -        |
-| locales          | env       | -     | -     | -          |  -     | -          | -     |apt       | -        |
-| pyenv            | env       | -     | -     | -          |  -     | -          | -     |git clone | -        |
-| pyenv-virtualenv | env       | -     | -     | -          |  -     | -          | -     |git clone | -        |
-| python 3.10      | lang      | -     | -     | -          |  -     | -          | -     |pyenv     | -        |
-| python 3.11      | lang      | -     | -     | -          |  -     | -          | -     |pyenv     | -        |
-| python 3.12      | lang      | -     | -     | -          |  -     | -          | -     |pyenv     | -        |
-| python 3.13      | lang      | -     | -     | -          |  -     | -          | -     |pyenv     | -        |
-| python 3.14      | lang      | -     | -     | -          |  -     | -          | -     |pyenv     | -        |
-| poetry           | lang      | -     | -     | -          |  -     | -          | -     |pip       | -        |
-| tox              | test      | -     | -     | -          |  -     | -          | -     |pip       | -        |
-| nvm              | env       | -     | -     | -          |  -     | -          | -     |-         | curl     |
-| node 24          | lang      | -     | -     | -          |  -     | -          | -     |-         | nvm      |
-| yarn             | build     | -     | -     | -          |  -     | -          | -     |-         | npm      |
-| firebase         | firebase  | -     | -     | -          |  -     | -          | -     |-         | npm      |
-| jacoco           | coverage  | todo  | todo  | todo       |  -     | -          | -     |-         | -        |
-| qlty             | quality   | todo  | todo  | todo       |  todo  | todo       | todo  |todo      | todo     |
-| sonar            | quality   | todo  | todo  | todo       |  todo  | todo       | todo  |todo      | todo     |
-| kubectl          | container | todo  | todo  | todo       |  todo  | todo       | todo  |todo      | todo     |
-| helm             | container | todo  | todo  | todo       |  todo  | todo       | todo  |todo      | todo     |
-| helm-unit-test   | container | todo  | todo  | todo       |  todo  | todo       | todo  |todo      | todo     |
-| kind             | container | todo  | todo  | todo       |  todo  | todo       | todo  |todo      | todo     |
+| Component        | type      | jdk21 | jdk25 | jdk25_2604 | go126 | go126_2604 | go127 | python314 | nodejs24 |
+| ---------------- | --------- | ----- | ----- | ---------- | ----- | ---------- | ----- | --------- | -------- |
+| jdk 21           | lang      | curl  | -     | -          | -     | -          | -     | -         | -        |
+| jdk 25           | lang      | -     | curl  | curl       | -     | -          | -     | -         | -        |
+| maven            | build     | curl  | curl  | curl       | -     | -          | -     | -         | -        |
+| gradle           | build     | curl  | curl  | curl       | -     | -          | -     | -         | -        |
+| spring-boot-cli  | build     | curl  | curl  | curl       | -     | -          | -     | -         | -        |
+| groovy           | lang      | curl  | curl  | curl       | -     | -          | -     | -         | -        |
+| go 1.26          | lang      | -     | -     | -          | curl  | curl       | -     | -         | -        |
+| go 1.27          | lang      | -     | -     | -          | -     | -          | curl  | -         | -        |
+| golangci-lint    | quality   | -     | -     | -          | curl  | curl       | curl  | -         | -        |
+| goreleaser       | deploy    | -     | -     | -          | curl  | curl       | curl  | -         | -        |
+| dlv              | debugger  | -     | -     | -          | go    | go         | go    | -         | -        |
+| gopls            | lang      | -     | -     | -          | go    | go         | go    | -         | -        |
+| locales          | env       | -     | -     | -          | -     | -          | -     | apt       | -        |
+| pyenv            | env       | -     | -     | -          | -     | -          | -     | git clone | -        |
+| pyenv-virtualenv | env       | -     | -     | -          | -     | -          | -     | git clone | -        |
+| python 3.10      | lang      | -     | -     | -          | -     | -          | -     | pyenv     | -        |
+| python 3.11      | lang      | -     | -     | -          | -     | -          | -     | pyenv     | -        |
+| python 3.12      | lang      | -     | -     | -          | -     | -          | -     | pyenv     | -        |
+| python 3.13      | lang      | -     | -     | -          | -     | -          | -     | pyenv     | -        |
+| python 3.14      | lang      | -     | -     | -          | -     | -          | -     | pyenv     | -        |
+| poetry           | lang      | -     | -     | -          | -     | -          | -     | pip       | -        |
+| tox              | test      | -     | -     | -          | -     | -          | -     | pip       | -        |
+| nvm              | env       | -     | -     | -          | -     | -          | -     | -         | curl     |
+| node 24          | lang      | -     | -     | -          | -     | -          | -     | -         | nvm      |
+| yarn             | build     | -     | -     | -          | -     | -          | -     | -         | npm      |
+| firebase         | firebase  | -     | -     | -          | -     | -          | -     | -         | npm      |
+| jacoco           | coverage  | todo  | todo  | todo       | -     | -          | -     | -         | -        |
+| qlty             | quality   | todo  | todo  | todo       | todo  | todo       | todo  | todo      | todo     |
+| sonar            | quality   | todo  | todo  | todo       | todo  | todo       | todo  | todo      | todo     |
+| kubectl          | container | todo  | todo  | todo       | todo  | todo       | todo  | todo      | todo     |
+| helm             | container | todo  | todo  | todo       | todo  | todo       | todo  | todo      | todo     |
+| helm-unit-test   | container | todo  | todo  | todo       | todo  | todo       | todo  | todo      | todo     |
+| kind             | container | todo  | todo  | todo       | todo  | todo       | todo  | todo      | todo     |
 
 ### Others
 

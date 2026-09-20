@@ -1,0 +1,7 @@
+docker
+just
+git
+gpg
+curl
+update-ca-certificates
+gcloud
