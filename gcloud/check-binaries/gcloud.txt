@@ -5,3 +5,8 @@ gpg
 curl
 update-ca-certificates
 gcloud
+make
+sudo
+unzip
+wget
+zip

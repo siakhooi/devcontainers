@@ -140,6 +140,11 @@ $ docker run -it --rm  -v /path/to/custom-init-scripts:/opt/devcontainer/entrypo
 | git             | source control | apt    |                        |
 | siakhooi-devy   | utilities      | apt    | incl siakhooi-devutils |
 | json2table      | utilities      | apt    |                        |
+| sudo            | admin          | apt    |                        |
+| zip             | compression    | apt    |                        |
+| unzip           | compression    | apt    |                        |
+| make            | build          | apt    |                        |
+| wget            | http           | apt    |                        |
 
 ### Repo Tooling
 | Component        | type       | repoctl   | Remark          |

@@ -8,7 +8,16 @@ LABEL org.opencontainers.image.url="https://github.com/siakhooi/devcontainer" \
       org.opencontainers.image.description="Devcontainer for gcloud admin"
 
 RUN apt-get update \
-  && apt-get install -y --no-install-recommends ca-certificates curl git gnupg \
+  && apt-get install -y --no-install-recommends \
+       ca-certificates \
+       curl \
+       git \
+       gnupg \
+       make \
+       sudo \
+       unzip \
+       wget \
+       zip \
   && install -m 0755 -d /etc/apt/keyrings \
   && curl -fsSL https://download.docker.com/linux/debian/gpg \
     | gpg --dearmor -o /etc/apt/keyrings/docker.gpg \
