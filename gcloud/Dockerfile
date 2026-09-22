@@ -18,6 +18,8 @@ RUN apt-get update \
        unzip \
        wget \
        zip \
+  && echo "cloudsdk ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/cloudsdk \
+  && chmod 0440 /etc/sudoers.d/cloudsdk \
   && install -m 0755 -d /etc/apt/keyrings \
   && curl -fsSL https://download.docker.com/linux/debian/gpg \
     | gpg --dearmor -o /etc/apt/keyrings/docker.gpg \
