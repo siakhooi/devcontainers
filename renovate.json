@@ -102,6 +102,15 @@
     },
     {
       "customType": "regex",
+      "fileMatch": ["^go.*/Dockerfile$"],
+      "matchStrings": [
+        "ARG GOFUMPT_VERSION=(?<currentValue>[0-9.]+)"
+      ],
+      "depNameTemplate": "mvdan/gofumpt",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
       "fileMatch": ["^minizinc.*/Dockerfile$"],
       "matchStrings": [
         "ARG MINIZINC_VERSION=(?<currentValue>[0-9.]+)"

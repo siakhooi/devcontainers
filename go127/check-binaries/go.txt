@@ -4,3 +4,4 @@ goreleaser
 qlty
 dlv
 gopls
+gofumpt

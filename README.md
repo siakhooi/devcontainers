@@ -183,6 +183,7 @@ $ docker run -it --rm  -v /path/to/custom-init-scripts:/opt/devcontainer/entrypo
 | go 1.27          | lang      | -     | -     | -          | -     | -          | curl  | -         | -        |
 | golangci-lint    | quality   | -     | -     | -          | curl  | curl       | curl  | -         | -        |
 | goreleaser       | deploy    | -     | -     | -          | curl  | curl       | curl  | -         | -        |
+| gofumpt          | formatter | -     | -     | -          | curl  | curl       | curl  | -         | -        |
 | dlv              | debugger  | -     | -     | -          | go    | go         | go    | -         | -        |
 | gopls            | lang      | -     | -     | -          | go    | go         | go    | -         | -        |
 | locales          | env       | -     | -     | -          | -     | -          | -     | apt       | -        |
