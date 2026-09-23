@@ -10,12 +10,15 @@ LABEL org.opencontainers.image.url="https://github.com/siakhooi/devcontainer" \
 ARG GO_VERSION=1.27.1
 ARG GOLANGCI_LINT_VERSION=2.13.2
 ARG GORELEASER_VERSION=2.18.2
+ARG GOFUMPT_VERSION=0.12.0
 
 USER root
 
 COPY --chown=root:root --chmod=755 bashrc.d /etc/devcontainer/bashrc.d
 COPY --chown=root:root --chmod=644 check-binaries /etc/devcontainer/check-binaries
 RUN chmod 755 /etc/devcontainer/check-binaries
+
+ADD --chown=root:root --chmod=755 https://github.com/mvdan/gofumpt/releases/download/v${GOFUMPT_VERSION}/gofumpt_v${GOFUMPT_VERSION}_linux_amd64 /usr/local/bin/gofumpt
 
 RUN \
     # Install GO
