@@ -8,7 +8,7 @@ LABEL org.opencontainers.image.url="https://github.com/siakhooi/devcontainer" \
       org.opencontainers.image.description="Devcontainer for JDK 21 development based on Ubuntu 24.04"
 
 ARG JDK_VERSION=21
-ARG MAVEN_VERSION=3.9.16
+ARG MAVEN_VERSION=3.10.0
 ARG GRADLE_VERSION=9.8.0
 ARG SPRING_BOOT_CLI_VERSION=4.1.1
 ARG GROOVY_VERSION=6.0.0
