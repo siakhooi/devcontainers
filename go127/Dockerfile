@@ -9,7 +9,7 @@ LABEL org.opencontainers.image.url="https://github.com/siakhooi/devcontainer" \
 
 ARG GO_VERSION=1.27.2
 ARG GOLANGCI_LINT_VERSION=2.14.0
-ARG GORELEASER_VERSION=2.18.2
+ARG GORELEASER_VERSION=2.18.3
 ARG GOFUMPT_VERSION=0.12.0
 
 USER root
