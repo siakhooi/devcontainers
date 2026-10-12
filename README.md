@@ -39,6 +39,7 @@ $ docker run -it --rm  -v /path/to/custom-init-scripts:/opt/devcontainer/entrypo
 | go126_2604      | go127           | 2027-Feb    | 2031-May (ubuntu2604), 2027-Feb (go126)                         |
 | go127           | -               | -           | 2031-May (ubuntu2604), 2027-Aug (go127)                         |
 | python314       | -               | -           | 2029-May (ubuntu2404), 2026-Oct (python 3.10)                   |
+| python315       | -               | -           | 2031-May (ubuntu2604), 2027-Oct (python 3.11)                   |
 | jupyter312      | -               | -           | 2029-May (ubuntu2404), 2028-Oct (python 3.12), 2029-Sep (jdk17) |
 | minizinc        | minizinc_2604   | 2029-May    | 2029-May (ubuntu2404)                                           |
 | minizinc_2604   | -               | -           | 2031-May (ubuntu2604)                                           |
@@ -68,6 +69,7 @@ $ docker run -it --rm  -v /path/to/custom-init-scripts:/opt/devcontainer/entrypo
 │       ├── jdk25_2604
 │       ├── go126_2604
 │       ├── go127
+│       ├── python315
 │       ├── minizinc_2604
 │       └── deb2604
 ├── fedora:43
@@ -171,42 +173,43 @@ $ docker run -it --rm  -v /path/to/custom-init-scripts:/opt/devcontainer/entrypo
 
 ### languages
 
-| Component        | type      | jdk21 | jdk25 | jdk25_2604 | go126 | go126_2604 | go127 | python314 | nodejs24 |
-| ---------------- | --------- | ----- | ----- | ---------- | ----- | ---------- | ----- | --------- | -------- |
-| jdk 21           | lang      | curl  | -     | -          | -     | -          | -     | -         | -        |
-| jdk 25           | lang      | -     | curl  | curl       | -     | -          | -     | -         | -        |
-| maven            | build     | curl  | curl  | curl       | -     | -          | -     | -         | -        |
-| gradle           | build     | curl  | curl  | curl       | -     | -          | -     | -         | -        |
-| spring-boot-cli  | build     | curl  | curl  | curl       | -     | -          | -     | -         | -        |
-| groovy           | lang      | curl  | curl  | curl       | -     | -          | -     | -         | -        |
-| go 1.26          | lang      | -     | -     | -          | curl  | curl       | -     | -         | -        |
-| go 1.27          | lang      | -     | -     | -          | -     | -          | curl  | -         | -        |
-| golangci-lint    | quality   | -     | -     | -          | curl  | curl       | curl  | -         | -        |
-| goreleaser       | deploy    | -     | -     | -          | curl  | curl       | curl  | -         | -        |
-| gofumpt          | formatter | -     | -     | -          | curl  | curl       | curl  | -         | -        |
-| dlv              | debugger  | -     | -     | -          | go    | go         | go    | -         | -        |
-| gopls            | lang      | -     | -     | -          | go    | go         | go    | -         | -        |
-| locales          | env       | -     | -     | -          | -     | -          | -     | apt       | -        |
-| pyenv            | env       | -     | -     | -          | -     | -          | -     | git clone | -        |
-| pyenv-virtualenv | env       | -     | -     | -          | -     | -          | -     | git clone | -        |
-| python 3.10      | lang      | -     | -     | -          | -     | -          | -     | pyenv     | -        |
-| python 3.11      | lang      | -     | -     | -          | -     | -          | -     | pyenv     | -        |
-| python 3.12      | lang      | -     | -     | -          | -     | -          | -     | pyenv     | -        |
-| python 3.13      | lang      | -     | -     | -          | -     | -          | -     | pyenv     | -        |
-| python 3.14      | lang      | -     | -     | -          | -     | -          | -     | pyenv     | -        |
-| poetry           | lang      | -     | -     | -          | -     | -          | -     | pip       | -        |
-| tox              | test      | -     | -     | -          | -     | -          | -     | pip       | -        |
-| nvm              | env       | -     | -     | -          | -     | -          | -     | -         | curl     |
-| node 24          | lang      | -     | -     | -          | -     | -          | -     | -         | nvm      |
-| yarn             | build     | -     | -     | -          | -     | -          | -     | -         | npm      |
-| firebase         | firebase  | -     | -     | -          | -     | -          | -     | -         | npm      |
-| jacoco           | coverage  | todo  | todo  | todo       | -     | -          | -     | -         | -        |
-| qlty             | quality   | todo  | todo  | todo       | todo  | todo       | todo  | todo      | todo     |
-| sonar            | quality   | todo  | todo  | todo       | todo  | todo       | todo  | todo      | todo     |
-| kubectl          | container | todo  | todo  | todo       | todo  | todo       | todo  | todo      | todo     |
-| helm             | container | todo  | todo  | todo       | todo  | todo       | todo  | todo      | todo     |
-| helm-unit-test   | container | todo  | todo  | todo       | todo  | todo       | todo  | todo      | todo     |
-| kind             | container | todo  | todo  | todo       | todo  | todo       | todo  | todo      | todo     |
+| Component        | type      | jdk21 | jdk25 | jdk25_2604 | go126 | go126_2604 | go127 | python314 | python315 | nodejs24 |
+| ---------------- | --------- | ----- | ----- | ---------- | ----- | ---------- | ----- | --------- | --------- | -------- |
+| jdk 21           | lang      | curl  | -     | -          | -     | -          | -     | -         | -         | -        |
+| jdk 25           | lang      | -     | curl  | curl       | -     | -          | -     | -         | -         | -        |
+| maven            | build     | curl  | curl  | curl       | -     | -          | -     | -         | -         | -        |
+| gradle           | build     | curl  | curl  | curl       | -     | -          | -     | -         | -         | -        |
+| spring-boot-cli  | build     | curl  | curl  | curl       | -     | -          | -     | -         | -         | -        |
+| groovy           | lang      | curl  | curl  | curl       | -     | -          | -     | -         | -         | -        |
+| go 1.26          | lang      | -     | -     | -          | curl  | curl       | -     | -         | -         | -        |
+| go 1.27          | lang      | -     | -     | -          | -     | -          | curl  | -         | -         | -        |
+| golangci-lint    | quality   | -     | -     | -          | curl  | curl       | curl  | -         | -         | -        |
+| goreleaser       | deploy    | -     | -     | -          | curl  | curl       | curl  | -         | -         | -        |
+| gofumpt          | formatter | -     | -     | -          | curl  | curl       | curl  | -         | -         | -        |
+| dlv              | debugger  | -     | -     | -          | go    | go         | go    | -         | -         | -        |
+| gopls            | lang      | -     | -     | -          | go    | go         | go    | -         | -         | -        |
+| locales          | env       | -     | -     | -          | -     | -          | -     | apt       | apt       | -        |
+| pyenv            | env       | -     | -     | -          | -     | -          | -     | git clone | git clone | -        |
+| pyenv-virtualenv | env       | -     | -     | -          | -     | -          | -     | git clone | git clone | -        |
+| python 3.10      | lang      | -     | -     | -          | -     | -          | -     | pyenv     | -         | -        |
+| python 3.11      | lang      | -     | -     | -          | -     | -          | -     | pyenv     | pyenv     | -        |
+| python 3.12      | lang      | -     | -     | -          | -     | -          | -     | pyenv     | pyenv     | -        |
+| python 3.13      | lang      | -     | -     | -          | -     | -          | -     | pyenv     | pyenv     | -        |
+| python 3.14      | lang      | -     | -     | -          | -     | -          | -     | pyenv     | pyenv     | -        |
+| python 3.15      | lang      | -     | -     | -          | -     | -          | -     | -         | pyenv     | -        |
+| poetry           | lang      | -     | -     | -          | -     | -          | -     | pip       | pip       | -        |
+| tox              | test      | -     | -     | -          | -     | -          | -     | pip       | pip       | -        |
+| nvm              | env       | -     | -     | -          | -     | -          | -     | -         | -         | curl     |
+| node 24          | lang      | -     | -     | -          | -     | -          | -     | -         | -         | nvm      |
+| yarn             | build     | -     | -     | -          | -     | -          | -     | -         | -         | npm      |
+| firebase         | firebase  | -     | -     | -          | -     | -          | -     | -         | -         | npm      |
+| jacoco           | coverage  | todo  | todo  | todo       | -     | -          | -     | -         | -         | -        |
+| qlty             | quality   | todo  | todo  | todo       | todo  | todo       | todo  | todo      | todo      | todo     |
+| sonar            | quality   | todo  | todo  | todo       | todo  | todo       | todo  | todo      | todo      | todo     |
+| kubectl          | container | todo  | todo  | todo       | todo  | todo       | todo  | todo      | todo      | todo     |
+| helm             | container | todo  | todo  | todo       | todo  | todo       | todo  | todo      | todo      | todo     |
+| helm-unit-test   | container | todo  | todo  | todo       | todo  | todo       | todo  | todo      | todo      | todo     |
+| kind             | container | todo  | todo  | todo       | todo  | todo       | todo  | todo      | todo      | todo     |
 
 ### Others
 

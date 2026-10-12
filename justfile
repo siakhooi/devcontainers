@@ -26,6 +26,7 @@ lang: deb rpm go jdk \
 	(make "minizinc_2604") \
 	(make "nodejs24") \
 	(make "python314") \
+	(make "python315") \
 	(make "nfpm") \
 	(make "gcloud") \
 	(make "repoctl")

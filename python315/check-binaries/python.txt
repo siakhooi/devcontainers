@@ -1,0 +1,6 @@
+pyenv
+python
+poetry
+pip
+tox
+qlty

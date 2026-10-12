@@ -108,6 +108,14 @@ jobs:
     with:
       push-images: ${{ inputs.push-images || false }}
 
+  build-python315:
+    uses: ./.github/workflows/build-python315.yml
+    secrets:
+      PUBLISH_TO_GITHUB_REPO_TOKEN: ${{ secrets.PUBLISH_TO_GITHUB_REPO_TOKEN }}
+      REGISTRY_PASSWORD_DOCKER: ${{ secrets.REGISTRY_PASSWORD_DOCKER }}
+    with:
+      push-images: ${{ inputs.push-images || false }}
+
   build-jupyter312:
     uses: ./.github/workflows/build-jupyter312.yml
     secrets:
