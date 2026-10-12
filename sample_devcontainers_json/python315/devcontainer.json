@@ -1,0 +1,33 @@
+{
+  "name": "Python 3.15 Development Dev Container",
+  "image": "siakhooi/devcontainer:python315",
+  "remoteUser": "maui",
+  "containerUser": "maui",
+  "updateRemoteUserUID": true,
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "lfm.vscode-makefile-term",
+        "yzhang.markdown-all-in-one",
+        "ms-python.python",
+        "ms-python.debugpy",
+        "ms-python.black-formatter",
+        "ms-python.vscode-pylance",
+        "ms-python.vscode-python-envs",
+        "humao.rest-client",
+        "ms-vscode.live-server",
+        "redhat.vscode-yaml",
+        "tim-koehler.helm-intellisense"
+      ]
+    }
+  },
+  "mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/maui/.ssh,type=bind,consistency=cached",
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+  ],
+  "postStartCommand": "sudo chmod 666 /var/run/docker.sock || true",
+  "remoteEnv": {
+    "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+  }
+}
