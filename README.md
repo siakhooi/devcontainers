@@ -38,7 +38,7 @@ $ docker run -it --rm  -v /path/to/custom-init-scripts:/opt/devcontainer/entrypo
 | go126           | go127           | 2027-Feb    | 2029-May (ubuntu2404), 2027-Feb (go126)                         |
 | go126_2604      | go127           | 2027-Feb    | 2031-May (ubuntu2604), 2027-Feb (go126)                         |
 | go127           | -               | -           | 2031-May (ubuntu2604), 2027-Aug (go127)                         |
-| python314       | -               | 2026-Dec    | 2029-May (ubuntu2404), 2026-Oct (python 3.10)                   |
+| python314       | python315       | 2026-Dec    | 2029-May (ubuntu2404), 2026-Oct (python 3.10)                   |
 | python315       | -               | -           | 2031-May (ubuntu2604), 2027-Oct (python 3.11)                   |
 | jupyter312      | -               | -           | 2029-May (ubuntu2404), 2028-Oct (python 3.12), 2029-Sep (jdk17) |
 | minizinc        | minizinc_2604   | 2029-May    | 2029-May (ubuntu2404)                                           |
