@@ -10,15 +10,16 @@ $ docker run -it --rm  -v /path/to/custom-init-scripts:/opt/devcontainer/entrypo
 
 ### Directories in container for Customization
 
-- `/opt/devcontainer/entrypoint.d` - to be mounted by user to add custom init logic
-- `/opt/devcontainer/bashrc.d` - to be mounted by user to add custom shell logic
-- `/opt/devcontainer/check-binaries` - to be mounted by user to add custom binaries list to check
+* `/opt/devcontainer/entrypoint.d` - to be mounted by user to add custom init logic
+* `/opt/devcontainer/bashrc.d` - to be mounted by user to add custom shell logic
+* `/opt/devcontainer/check-binaries` - to be mounted by user to add custom binaries list to check
 
 ## Deliverables
 
-- https://hub.docker.com/r/siakhooi/devcontainer
+* https://hub.docker.com/r/siakhooi/devcontainer
 
 ## List of Images
+
 | Image Tag       | Upgrade To      | Delete Date | Component Expired Dates                                         |
 | --------------- | --------------- | ----------- | --------------------------------------------------------------- |
 | base-ubuntu2404 | base-ubuntu2604 | 2029-May    | 2029-May (ubuntu2404)                                           |
@@ -133,6 +134,7 @@ $ docker run -it --rm  -v /path/to/custom-init-scripts:/opt/devcontainer/entrypo
 | xmlstarlet      | utilities      | todo            | todo            | todo          | todo          |                        |
 
 ### Cloud Tooling
+
 | Component       | type           | gcloud | Remark                 |
 | --------------- | -------------- | ------ | ---------------------- |
 | gcloud          | cloud cli      | (base) |                        |
@@ -151,6 +153,7 @@ $ docker run -it --rm  -v /path/to/custom-init-scripts:/opt/devcontainer/entrypo
 | wget            | http           | apt    |                        |
 
 ### Repo Tooling
+
 | Component        | type       | repoctl   | Remark          |
 | ---------------- | ---------- | --------- | --------------- |
 | pyenv            | -          | git clone |
@@ -173,45 +176,55 @@ $ docker run -it --rm  -v /path/to/custom-init-scripts:/opt/devcontainer/entrypo
 | rpm         | rpm build | -       | -       | (baseimage) | (baseimage) | apt  |
 | nfpm        | packager  | -       | -       | -           | -           | apt  |
 
-### languages
+### nodejs
 
-| Component        | type      | jdk21 | jdk25 | jdk25_2604 | go126 | go126_2604 | go127 | python314 | python315 | nodejs24 |
-| ---------------- | --------- | ----- | ----- | ---------- | ----- | ---------- | ----- | --------- | --------- | -------- |
-| jdk 21           | lang      | curl  | -     | -          | -     | -          | -     | -         | -         | -        |
-| jdk 25           | lang      | -     | curl  | curl       | -     | -          | -     | -         | -         | -        |
-| maven            | build     | curl  | curl  | curl       | -     | -          | -     | -         | -         | -        |
-| gradle           | build     | curl  | curl  | curl       | -     | -          | -     | -         | -         | -        |
-| spring-boot-cli  | build     | curl  | curl  | curl       | -     | -          | -     | -         | -         | -        |
-| groovy           | lang      | curl  | curl  | curl       | -     | -          | -     | -         | -         | -        |
-| go 1.26          | lang      | -     | -     | -          | curl  | curl       | -     | -         | -         | -        |
-| go 1.27          | lang      | -     | -     | -          | -     | -          | curl  | -         | -         | -        |
-| golangci-lint    | quality   | -     | -     | -          | curl  | curl       | curl  | -         | -         | -        |
-| goreleaser       | deploy    | -     | -     | -          | curl  | curl       | curl  | -         | -         | -        |
-| gofumpt          | formatter | -     | -     | -          | curl  | curl       | curl  | -         | -         | -        |
-| dlv              | debugger  | -     | -     | -          | go    | go         | go    | -         | -         | -        |
-| gopls            | lang      | -     | -     | -          | go    | go         | go    | -         | -         | -        |
-| locales          | env       | -     | -     | -          | -     | -          | -     | apt       | apt       | -        |
-| pyenv            | env       | -     | -     | -          | -     | -          | -     | git clone | git clone | -        |
-| pyenv-virtualenv | env       | -     | -     | -          | -     | -          | -     | git clone | git clone | -        |
-| python 3.10      | lang      | -     | -     | -          | -     | -          | -     | pyenv     | -         | -        |
-| python 3.11      | lang      | -     | -     | -          | -     | -          | -     | pyenv     | pyenv     | -        |
-| python 3.12      | lang      | -     | -     | -          | -     | -          | -     | pyenv     | pyenv     | -        |
-| python 3.13      | lang      | -     | -     | -          | -     | -          | -     | pyenv     | pyenv     | -        |
-| python 3.14      | lang      | -     | -     | -          | -     | -          | -     | pyenv     | pyenv     | -        |
-| python 3.15      | lang      | -     | -     | -          | -     | -          | -     | -         | pyenv     | -        |
-| poetry           | lang      | -     | -     | -          | -     | -          | -     | pip       | pip       | -        |
-| tox              | test      | -     | -     | -          | -     | -          | -     | pip       | pip       | -        |
-| nvm              | env       | -     | -     | -          | -     | -          | -     | -         | -         | curl     |
-| node 24          | lang      | -     | -     | -          | -     | -          | -     | -         | -         | nvm      |
-| yarn             | build     | -     | -     | -          | -     | -          | -     | -         | -         | npm      |
-| firebase         | firebase  | -     | -     | -          | -     | -          | -     | -         | -         | npm      |
-| jacoco           | coverage  | todo  | todo  | todo       | -     | -          | -     | -         | -         | -        |
-| qlty             | quality   | todo  | todo  | todo       | todo  | todo       | todo  | todo      | todo      | todo     |
-| sonar            | quality   | todo  | todo  | todo       | todo  | todo       | todo  | todo      | todo      | todo     |
-| kubectl          | container | todo  | todo  | todo       | todo  | todo       | todo  | todo      | todo      | todo     |
-| helm             | container | todo  | todo  | todo       | todo  | todo       | todo  | todo      | todo      | todo     |
-| helm-unit-test   | container | todo  | todo  | todo       | todo  | todo       | todo  | todo      | todo      | todo     |
-| kind             | container | todo  | todo  | todo       | todo  | todo       | todo  | todo      | todo      | todo     |
+| Component | type     | nodejs24 | nodejs26 |
+| --------- | -------- | -------- | -------- |
+| nvm       | env      | curl     | curl     |
+| node 24   | lang     | nvm      | -        |
+| node 26   | lang     | -        | nvm      |
+| yarn      | build    | npm      | npm      |
+| firebase  | firebase | npm      | npm      |
+
+### java
+
+| Component       | type     | jdk21 | jdk25 | jdk25_2604 |
+| --------------- | -------- | ----- | ----- | ---------- |
+| jdk 21          | lang     | curl  | -     | -          |
+| jdk 25          | lang     | -     | curl  | curl       |
+| maven           | build    | curl  | curl  | curl       |
+| gradle          | build    | curl  | curl  | curl       |
+| spring-boot-cli | build    | curl  | curl  | curl       |
+| groovy          | lang     | curl  | curl  | curl       |
+| jacoco          | coverage | todo  | todo  | todo       |
+
+### go
+
+| Component     | type      | go126 | go126_2604 | go127 |
+| ------------- | --------- | ----- | ---------- | ----- |
+| go 1.26       | lang      | curl  | curl       | -     |
+| go 1.27       | lang      | -     | -          | curl  |
+| golangci-lint | quality   | curl  | curl       | curl  |
+| goreleaser    | deploy    | curl  | curl       | curl  |
+| gofumpt       | formatter | curl  | curl       | curl  |
+| dlv           | debugger  | go    | go         | go    |
+| gopls         | lang      | go    | go         | go    |
+
+### python
+
+| Component        | type      | python314 | python315 |
+| ---------------- | --------- | --------- | --------- |
+| locales          | env       | apt       | apt       |
+| pyenv            | env       | git clone | git clone |
+| pyenv-virtualenv | env       | git clone | git clone |
+| python 3.10      | lang      | pyenv     | -         |
+| python 3.11      | lang      | pyenv     | pyenv     |
+| python 3.12      | lang      | pyenv     | pyenv     |
+| python 3.13      | lang      | pyenv     | pyenv     |
+| python 3.14      | lang      | pyenv     | pyenv     |
+| python 3.15      | lang      | -         | pyenv     |
+| poetry           | lang      | pip       | pip       |
+| tox              | test      | pip       | pip       |
 
 ### Others
 
@@ -256,5 +269,17 @@ $ docker run -it --rm  -v /path/to/custom-init-scripts:/opt/devcontainer/entrypo
 | kaggle              |      | pip        |
 | kagglehub           |      | pip        |
 
+### Others
+
+| Component        | type      |
+| ---------------- | --------- |
+| qlty             | quality   |
+| sonar            | quality   |
+| kubectl          | container |
+| helm             | container |
+| helm-unit-test   | container |
+| kind             | container |
+
 [![Wise](https://img.shields.io/badge/Funding-Wise-33cb56.svg?logo=wise)](https://wise.com/pay/me/siakn3)
+
 ![visitors](https://hit-tztugwlsja-uc.a.run.app/?outputtype=badge&counter=ghmd-devcontainers)
