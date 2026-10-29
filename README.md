@@ -34,7 +34,8 @@ $ docker run -it --rm  -v /path/to/custom-init-scripts:/opt/devcontainer/entrypo
 | jdk21           | jdk25_2604      | 2029-May    | 2029-May (ubuntu2404), 2029-Dec (jdk21)                         |
 | jdk25           | jdk25_2604      | 2029-May    | 2029-May (ubuntu2404), 2031-Sep (jdk25)                         |
 | jdk25_2604      | -               | -           | 2031-May (ubuntu2604), 2031-Sep (jdk25)                         |
-| nodejs24        | -               | -           | 2029-May (ubuntu2404), 2028-Apr (nodejs24)                      |
+| nodejs24        | nodejs26        | 2028-Apr    | 2029-May (ubuntu2404), 2028-Apr (nodejs24)                      |
+| nodejs26        | -               | -           | 2031-May (ubuntu2604), 2029-Apr (nodejs26)                      |
 | go126           | go127           | 2027-Feb    | 2029-May (ubuntu2404), 2027-Feb (go126)                         |
 | go126_2604      | go127           | 2027-Feb    | 2031-May (ubuntu2604), 2027-Feb (go126)                         |
 | go127           | -               | -           | 2031-May (ubuntu2604), 2027-Aug (go127)                         |
@@ -69,6 +70,7 @@ $ docker run -it --rm  -v /path/to/custom-init-scripts:/opt/devcontainer/entrypo
 │       ├── jdk25_2604
 │       ├── go126_2604
 │       ├── go127
+│       ├── nodejs26
 │       ├── python315
 │       ├── minizinc_2604
 │       └── deb2604
