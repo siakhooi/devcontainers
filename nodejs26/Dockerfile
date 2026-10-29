@@ -1,0 +1,25 @@
+FROM  siakhooi/devcontainer:base-ubuntu2604
+LABEL org.opencontainers.image.url="https://github.com/siakhooi/devcontainer" \
+      org.opencontainers.image.source="https://github.com/siakhooi/devcontainer" \
+      org.opencontainers.image.licenses="MIT" \
+      org.opencontainers.image.authors="Siak Hooi" \
+      org.opencontainers.image.base.name="siakhooi/devcontainer:base-ubuntu2604" \
+      org.opencontainers.image.title="siakhooi/devcontainer:nodejs24" \
+      org.opencontainers.image.description="Devcontainer for Node.js 26 development based on Ubuntu 26.04"
+
+ARG NVM_VERSION=0.40.8
+ARG NODE_VERSION=26
+
+USER root
+
+COPY --chown=root:root --chmod=755 bashrc.d /etc/devcontainer/bashrc.d
+COPY --chown=root:root --chmod=644 check-binaries /etc/devcontainer/check-binaries
+RUN chmod 755 /etc/devcontainer/check-binaries
+
+USER maui
+
+RUN (PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v${NVM_VERSION}/install.sh | bash') \
+    && /bin/bash -c 'NVM_DIR="$HOME/.nvm" \
+    && source $NVM_DIR/nvm.sh \
+    && nvm install ${NODE_VERSION} \
+    && npm install -g firebase-tools yarn'
