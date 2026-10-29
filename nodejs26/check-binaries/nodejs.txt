@@ -1,0 +1,5 @@
+node
+npm
+yarn
+firebase
+qlty

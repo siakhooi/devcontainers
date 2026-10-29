@@ -100,6 +100,14 @@ jobs:
     with:
       push-images: ${{ inputs.push-images || false }}
 
+  build-nodejs26:
+    uses: ./.github/workflows/build-nodejs26.yml
+    secrets:
+      PUBLISH_TO_GITHUB_REPO_TOKEN: ${{ secrets.PUBLISH_TO_GITHUB_REPO_TOKEN }}
+      REGISTRY_PASSWORD_DOCKER: ${{ secrets.REGISTRY_PASSWORD_DOCKER }}
+    with:
+      push-images: ${{ inputs.push-images || false }}
+
   build-python314:
     uses: ./.github/workflows/build-python314.yml
     secrets:
