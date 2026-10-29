@@ -1,7 +1,7 @@
 #!/bin/bash
 
 readonly new_devcontainer="siakhooi/devcontainer:python315"
-readonly expire_date='Dec 2026'
+readonly expire_date='Oct 2027'
 
 echo.info -n "
 A new devcontainer image is available: "
