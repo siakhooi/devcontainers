@@ -7,7 +7,7 @@ LABEL org.opencontainers.image.url="https://github.com/siakhooi/devcontainer" \
       org.opencontainers.image.title="siakhooi/devcontainer:minizinc_2604" \
       org.opencontainers.image.description="Devcontainer for MiniZinc development based on Ubuntu 26.04"
 
-ARG MINIZINC_VERSION=2.10.1
+ARG MINIZINC_VERSION=2.11.0
 
 USER root
 
