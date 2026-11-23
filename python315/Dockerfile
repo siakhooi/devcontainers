@@ -37,4 +37,4 @@ RUN export PYENV_ROOT="${HOME}/.pyenv" \
     && pyenv global 3.15 3.14 3.13 3.12 3.11 \
     && eval "$(pyenv init -)" \
     && pip install --upgrade pip \
-    && pip install poetry tox
+    && pip install poetry tox uv

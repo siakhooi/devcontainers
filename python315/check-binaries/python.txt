@@ -4,3 +4,4 @@ poetry
 pip
 tox
 qlty
+uv
