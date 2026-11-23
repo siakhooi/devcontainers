@@ -225,6 +225,7 @@ $ docker run -it --rm  -v /path/to/custom-init-scripts:/opt/devcontainer/entrypo
 | python 3.15      | lang      | -         | pyenv     |
 | poetry           | lang      | pip       | pip       |
 | tox              | test      | pip       | pip       |
+| uv               | ppm       | -         | pip       |
 
 ### Others
 
